@@ -108,6 +108,7 @@ export default function DashboardPage() {
               title="캐쥬얼 카탈로그 인지도"
               regionNames={regionNames}
               byRegion={data.byRegion}
+              national={data.national}
               getRecord={(b) => b.awareness}
               labels={AWARENESS_LABELS}
             />
@@ -119,6 +120,7 @@ export default function DashboardPage() {
               title="가. 캐쥬얼 카탈로그 활용 만족도"
               regionNames={regionNames}
               byRegion={data.byRegion}
+              national={data.national}
               getRecord={(b) => b.q1a}
               labels={Q1A_LABELS}
             />
@@ -130,6 +132,7 @@ export default function DashboardPage() {
               title="나. 배포 방식 선호"
               regionNames={regionNames}
               byRegion={data.byRegion}
+              national={data.national}
               getRecord={(b) => b.q1c}
               labels={Q1C_LABELS}
             />
@@ -143,28 +146,51 @@ export default function DashboardPage() {
                   title="캐쥬얼 카탈로그 비중 선호"
                   regionNames={regionNames}
                   byRegion={data.byRegion}
+                  national={data.national}
                   getRecord={(b) => b.q1cRatio}
                   labels={Q1CRATIO_LABELS}
                 />
               )}
             </>
           )}
+
+          <p className="text-xs text-slate-400">
+            <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(37, 99, 235, 0.45)" }} />
+            전국 평균보다 높음
+            <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(220, 38, 38, 0.45)" }} />
+            전국 평균보다 낮음　(색이 진할수록 차이가 큼, 응답 5건 이상·15%p 이상 차이 기준)
+          </p>
         </div>
       )}
     </main>
   );
 }
 
+const HIGHLIGHT_MIN_TOTAL = 5;
+
+function highlightStyle(pct: number, basePct: number): { className: string; style?: React.CSSProperties } {
+  const diff = pct - basePct;
+  const abs = Math.abs(diff);
+  if (abs < 15) return { className: "" };
+
+  // 차이가 클수록 진하게: 15pt~50pt 범위를 알파 0.15~0.6으로 매핑
+  const alpha = Math.min(0.6, 0.15 + ((abs - 15) / 35) * 0.45);
+  const color = diff > 0 ? `rgba(37, 99, 235, ${alpha})` : `rgba(220, 38, 38, ${alpha})`;
+  return { className: "font-semibold", style: { backgroundColor: color } };
+}
+
 function RegionTypeTable({
   title,
   regionNames,
   byRegion,
+  national,
   getRecord,
   labels,
 }: {
   title: string;
   regionNames: string[];
   byRegion: Record<string, StatsResult>;
+  national: StatsResult;
   getRecord: (bucket: StatsBucket) => Record<string, number>;
   labels: Record<string, string>;
 }) {
@@ -174,6 +200,17 @@ function RegionTypeTable({
     { key: "지점", label: "지점", filter: "지점" },
     { key: "대리점", label: "대리점", filter: "대리점" },
   ];
+
+  const basePcts: Record<string, Record<string, number>> = {};
+  for (const col of columns) {
+    const nBucket = col.filter === "전체" ? national.all : national.byBranchType[col.filter];
+    const nRecord = getRecord(nBucket);
+    const nTotal = keys.reduce((sum, k) => sum + (nRecord[k] ?? 0), 0);
+    basePcts[col.key] = {};
+    for (const k of keys) {
+      basePcts[col.key][k] = nTotal > 0 ? (nRecord[k] / nTotal) * 100 : 0;
+    }
+  }
 
   return (
     <div className="-mt-4">
@@ -219,9 +256,18 @@ function RegionTypeTable({
                       <Fragment key={col.key}>
                         {keys.map((k) => {
                           const value = record?.[k] ?? 0;
-                          const pct = total > 0 ? Math.round((value / total) * 100) : 0;
+                          const pctExact = total > 0 ? (value / total) * 100 : 0;
+                          const pct = Math.round(pctExact);
+                          const highlight =
+                            total >= HIGHLIGHT_MIN_TOTAL
+                              ? highlightStyle(pctExact, basePcts[col.key][k])
+                              : { className: "" };
                           return (
-                            <td key={`${col.key}-${k}`} className="px-2 py-2 text-right text-slate-600 whitespace-nowrap">
+                            <td
+                              key={`${col.key}-${k}`}
+                              className={`px-2 py-2 text-right text-slate-600 whitespace-nowrap ${highlight.className}`}
+                              style={highlight.style}
+                            >
                               {value}
                               {total > 0 && <span className="text-slate-400"> ({pct}%)</span>}
                             </td>
