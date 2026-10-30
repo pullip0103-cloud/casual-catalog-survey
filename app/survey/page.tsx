@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Q1A, Q1B, Q1C, Q1CRatio, BranchType } from "@/lib/types";
 
@@ -135,7 +136,7 @@ export default function SurveyPage() {
               <p className="font-semibold text-slate-900">[캐쥬얼 카탈로그란?]</p>
               <p>
                 캐쥬얼 카탈로그는 기존 카탈로그의 수량 부족 문제를 해결하기 위해, 상대적으로
-                얇고 적은 페이지수를 통해 비용은 절감하고 수량은 늘린 제작물입니다.
+                얇고 적은 페이지수(4페이지)를 통해 비용은 절감하고 수량은 늘린 제작물입니다.
               </p>
               <p>
                 정식 카탈로그 1부 비용으로 약 4부의 캐쥬얼 카탈로그를 제작할 수 있습니다
@@ -146,6 +147,15 @@ export default function SurveyPage() {
                 카탈로그만 제작하고, 나머지 20부만큼의 예산으로 캐쥬얼 카탈로그를 80부
                 추가 제작해서 배포합니다.
               </p>
+              <div className="pt-2">
+                <Image
+                  src="/catalog/sorento-casual-catalog.png"
+                  alt="쏘렌토 캐쥬얼 카탈로그 예시"
+                  width={920}
+                  height={540}
+                  className="w-full rounded-md border border-slate-200"
+                />
+              </div>
             </div>
             <button
               onClick={() => setStep("region")}
@@ -248,12 +258,12 @@ export default function SurveyPage() {
                 <RadioOption
                   checked={q1a === "good"}
                   onChange={() => setQ1a("good")}
-                  label="카탈로그가 부족해서 고객에게 무엇이라도 전달할 것이 없어 안좋았는데, 캐쥬얼 카탈로그라도 고객에게 드릴 수 있으니 좋은 것 같다."
+                  label="카탈로그가 부족했는데, 캐쥬얼 카탈로그라도 고객에게 드릴 수 있으니 좋은 것 같다."
                 />
                 <RadioOption
                   checked={q1a === "bad"}
                   onChange={() => setQ1a("bad")}
-                  label="캐쥬얼 카탈로그는 페이지수도 적고 얇은 재질이다보니 고객에게 전달하기가 기분상 좋지 않다."
+                  label="캐쥬얼 카탈로그는 페이지수도 적고 얇은 재질이다보니 고객에게 전달하기가 적절하지 않다."
                 />
                 <RadioOption checked={q1a === "other"} onChange={() => setQ1a("other")} label="기타 의견" />
                 {q1a === "other" && (
@@ -280,7 +290,7 @@ export default function SurveyPage() {
                     setQ1c(null);
                     setQ1cRatio(null);
                   }}
-                  label="도움이 안된다. 차라리 그 예산으로 적으나마 공식 카탈로그를 몇부라도 더 주는게 낫다."
+                  label="도움이 안된다. 차라리 부족하더라도 공식 카탈로그만 쓰게 된다."
                 />
               </QuestionBlock>
 

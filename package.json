@@ -10,9 +10,12 @@
     "seed:branches": "dotenv -e .env.local -- node scripts/seedBranches.mjs"
   },
   "dependencies": {
+    "adm-zip": "^0.6.1",
     "dotenv-cli": "^11.1.0",
     "firebase-admin": "^14.5.0",
     "next": "16.4.3",
+    "pptxgenjs": "^4.0.1",
+    "qrcode": "^1.5.4",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "recharts": "^3.10.1"
