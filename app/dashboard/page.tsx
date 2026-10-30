@@ -221,11 +221,16 @@ function RegionTypeTable({
                     const total = record ? keys.reduce((sum, k) => sum + (record[k] ?? 0), 0) : 0;
                     return (
                       <Fragment key={col.key}>
-                        {keys.map((k) => (
-                          <td key={`${col.key}-${k}`} className="px-2 py-2 text-right text-slate-600">
-                            {record?.[k] ?? 0}
-                          </td>
-                        ))}
+                        {keys.map((k) => {
+                          const value = record?.[k] ?? 0;
+                          const pct = total > 0 ? Math.round((value / total) * 100) : 0;
+                          return (
+                            <td key={`${col.key}-${k}`} className="px-2 py-2 text-right text-slate-600 whitespace-nowrap">
+                              {value}
+                              {total > 0 && <span className="text-slate-400"> ({pct}%)</span>}
+                            </td>
+                          );
+                        })}
                         <td className="px-2 py-2 text-right font-medium text-slate-900">
                           {total}
                         </td>
