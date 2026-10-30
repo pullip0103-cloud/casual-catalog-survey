@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -103,18 +103,142 @@ export default function DashboardPage() {
           <p className="text-sm text-slate-500">총 응답 수: {bucket.total}건</p>
 
           <ChartSection title="가. 캐쥬얼 카탈로그 활용 만족도" data={toChartData(bucket.q1a, Q1A_LABELS)} />
+          {scope === "national" && (
+            <RegionTypeTable
+              title="가. 캐쥬얼 카탈로그 활용 만족도"
+              regionNames={regionNames}
+              byRegion={data.byRegion}
+              getRecord={(b) => b.q1a}
+              labels={Q1A_LABELS}
+            />
+          )}
+
           <ChartSection title="나. 현장 도움 여부" data={toChartData(bucket.q1b, Q1B_LABELS)} />
+          {scope === "national" && (
+            <RegionTypeTable
+              title="나. 현장 도움 여부"
+              regionNames={regionNames}
+              byRegion={data.byRegion}
+              getRecord={(b) => b.q1b}
+              labels={Q1B_LABELS}
+            />
+          )}
 
           {(bucket.q1c.hq_decide + bucket.q1c.branch_ratio) > 0 && (
-            <ChartSection title="다. 배포 방식 선호" data={toChartData(bucket.q1c, Q1C_LABELS)} />
+            <>
+              <ChartSection title="다. 배포 방식 선호" data={toChartData(bucket.q1c, Q1C_LABELS)} />
+              {scope === "national" && (
+                <RegionTypeTable
+                  title="다. 배포 방식 선호"
+                  regionNames={regionNames}
+                  byRegion={data.byRegion}
+                  getRecord={(b) => b.q1c}
+                  labels={Q1C_LABELS}
+                />
+              )}
+            </>
           )}
 
           {(bucket.q1cRatio["90_10"] + bucket.q1cRatio["80_20"] + bucket.q1cRatio["70_30"]) > 0 && (
-            <ChartSection title="캐쥬얼 카탈로그 비중 선호" data={toChartData(bucket.q1cRatio, Q1CRATIO_LABELS)} />
+            <>
+              <ChartSection title="캐쥬얼 카탈로그 비중 선호" data={toChartData(bucket.q1cRatio, Q1CRATIO_LABELS)} />
+              {scope === "national" && (
+                <RegionTypeTable
+                  title="캐쥬얼 카탈로그 비중 선호"
+                  regionNames={regionNames}
+                  byRegion={data.byRegion}
+                  getRecord={(b) => b.q1cRatio}
+                  labels={Q1CRATIO_LABELS}
+                />
+              )}
+            </>
           )}
         </div>
       )}
     </main>
+  );
+}
+
+function RegionTypeTable({
+  title,
+  regionNames,
+  byRegion,
+  getRecord,
+  labels,
+}: {
+  title: string;
+  regionNames: string[];
+  byRegion: Record<string, StatsResult>;
+  getRecord: (bucket: StatsBucket) => Record<string, number>;
+  labels: Record<string, string>;
+}) {
+  const keys = Object.keys(labels);
+  const columns: { key: string; label: string; filter: BranchFilter }[] = [
+    { key: "전체", label: "전체", filter: "전체" },
+    { key: "지점", label: "지점", filter: "지점" },
+    { key: "대리점", label: "대리점", filter: "대리점" },
+  ];
+
+  return (
+    <div className="-mt-4">
+      <p className="text-xs text-slate-400 mb-2">{title} — 지역본부별 상세</p>
+      <div className="overflow-x-auto rounded-lg border border-slate-200">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="bg-slate-50 text-slate-500">
+              <th className="px-3 py-2 text-left font-medium">지역본부</th>
+              {columns.map((col) => (
+                <th key={col.key} className="px-3 py-2 text-left font-medium" colSpan={keys.length + 1}>
+                  {col.label}
+                </th>
+              ))}
+            </tr>
+            <tr className="bg-slate-50 text-slate-400">
+              <th className="px-3 py-1"></th>
+              {columns.map((col) => (
+                <Fragment key={col.key}>
+                  {keys.map((k) => (
+                    <th key={`${col.key}-${k}`} className="px-2 py-1 text-right whitespace-nowrap">
+                      {labels[k]}
+                    </th>
+                  ))}
+                  <th className="px-2 py-1 text-right whitespace-nowrap font-medium">
+                    합계
+                  </th>
+                </Fragment>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {regionNames.map((region) => {
+              const result = byRegion[region];
+              return (
+                <tr key={region} className="border-t border-slate-100">
+                  <td className="px-3 py-2 whitespace-nowrap text-slate-700">{region}</td>
+                  {columns.map((col) => {
+                    const bucket = col.filter === "전체" ? result?.all : result?.byBranchType[col.filter];
+                    const record = bucket ? getRecord(bucket) : undefined;
+                    const total = record ? keys.reduce((sum, k) => sum + (record[k] ?? 0), 0) : 0;
+                    return (
+                      <Fragment key={col.key}>
+                        {keys.map((k) => (
+                          <td key={`${col.key}-${k}`} className="px-2 py-2 text-right text-slate-600">
+                            {record?.[k] ?? 0}
+                          </td>
+                        ))}
+                        <td className="px-2 py-2 text-right font-medium text-slate-900">
+                          {total}
+                        </td>
+                      </Fragment>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
 
