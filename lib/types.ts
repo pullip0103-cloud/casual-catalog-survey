@@ -8,16 +8,16 @@ export interface Branch {
   code: string;
 }
 
+export type Awareness = "aware" | "unaware";
 export type Q1A = "good" | "bad" | "other";
-export type Q1B = "helpful" | "not_helpful";
 export type Q1C = "hq_decide" | "branch_ratio";
 export type Q1CRatio = "90_10" | "80_20" | "70_30";
 
 export interface SurveyAnswers {
+  awareness: Awareness;
   q1a: Q1A;
   q1aOther?: string;
-  q1b: Q1B;
-  q1c?: Q1C;
+  q1c: Q1C;
   q1cRatio?: Q1CRatio;
 }
 

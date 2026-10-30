@@ -1,29 +1,32 @@
 import { NextRequest, NextResponse, connection } from "next/server";
 import { adminDb } from "@/lib/firebase/admin";
-import type { Q1A, Q1B, Q1C, Q1CRatio } from "@/lib/types";
+import type { Awareness, Q1A, Q1C, Q1CRatio } from "@/lib/types";
 
 function normalizeCode(raw: string): string {
   return raw.toUpperCase().replace(/[^A-Z0-9가-힣]/g, "");
 }
 
+const AWARENESS_VALUES: Awareness[] = ["aware", "unaware"];
 const Q1A_VALUES: Q1A[] = ["good", "bad", "other"];
-const Q1B_VALUES: Q1B[] = ["helpful", "not_helpful"];
 const Q1C_VALUES: Q1C[] = ["hq_decide", "branch_ratio"];
 const Q1CRATIO_VALUES: Q1CRatio[] = ["90_10", "80_20", "70_30"];
 
 export async function POST(req: NextRequest) {
   await connection();
   const body = await req.json();
-  const { branchId, code, q1a, q1aOther, q1b, q1c, q1cRatio } = body ?? {};
+  const { branchId, code, awareness, q1a, q1aOther, q1c, q1cRatio } = body ?? {};
 
-  if (!branchId || !code || !Q1A_VALUES.includes(q1a) || !Q1B_VALUES.includes(q1b)) {
+  if (
+    !branchId ||
+    !code ||
+    !AWARENESS_VALUES.includes(awareness) ||
+    !Q1A_VALUES.includes(q1a) ||
+    !Q1C_VALUES.includes(q1c)
+  ) {
     return NextResponse.json({ error: "입력값이 올바르지 않습니다." }, { status: 400 });
   }
   if (q1a === "other" && !q1aOther) {
     return NextResponse.json({ error: "기타 의견을 입력해주세요." }, { status: 400 });
-  }
-  if (q1b === "helpful" && !Q1C_VALUES.includes(q1c)) {
-    return NextResponse.json({ error: "다 항목 응답이 올바르지 않습니다." }, { status: 400 });
   }
   if (q1c === "branch_ratio" && !Q1CRATIO_VALUES.includes(q1cRatio)) {
     return NextResponse.json({ error: "비중 선택이 올바르지 않습니다." }, { status: 400 });
@@ -42,15 +45,13 @@ export async function POST(req: NextRequest) {
     region: branch.region,
     branchType: branch.branchType,
     branchName: branch.name,
+    awareness,
     q1a,
-    q1b,
+    q1c,
     createdAt: new Date().toISOString(),
   };
   if (q1a === "other") doc.q1aOther = q1aOther;
-  if (q1b === "helpful") {
-    doc.q1c = q1c;
-    if (q1c === "branch_ratio") doc.q1cRatio = q1cRatio;
-  }
+  if (q1c === "branch_ratio") doc.q1cRatio = q1cRatio;
 
   await adminDb.collection("survey_responses").add(doc);
 

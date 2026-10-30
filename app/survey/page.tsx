@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Q1A, Q1B, Q1C, Q1CRatio, BranchType } from "@/lib/types";
+import type { Awareness, Q1A, Q1C, Q1CRatio, BranchType } from "@/lib/types";
 
 type Step =
   | "intro"
@@ -34,9 +34,9 @@ export default function SurveyPage() {
   const [codeError, setCodeError] = useState<string | null>(null);
   const [verifying, setVerifying] = useState(false);
 
+  const [awareness, setAwareness] = useState<Awareness | null>(null);
   const [q1a, setQ1a] = useState<Q1A | null>(null);
   const [q1aOther, setQ1aOther] = useState("");
-  const [q1b, setQ1b] = useState<Q1B | null>(null);
   const [q1c, setQ1c] = useState<Q1C | null>(null);
   const [q1cRatio, setQ1cRatio] = useState<Q1CRatio | null>(null);
 
@@ -83,13 +83,9 @@ export default function SurveyPage() {
   }
 
   async function handleSubmit() {
-    if (!branchId || !q1a || !q1b) return;
+    if (!branchId || !awareness || !q1a || !q1c) return;
     if (q1a === "other" && !q1aOther.trim()) {
       setSubmitError("기타 의견을 입력해주세요.");
-      return;
-    }
-    if (q1b === "helpful" && !q1c) {
-      setSubmitError("다 항목에 응답해주세요.");
       return;
     }
     if (q1c === "branch_ratio" && !q1cRatio) {
@@ -106,10 +102,10 @@ export default function SurveyPage() {
         body: JSON.stringify({
           branchId,
           code: code.trim(),
+          awareness,
           q1a,
           q1aOther: q1a === "other" ? q1aOther.trim() : undefined,
-          q1b,
-          q1c: q1b === "helpful" ? q1c : undefined,
+          q1c,
           q1cRatio: q1c === "branch_ratio" ? q1cRatio : undefined,
         }),
       });
@@ -258,6 +254,19 @@ export default function SurveyPage() {
                 </div>
               </div>
 
+              <QuestionBlock label="캐쥬얼 카탈로그를 알고 계신가요?">
+                <RadioOption
+                  checked={awareness === "aware"}
+                  onChange={() => setAwareness("aware")}
+                  label="알고 있다"
+                />
+                <RadioOption
+                  checked={awareness === "unaware"}
+                  onChange={() => setAwareness("unaware")}
+                  label="모른다"
+                />
+              </QuestionBlock>
+
               <QuestionBlock label="가. 캐쥬얼 카탈로그를 잘 활용하고 계신가요?">
                 <RadioOption
                   checked={q1a === "good"}
@@ -281,68 +290,49 @@ export default function SurveyPage() {
                 )}
               </QuestionBlock>
 
-              <QuestionBlock label="나. 캐쥬얼 카탈로그는 현장에 도움이 되나요?">
+              <QuestionBlock label="나. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
                 <RadioOption
-                  checked={q1b === "helpful"}
-                  onChange={() => setQ1b("helpful")}
-                  label="도움이 된다. 유지했으면 좋겠다."
-                />
-                <RadioOption
-                  checked={q1b === "not_helpful"}
+                  checked={q1c === "hq_decide"}
                   onChange={() => {
-                    setQ1b("not_helpful");
-                    setQ1c(null);
+                    setQ1c("hq_decide");
                     setQ1cRatio(null);
                   }}
-                  label="도움이 안된다. 차라리 부족하더라도 공식 카탈로그만 쓰게 된다."
+                  label="지금처럼 차종별 예산으로 신청하면, 본사에서 알아서 공식/캐쥬얼 카탈로그 수량을 정해주면 좋겠다."
                 />
+                <RadioOption
+                  checked={q1c === "branch_ratio"}
+                  onChange={() => setQ1c("branch_ratio")}
+                  label="거점마다 캐쥬얼 카탈로그 비중을 정할 수 있으면 좋겠다."
+                />
+                {q1c === "branch_ratio" && (
+                  <div className="mt-3 rounded-lg bg-slate-100 p-4 space-y-2">
+                    <p className="text-xs text-slate-500">
+                      공식 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
+                    </p>
+                    <RadioOption
+                      checked={q1cRatio === "80_20"}
+                      onChange={() => setQ1cRatio("80_20")}
+                      label="현재: 80% : 20% (쏘렌토 100부 신청 시 공식 80부 + 캐쥬얼 80부)"
+                    />
+                    <RadioOption
+                      checked={q1cRatio === "90_10"}
+                      onChange={() => setQ1cRatio("90_10")}
+                      label="선택 1: 90% : 10% (공식 90부 + 캐쥬얼 40부)"
+                    />
+                    <RadioOption
+                      checked={q1cRatio === "70_30"}
+                      onChange={() => setQ1cRatio("70_30")}
+                      label="선택 3: 70% : 30% (공식 70부 + 캐쥬얼 90부)"
+                    />
+                  </div>
+                )}
               </QuestionBlock>
-
-              {q1b === "helpful" && (
-                <QuestionBlock label="다. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
-                  <RadioOption
-                    checked={q1c === "hq_decide"}
-                    onChange={() => {
-                      setQ1c("hq_decide");
-                      setQ1cRatio(null);
-                    }}
-                    label="지금처럼 차종별 예산으로 신청하면, 본사에서 알아서 공식/캐쥬얼 카탈로그 수량을 정해주면 좋겠다."
-                  />
-                  <RadioOption
-                    checked={q1c === "branch_ratio"}
-                    onChange={() => setQ1c("branch_ratio")}
-                    label="거점마다 캐쥬얼 카탈로그 비중을 정할 수 있으면 좋겠다."
-                  />
-                  {q1c === "branch_ratio" && (
-                    <div className="mt-3 rounded-lg bg-slate-100 p-4 space-y-2">
-                      <p className="text-xs text-slate-500">
-                        공식 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
-                      </p>
-                      <RadioOption
-                        checked={q1cRatio === "80_20"}
-                        onChange={() => setQ1cRatio("80_20")}
-                        label="현재: 80% : 20% (쏘렌토 100부 신청 시 공식 80부 + 캐쥬얼 80부)"
-                      />
-                      <RadioOption
-                        checked={q1cRatio === "90_10"}
-                        onChange={() => setQ1cRatio("90_10")}
-                        label="선택 1: 90% : 10% (공식 90부 + 캐쥬얼 40부)"
-                      />
-                      <RadioOption
-                        checked={q1cRatio === "70_30"}
-                        onChange={() => setQ1cRatio("70_30")}
-                        label="선택 3: 70% : 30% (공식 70부 + 캐쥬얼 90부)"
-                      />
-                    </div>
-                  )}
-                </QuestionBlock>
-              )}
 
               {submitError && <p className="text-sm text-red-600">{submitError}</p>}
 
               <button
                 onClick={handleSubmit}
-                disabled={submitting || !q1a || !q1b}
+                disabled={submitting || !awareness || !q1a || !q1c}
                 className="w-full rounded-lg bg-slate-900 px-6 py-3 text-white font-medium hover:bg-slate-700 disabled:opacity-50"
               >
                 {submitting ? "제출 중..." : "제출하기"}

@@ -18,8 +18,8 @@ import type { StatsBucket, StatsResult } from "@/lib/stats";
 
 const COLORS = ["#2563eb", "#f97316", "#64748b", "#16a34a", "#dc2626"];
 
+const AWARENESS_LABELS: Record<string, string> = { aware: "알고 있다", unaware: "모른다" };
 const Q1A_LABELS: Record<string, string> = { good: "좋다", bad: "안좋다", other: "기타" };
-const Q1B_LABELS: Record<string, string> = { helpful: "도움됨", not_helpful: "도움안됨" };
 const Q1C_LABELS: Record<string, string> = { hq_decide: "본사 결정", branch_ratio: "거점별 비중" };
 const Q1CRATIO_LABELS: Record<string, string> = { "90_10": "90:10", "80_20": "80:20(현재)", "70_30": "70:30" };
 
@@ -102,6 +102,17 @@ export default function DashboardPage() {
         <div className="space-y-10">
           <p className="text-sm text-slate-500">총 응답 수: {bucket.total}건</p>
 
+          <ChartSection title="캐쥬얼 카탈로그 인지도" data={toChartData(bucket.awareness, AWARENESS_LABELS)} />
+          {scope === "national" && (
+            <RegionTypeTable
+              title="캐쥬얼 카탈로그 인지도"
+              regionNames={regionNames}
+              byRegion={data.byRegion}
+              getRecord={(b) => b.awareness}
+              labels={AWARENESS_LABELS}
+            />
+          )}
+
           <ChartSection title="가. 캐쥬얼 카탈로그 활용 만족도" data={toChartData(bucket.q1a, Q1A_LABELS)} />
           {scope === "national" && (
             <RegionTypeTable
@@ -113,30 +124,15 @@ export default function DashboardPage() {
             />
           )}
 
-          <ChartSection title="나. 현장 도움 여부" data={toChartData(bucket.q1b, Q1B_LABELS)} />
+          <ChartSection title="나. 배포 방식 선호" data={toChartData(bucket.q1c, Q1C_LABELS)} />
           {scope === "national" && (
             <RegionTypeTable
-              title="나. 현장 도움 여부"
+              title="나. 배포 방식 선호"
               regionNames={regionNames}
               byRegion={data.byRegion}
-              getRecord={(b) => b.q1b}
-              labels={Q1B_LABELS}
+              getRecord={(b) => b.q1c}
+              labels={Q1C_LABELS}
             />
-          )}
-
-          {(bucket.q1c.hq_decide + bucket.q1c.branch_ratio) > 0 && (
-            <>
-              <ChartSection title="다. 배포 방식 선호" data={toChartData(bucket.q1c, Q1C_LABELS)} />
-              {scope === "national" && (
-                <RegionTypeTable
-                  title="다. 배포 방식 선호"
-                  regionNames={regionNames}
-                  byRegion={data.byRegion}
-                  getRecord={(b) => b.q1c}
-                  labels={Q1C_LABELS}
-                />
-              )}
-            </>
           )}
 
           {(bucket.q1cRatio["90_10"] + bucket.q1cRatio["80_20"] + bucket.q1cRatio["70_30"]) > 0 && (

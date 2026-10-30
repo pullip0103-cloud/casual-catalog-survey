@@ -10,8 +10,8 @@ const app = initializeApp({
 });
 const db = getFirestore(app);
 
+const AWARENESS = ["aware", "unaware"];
 const Q1A = ["good", "bad", "other"];
-const Q1B = ["helpful", "not_helpful"];
 const Q1C = ["hq_decide", "branch_ratio"];
 const Q1CRATIO = ["90_10", "80_20", "70_30"];
 
@@ -31,22 +31,22 @@ async function main() {
 
   const batch = db.batch();
   for (const b of sampled) {
+    const awareness = pick(AWARENESS);
     const q1a = pick(Q1A);
-    const q1b = pick(Q1B);
-    const q1c = q1b === "helpful" ? pick(Q1C) : undefined;
+    const q1c = pick(Q1C);
     const q1cRatio = q1c === "branch_ratio" ? pick(Q1CRATIO) : undefined;
 
     const doc = {
       region: b.region,
       branchType: b.branchType,
       branchName: b.name,
+      awareness,
       q1a,
-      q1b,
+      q1c,
       createdAt: new Date().toISOString(),
       __sample: true,
     };
     if (q1a === "other") doc.q1aOther = "샘플 의견입니다.";
-    if (q1c) doc.q1c = q1c;
     if (q1cRatio) doc.q1cRatio = q1cRatio;
 
     const ref = db.collection("survey_responses").doc();
