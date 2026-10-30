@@ -132,31 +132,9 @@ export default function SurveyPage() {
         {step === "intro" && (
           <section className="space-y-6">
             <h1 className="text-xl font-bold">캐쥬얼 카탈로그 설문조사</h1>
-            <div className="rounded-lg bg-white border border-slate-200 p-5 text-sm leading-relaxed text-slate-700 space-y-2">
-              <p className="font-semibold text-slate-900">[캐쥬얼 카탈로그란?]</p>
-              <p>
-                캐쥬얼 카탈로그는 기존 카탈로그의 수량 부족 문제를 해결하기 위해, 상대적으로
-                얇고 적은 페이지수(4페이지)를 통해 비용은 절감하고 수량은 늘린 제작물입니다.
-              </p>
-              <p>
-                정식 카탈로그 1부 비용으로 약 4부의 캐쥬얼 카탈로그를 제작할 수 있습니다
-                (쏘렌토, 카니발, 스포티지 한정).
-              </p>
-              <p>
-                지점에서 쏘렌토 카탈로그 100부만큼의 예산을 신청했다면, 본사에서는 80부의
-                카탈로그만 제작하고, 나머지 20부만큼의 예산으로 캐쥬얼 카탈로그를 80부
-                추가 제작해서 배포합니다.
-              </p>
-              <div className="pt-2">
-                <Image
-                  src="/catalog/sorento-casual-catalog.png"
-                  alt="쏘렌토 캐쥬얼 카탈로그 예시"
-                  width={920}
-                  height={540}
-                  className="w-full rounded-md border border-slate-200"
-                />
-              </div>
-            </div>
+            <p className="text-sm text-slate-500">
+              소속 지역본부와 거점을 선택한 뒤 설문에 응답해주세요.
+            </p>
             <button
               onClick={() => setStep("region")}
               className="w-full rounded-lg bg-slate-900 px-6 py-3 text-white font-medium hover:bg-slate-700"
@@ -254,6 +232,32 @@ export default function SurveyPage() {
             onBack={() => setStep("code")}
           >
             <div className="space-y-8">
+              <div className="rounded-lg bg-white border border-slate-200 p-5 text-sm leading-relaxed text-slate-700 space-y-2">
+                <p className="font-semibold text-slate-900">[캐쥬얼 카탈로그란?]</p>
+                <p>
+                  캐쥬얼 카탈로그는 기존 카탈로그의 수량 부족 문제를 해결하기 위해, 상대적으로
+                  얇고 적은 페이지수(4페이지)를 통해 비용은 절감하고 수량은 늘린 제작물입니다.
+                </p>
+                <p>
+                  정식 카탈로그 1부 비용으로 약 4부의 캐쥬얼 카탈로그를 제작할 수 있습니다
+                  (쏘렌토, 카니발, 스포티지 한정).
+                </p>
+                <p>
+                  지점에서 쏘렌토 카탈로그 100부만큼의 예산을 신청했다면, 본사에서는 80부의
+                  카탈로그만 제작하고, 나머지 20부만큼의 예산으로 캐쥬얼 카탈로그를 80부
+                  추가 제작해서 배포합니다.
+                </p>
+                <div className="pt-2">
+                  <Image
+                    src="/catalog/sorento-casual-catalog.png"
+                    alt="쏘렌토 캐쥬얼 카탈로그 예시"
+                    width={920}
+                    height={540}
+                    className="w-full rounded-md border border-slate-200"
+                  />
+                </div>
+              </div>
+
               <QuestionBlock label="가. 캐쥬얼 카탈로그를 잘 활용하고 계신가요?">
                 <RadioOption
                   checked={q1a === "good"}

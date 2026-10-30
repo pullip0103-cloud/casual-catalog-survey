@@ -16,7 +16,7 @@ const pptx = new pptxgen();
 pptx.defineLayout({ name: "WIDE", width: 13.33, height: 7.5 });
 pptx.layout = "WIDE";
 
-function linkSlide(title, subtitle, url, qrImage, badgeColor) {
+function linkSlide(title, subtitle, url, qrImage) {
   const slide = pptx.addSlide();
   slide.addText(title, {
     x: 0.6, y: 0.6, w: 12.1, h: 0.8,
