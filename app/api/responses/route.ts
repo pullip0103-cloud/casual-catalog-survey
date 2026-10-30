@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, connection } from "next/server";
 import { adminDb } from "@/lib/firebase/admin";
 import type { Q1A, Q1B, Q1C, Q1CRatio } from "@/lib/types";
 
@@ -12,6 +12,7 @@ const Q1C_VALUES: Q1C[] = ["hq_decide", "branch_ratio"];
 const Q1CRATIO_VALUES: Q1CRatio[] = ["90_10", "80_20", "70_30"];
 
 export async function POST(req: NextRequest) {
+  await connection();
   const body = await req.json();
   const { branchId, code, q1a, q1aOther, q1b, q1c, q1cRatio } = body ?? {};
 

@@ -1,9 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, connection } from "next/server";
 import { adminDb } from "@/lib/firebase/admin";
 import type { BranchType } from "@/lib/types";
 
 // 거점 코드는 여기서 클라이언트에 내려주지 않는다 — 코드 검증은 /api/verify-code가 서버에서 처리한다.
 export async function GET(req: NextRequest) {
+  await connection();
   const { searchParams } = new URL(req.url);
   const region = searchParams.get("region");
   const branchType = searchParams.get("branchType") as BranchType | null;

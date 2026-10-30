@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, connection } from "next/server";
 import { adminDb } from "@/lib/firebase/admin";
 
 // 대소문자 구분 없이, 문자/숫자만 비교한다(공백·하이픈 등 기호는 무시).
@@ -7,6 +7,7 @@ function normalizeCode(raw: string): string {
 }
 
 export async function POST(req: NextRequest) {
+  await connection();
   const { branchId, code } = await req.json();
 
   if (!branchId || !code) {
