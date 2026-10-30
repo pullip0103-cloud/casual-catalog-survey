@@ -1,0 +1,3439 @@
+{
+  "regions": [
+    "강원지역본부",
+    "경기지역본부",
+    "경남지역본부",
+    "남부지역본부",
+    "대구경북지역본부",
+    "대전지역본부",
+    "동부지역본부",
+    "부산지역본부",
+    "서부지역본부",
+    "인천지역본부",
+    "전남광주지역본부",
+    "전북지역본부",
+    "충청지역본부"
+  ],
+  "branches": [
+    {
+      "region": "동부지역본부",
+      "name": "강동",
+      "branchType": "지점",
+      "code": "CA1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "강북",
+      "branchType": "지점",
+      "code": "BM1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "광진",
+      "branchType": "지점",
+      "code": "BN1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "구리",
+      "branchType": "지점",
+      "code": "EK1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "구의",
+      "branchType": "지점",
+      "code": "BN2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "길동",
+      "branchType": "지점",
+      "code": "CA2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "남대문",
+      "branchType": "지점",
+      "code": "BA2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "남양주",
+      "branchType": "지점",
+      "code": "EK2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "노원",
+      "branchType": "지점",
+      "code": "BK1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "다산갤러리",
+      "branchType": "지점",
+      "code": "BJ2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "동대문",
+      "branchType": "지점",
+      "code": "BF1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "동두천",
+      "branchType": "지점",
+      "code": "EL2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "별내센트럴",
+      "branchType": "지점",
+      "code": "BG1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "상계",
+      "branchType": "지점",
+      "code": "BK2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "성동",
+      "branchType": "지점",
+      "code": "BI1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "성북중앙",
+      "branchType": "지점",
+      "code": "BJ1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "성수",
+      "branchType": "지점",
+      "code": "BN3"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "신내",
+      "branchType": "지점",
+      "code": "BG3"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "양주",
+      "branchType": "지점",
+      "code": "EL5"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "양평",
+      "branchType": "지점",
+      "code": "EK4"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "왕십리",
+      "branchType": "지점",
+      "code": "BI2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "의정부",
+      "branchType": "지점",
+      "code": "EL1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "의정부동부",
+      "branchType": "지점",
+      "code": "EL4"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "종로",
+      "branchType": "지점",
+      "code": "BB3"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "중랑",
+      "branchType": "지점",
+      "code": "BG2"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "창동",
+      "branchType": "지점",
+      "code": "BH1"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "포천",
+      "branchType": "지점",
+      "code": "EL3"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "DMC수색",
+      "branchType": "지점",
+      "code": "BC1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "가양",
+      "branchType": "지점",
+      "code": "CL1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "개봉",
+      "branchType": "지점",
+      "code": "CI1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "고양",
+      "branchType": "지점",
+      "code": "EA3"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "공항",
+      "branchType": "지점",
+      "code": "CL3"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "구파발역",
+      "branchType": "지점",
+      "code": "BE2"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "당산",
+      "branchType": "지점",
+      "code": "CG1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "마곡센트럴",
+      "branchType": "지점",
+      "code": "CL2"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "마포",
+      "branchType": "지점",
+      "code": "BD1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "목동",
+      "branchType": "지점",
+      "code": "CM1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "백석",
+      "branchType": "지점",
+      "code": "EA7"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "삼송",
+      "branchType": "지점",
+      "code": "BB1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "상암",
+      "branchType": "지점",
+      "code": "BA3"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "신구로",
+      "branchType": "지점",
+      "code": "CI3"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "신길",
+      "branchType": "지점",
+      "code": "CI5"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "신월",
+      "branchType": "지점",
+      "code": "CM2"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "신풍",
+      "branchType": "지점",
+      "code": "CI2"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "여의도",
+      "branchType": "지점",
+      "code": "CG3"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "영등포",
+      "branchType": "지점",
+      "code": "CG4"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "용산",
+      "branchType": "지점",
+      "code": "BL1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "운정",
+      "branchType": "지점",
+      "code": "EA5"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "은평갤러리",
+      "branchType": "지점",
+      "code": "BE1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "일산",
+      "branchType": "지점",
+      "code": "EA1"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "운정중앙",
+      "branchType": "지점",
+      "code": "EA4"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "가락",
+      "branchType": "지점",
+      "code": "CF1"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "강남",
+      "branchType": "지점",
+      "code": "CB2"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "강남영동",
+      "branchType": "지점",
+      "code": "CB1"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "경기광주",
+      "branchType": "지점",
+      "code": "EJ1"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "경기하남",
+      "branchType": "지점",
+      "code": "EJ2"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "금천",
+      "branchType": "지점",
+      "code": "CJ2"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "대치",
+      "branchType": "지점",
+      "code": "CB3"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "대치갤러리",
+      "branchType": "지점",
+      "code": "CB6"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "도곡",
+      "branchType": "지점",
+      "code": "CD6"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "미사",
+      "branchType": "지점",
+      "code": "CA3"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "방배",
+      "branchType": "지점",
+      "code": "CD3"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "분당",
+      "branchType": "지점",
+      "code": "EI4"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "분당중앙",
+      "branchType": "지점",
+      "code": "EI6"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "사당",
+      "branchType": "지점",
+      "code": "CK3"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "서초",
+      "branchType": "지점",
+      "code": "CD4"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "서초남부",
+      "branchType": "지점",
+      "code": "CD5"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "성남",
+      "branchType": "지점",
+      "code": "EI3"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "송파",
+      "branchType": "지점",
+      "code": "CF4"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "압구정",
+      "branchType": "지점",
+      "code": "CB5"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "오금",
+      "branchType": "지점",
+      "code": "CF2"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "위례",
+      "branchType": "지점",
+      "code": "EI1"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "잠실",
+      "branchType": "지점",
+      "code": "CF3"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "판교",
+      "branchType": "지점",
+      "code": "EI5"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "광명",
+      "branchType": "지점",
+      "code": "EC5"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "김포",
+      "branchType": "지점",
+      "code": "EB1"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "부천",
+      "branchType": "지점",
+      "code": "EC1"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "부평",
+      "branchType": "지점",
+      "code": "DC2"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "송도국제",
+      "branchType": "지점",
+      "code": "DE1"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "시흥",
+      "branchType": "지점",
+      "code": "ED5"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "안산",
+      "branchType": "지점",
+      "code": "ED3"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "안산고잔",
+      "branchType": "지점",
+      "code": "ED6"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "안산선부",
+      "branchType": "지점",
+      "code": "ED2"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "역곡",
+      "branchType": "지점",
+      "code": "EC2"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "인천",
+      "branchType": "지점",
+      "code": "DA2"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "인천남동",
+      "branchType": "지점",
+      "code": "DE3"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "중동",
+      "branchType": "지점",
+      "code": "EC3"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "청라루원",
+      "branchType": "지점",
+      "code": "DD1"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "군포",
+      "branchType": "지점",
+      "code": "EE4"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "수원",
+      "branchType": "지점",
+      "code": "EF2"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "동수원",
+      "branchType": "지점",
+      "code": "EG3"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "동탄",
+      "branchType": "지점",
+      "code": "EG2"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "동탄역",
+      "branchType": "지점",
+      "code": "EF3"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "발안",
+      "branchType": "지점",
+      "code": "EG1"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "수지",
+      "branchType": "지점",
+      "code": "EI2"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "신갈",
+      "branchType": "지점",
+      "code": "EG4"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "안양",
+      "branchType": "지점",
+      "code": "EE1"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "안중",
+      "branchType": "지점",
+      "code": "EH2"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "여주",
+      "branchType": "지점",
+      "code": "EJ5"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "용인",
+      "branchType": "지점",
+      "code": "EG5"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "의왕",
+      "branchType": "지점",
+      "code": "DC1"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "이천",
+      "branchType": "지점",
+      "code": "JC1"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "평촌",
+      "branchType": "지점",
+      "code": "EE3"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "평택",
+      "branchType": "지점",
+      "code": "EH1"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "강릉",
+      "branchType": "지점",
+      "code": "FB1"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "동해삼척",
+      "branchType": "지점",
+      "code": "FE1"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "속초",
+      "branchType": "지점",
+      "code": "FB3"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "신강릉",
+      "branchType": "지점",
+      "code": "FB2"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "신춘천",
+      "branchType": "지점",
+      "code": "FA1"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "영월",
+      "branchType": "지점",
+      "code": "FD1"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "원주",
+      "branchType": "지점",
+      "code": "FC1"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "철원",
+      "branchType": "지점",
+      "code": "FG1"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "춘천",
+      "branchType": "지점",
+      "code": "FA2"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "태백",
+      "branchType": "지점",
+      "code": "FD3"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "평창",
+      "branchType": "지점",
+      "code": "FD2"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "홍천",
+      "branchType": "지점",
+      "code": "FF2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "공주",
+      "branchType": "지점",
+      "code": "IA2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "논산",
+      "branchType": "지점",
+      "code": "IB1"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "당진",
+      "branchType": "지점",
+      "code": "ID2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "대전",
+      "branchType": "지점",
+      "code": "HA1"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "대전중구",
+      "branchType": "지점",
+      "code": "HB2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "대천",
+      "branchType": "지점",
+      "code": "IE2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "둔산",
+      "branchType": "지점",
+      "code": "HC1"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "북유성",
+      "branchType": "지점",
+      "code": "HA2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "서산",
+      "branchType": "지점",
+      "code": "IE3"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "서천",
+      "branchType": "지점",
+      "code": "IB3"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "세종",
+      "branchType": "지점",
+      "code": "IC5"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "세종시청갤러리",
+      "branchType": "지점",
+      "code": "HC2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "예산",
+      "branchType": "지점",
+      "code": "ID1"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "옥천",
+      "branchType": "지점",
+      "code": "GC2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "유성",
+      "branchType": "지점",
+      "code": "HD1"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "테크노밸리",
+      "branchType": "지점",
+      "code": "HD2"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "홍성",
+      "branchType": "지점",
+      "code": "IE1"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "남청주",
+      "branchType": "지점",
+      "code": "GA3"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "서청주",
+      "branchType": "지점",
+      "code": "GA2"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "아산",
+      "branchType": "지점",
+      "code": "IC4"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "오창",
+      "branchType": "지점",
+      "code": "GB2"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "음성",
+      "branchType": "지점",
+      "code": "GB3"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "제천",
+      "branchType": "지점",
+      "code": "GE1"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "천안DCS",
+      "branchType": "지점",
+      "code": "IC2"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "청주",
+      "branchType": "지점",
+      "code": "GA1"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "청주강서",
+      "branchType": "지점",
+      "code": "GA4"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "충주",
+      "branchType": "지점",
+      "code": "GD1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "고흥",
+      "branchType": "지점",
+      "code": "LE4"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "광주",
+      "branchType": "지점",
+      "code": "KA1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "나주",
+      "branchType": "지점",
+      "code": "LB1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "목포",
+      "branchType": "지점",
+      "code": "LC1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "서광주",
+      "branchType": "지점",
+      "code": "KC1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "순천",
+      "branchType": "지점",
+      "code": "LE1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "여수",
+      "branchType": "지점",
+      "code": "LG1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "여천",
+      "branchType": "지점",
+      "code": "LG2"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "용봉",
+      "branchType": "지점",
+      "code": "KA4"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "진도",
+      "branchType": "지점",
+      "code": "LC5"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "하남갤러리",
+      "branchType": "지점",
+      "code": "KE2"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "해남",
+      "branchType": "지점",
+      "code": "LC4"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "화순",
+      "branchType": "지점",
+      "code": "LA3"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "군산",
+      "branchType": "지점",
+      "code": "JC4"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "군산수송",
+      "branchType": "지점",
+      "code": "JC3"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "김제",
+      "branchType": "지점",
+      "code": "JC6"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "효천",
+      "branchType": "지점",
+      "code": "JA3"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "송천",
+      "branchType": "지점",
+      "code": "JA2"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "익산",
+      "branchType": "지점",
+      "code": "EJ3"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "전주",
+      "branchType": "지점",
+      "code": "JA6"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "전주서부",
+      "branchType": "지점",
+      "code": "JA1"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "정읍",
+      "branchType": "지점",
+      "code": "JE1"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "진안",
+      "branchType": "지점",
+      "code": "JB2"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "동제주",
+      "branchType": "지점",
+      "code": "TA1"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "서귀포",
+      "branchType": "지점",
+      "code": "TB2"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "신제주",
+      "branchType": "지점",
+      "code": "TA2"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "제주",
+      "branchType": "지점",
+      "code": "TA3"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "한림",
+      "branchType": "지점",
+      "code": "TC1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "대구",
+      "branchType": "지점",
+      "code": "MA1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "대구강북",
+      "branchType": "지점",
+      "code": "MC3"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "동대구",
+      "branchType": "지점",
+      "code": "MF1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "복현",
+      "branchType": "지점",
+      "code": "MF2"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "성서",
+      "branchType": "지점",
+      "code": "MD3"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "시지센트럴",
+      "branchType": "지점",
+      "code": "MF3"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "신월성",
+      "branchType": "지점",
+      "code": "MD4"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "화원",
+      "branchType": "지점",
+      "code": "NA1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "황금",
+      "branchType": "지점",
+      "code": "ME1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "경산",
+      "branchType": "지점",
+      "code": "NA2"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "경주",
+      "branchType": "지점",
+      "code": "NG1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "구미",
+      "branchType": "지점",
+      "code": "NB1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "김천",
+      "branchType": "지점",
+      "code": "NC1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "문경",
+      "branchType": "지점",
+      "code": "NC3"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "상주",
+      "branchType": "지점",
+      "code": "NC2"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "안동",
+      "branchType": "지점",
+      "code": "NE1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "영덕",
+      "branchType": "지점",
+      "code": "NE3"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "영주",
+      "branchType": "지점",
+      "code": "ND1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "영천",
+      "branchType": "지점",
+      "code": "NF1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "왜관",
+      "branchType": "지점",
+      "code": "NA3"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "의성",
+      "branchType": "지점",
+      "code": "NE4"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "포항",
+      "branchType": "지점",
+      "code": "NH3"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "포항남부",
+      "branchType": "지점",
+      "code": "NH1"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "포항서부",
+      "branchType": "지점",
+      "code": "NH2"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "가야",
+      "branchType": "지점",
+      "code": "PK1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "강서명지",
+      "branchType": "지점",
+      "code": "PC1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "구포",
+      "branchType": "지점",
+      "code": "PL1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "금정",
+      "branchType": "지점",
+      "code": "PG2"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "남산",
+      "branchType": "지점",
+      "code": "PG3"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "부산중앙",
+      "branchType": "지점",
+      "code": "PA1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "대연",
+      "branchType": "지점",
+      "code": "PF1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "동래",
+      "branchType": "지점",
+      "code": "PH1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "동부산",
+      "branchType": "지점",
+      "code": "PG1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "부산시청갤러리",
+      "branchType": "지점",
+      "code": "PK3"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "사상",
+      "branchType": "지점",
+      "code": "PM1"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "서면",
+      "branchType": "지점",
+      "code": "PK2"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "서부산",
+      "branchType": "지점",
+      "code": "PC4"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "장림",
+      "branchType": "지점",
+      "code": "PC2"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "해운대",
+      "branchType": "지점",
+      "code": "PI1"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "거제",
+      "branchType": "지점",
+      "code": "SD2"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "거창",
+      "branchType": "지점",
+      "code": "SG1"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "김해",
+      "branchType": "지점",
+      "code": "SA1"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "김해서부",
+      "branchType": "지점",
+      "code": "SA5"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "남해",
+      "branchType": "지점",
+      "code": "SE6"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "마산",
+      "branchType": "지점",
+      "code": "SB1"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "밀양",
+      "branchType": "지점",
+      "code": "SA4"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "사천",
+      "branchType": "지점",
+      "code": "SE3"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "양산",
+      "branchType": "지점",
+      "code": "SA2"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "울산",
+      "branchType": "지점",
+      "code": "SH2"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "울산동부",
+      "branchType": "지점",
+      "code": "SH4"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "울산중부",
+      "branchType": "지점",
+      "code": "SH3"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "울산중앙",
+      "branchType": "지점",
+      "code": "SH1"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "웅상",
+      "branchType": "지점",
+      "code": "SA3"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "진주",
+      "branchType": "지점",
+      "code": "SE2"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "진해",
+      "branchType": "지점",
+      "code": "SC3"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "창녕",
+      "branchType": "지점",
+      "code": "SB3"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "창원중앙",
+      "branchType": "지점",
+      "code": "SC2"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "하동",
+      "branchType": "지점",
+      "code": "SE5"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "벽제",
+      "branchType": "대리점",
+      "code": "DBB1951"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "증산",
+      "branchType": "대리점",
+      "code": "DBC1954"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "원",
+      "branchType": "대리점",
+      "code": "DBA3951"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "서강",
+      "branchType": "대리점",
+      "code": "DBA3952"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "연신내",
+      "branchType": "대리점",
+      "code": "DBE1953"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "문화촌",
+      "branchType": "대리점",
+      "code": "DBE1955"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "역촌",
+      "branchType": "대리점",
+      "code": "DBE2957"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "이태원",
+      "branchType": "대리점",
+      "code": "DBL1956"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "선유로",
+      "branchType": "대리점",
+      "code": "DCG1951"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "양화",
+      "branchType": "대리점",
+      "code": "DCG4954"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "선진",
+      "branchType": "대리점",
+      "code": "DCI1950"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "가리봉테크노",
+      "branchType": "대리점",
+      "code": "DCI2951"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "구로역",
+      "branchType": "대리점",
+      "code": "DCI3954"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "다온",
+      "branchType": "대리점",
+      "code": "DCI1952"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "보라매",
+      "branchType": "대리점",
+      "code": "DCI5958"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "서광",
+      "branchType": "대리점",
+      "code": "DCI5959"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "양서",
+      "branchType": "대리점",
+      "code": "DCL2956"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "남부법원",
+      "branchType": "대리점",
+      "code": "DCM1956"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "신화",
+      "branchType": "대리점",
+      "code": "DCM2952"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "신정",
+      "branchType": "대리점",
+      "code": "DCM2953"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "정발산",
+      "branchType": "대리점",
+      "code": "DEA1954"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "탄현",
+      "branchType": "대리점",
+      "code": "DEA1957"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "창조",
+      "branchType": "대리점",
+      "code": "DEA3951"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "은빛",
+      "branchType": "대리점",
+      "code": "DEA4950"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "능곡",
+      "branchType": "대리점",
+      "code": "DEA4952"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "봉일천",
+      "branchType": "대리점",
+      "code": "DEA5951"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "교하",
+      "branchType": "대리점",
+      "code": "DEA5952"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "금촌제일",
+      "branchType": "대리점",
+      "code": "DEA5953"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "통일",
+      "branchType": "대리점",
+      "code": "DEA4953"
+    },
+    {
+      "region": "서부지역본부",
+      "name": "백마",
+      "branchType": "대리점",
+      "code": "DEA7950"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "우리들",
+      "branchType": "대리점",
+      "code": "DCB6954"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "역삼",
+      "branchType": "대리점",
+      "code": "DCD4960"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "동산로",
+      "branchType": "대리점",
+      "code": "DCD6950"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "삼전",
+      "branchType": "대리점",
+      "code": "DCF3951"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "샬롬",
+      "branchType": "대리점",
+      "code": "DCF4954"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "토리",
+      "branchType": "대리점",
+      "code": "DCJ2950"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "독산",
+      "branchType": "대리점",
+      "code": "DCJ2954"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "가산",
+      "branchType": "대리점",
+      "code": "DCJ2953"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "대림",
+      "branchType": "대리점",
+      "code": "DCK3954"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "숭실대",
+      "branchType": "대리점",
+      "code": "DCK3953"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "태평역",
+      "branchType": "대리점",
+      "code": "DEI1951"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "대원",
+      "branchType": "대리점",
+      "code": "DEI1954"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "온누리",
+      "branchType": "대리점",
+      "code": "DEI3960"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "오리",
+      "branchType": "대리점",
+      "code": "DEI4950"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "동서",
+      "branchType": "대리점",
+      "code": "DEI4952"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "탑",
+      "branchType": "대리점",
+      "code": "DEI5952"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "서현",
+      "branchType": "대리점",
+      "code": "DEI6950"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "경안",
+      "branchType": "대리점",
+      "code": "DEJ1950"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "곤지암",
+      "branchType": "대리점",
+      "code": "DEJ1951"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "태전",
+      "branchType": "대리점",
+      "code": "DEJ1953"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "행복",
+      "branchType": "대리점",
+      "code": "DEJ2951"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "장충",
+      "branchType": "대리점",
+      "code": "DBA2952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "을지로",
+      "branchType": "대리점",
+      "code": "DBA2957"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "마석",
+      "branchType": "대리점",
+      "code": "DBG1952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "진건",
+      "branchType": "대리점",
+      "code": "DBG1953"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "오남",
+      "branchType": "대리점",
+      "code": "DBG1954"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "좋은차",
+      "branchType": "대리점",
+      "code": "DBG2951"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "상봉",
+      "branchType": "대리점",
+      "code": "DBG2952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "동일로",
+      "branchType": "대리점",
+      "code": "DBG3950"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "묵동",
+      "branchType": "대리점",
+      "code": "DBG3952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "쌍문",
+      "branchType": "대리점",
+      "code": "DBH1950"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "한마음",
+      "branchType": "대리점",
+      "code": "DBH1953"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "방학",
+      "branchType": "대리점",
+      "code": "DBH1954"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "정릉",
+      "branchType": "대리점",
+      "code": "DBJ1953"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "장위",
+      "branchType": "대리점",
+      "code": "DBJ1954"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "돈암",
+      "branchType": "대리점",
+      "code": "DBJ1955"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "마들",
+      "branchType": "대리점",
+      "code": "DBK1952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "하계",
+      "branchType": "대리점",
+      "code": "DBK2958"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "수유",
+      "branchType": "대리점",
+      "code": "DBM1951"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "우이",
+      "branchType": "대리점",
+      "code": "DBM1952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "중곡",
+      "branchType": "대리점",
+      "code": "DBN2950"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "둔촌",
+      "branchType": "대리점",
+      "code": "DCA1950"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "영파",
+      "branchType": "대리점",
+      "code": "DCA1956"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "명일",
+      "branchType": "대리점",
+      "code": "DCA2950"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "고덕",
+      "branchType": "대리점",
+      "code": "DCA2952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "교문",
+      "branchType": "대리점",
+      "code": "DEK1950"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "인창",
+      "branchType": "대리점",
+      "code": "DEK1952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "청평",
+      "branchType": "대리점",
+      "code": "DEK4952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "가능",
+      "branchType": "대리점",
+      "code": "DEL1954"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "내행",
+      "branchType": "대리점",
+      "code": "DEL2950"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "전곡",
+      "branchType": "대리점",
+      "code": "DEL2952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "송우",
+      "branchType": "대리점",
+      "code": "DEL3952"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "송산",
+      "branchType": "대리점",
+      "code": "DEL4951"
+    },
+    {
+      "region": "동부지역본부",
+      "name": "회천",
+      "branchType": "대리점",
+      "code": "DEL5950"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "남주안",
+      "branchType": "대리점",
+      "code": "DDA2953"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "용현",
+      "branchType": "대리점",
+      "code": "DDA2955"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "영종",
+      "branchType": "대리점",
+      "code": "DDA2956"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "청천",
+      "branchType": "대리점",
+      "code": "DDC2959"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "산곡",
+      "branchType": "대리점",
+      "code": "DDC2961"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "검단",
+      "branchType": "대리점",
+      "code": "DDD1950"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "가정",
+      "branchType": "대리점",
+      "code": "DDD1951"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "구월선수촌",
+      "branchType": "대리점",
+      "code": "DDE1952"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "학익",
+      "branchType": "대리점",
+      "code": "DDE1953"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "법원",
+      "branchType": "대리점",
+      "code": "DDE1954"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "간석",
+      "branchType": "대리점",
+      "code": "DDE3951"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "간석사거리",
+      "branchType": "대리점",
+      "code": "DDE3952"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "동막",
+      "branchType": "대리점",
+      "code": "DDE3950"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "송도",
+      "branchType": "대리점",
+      "code": "DDE1955"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "삼산",
+      "branchType": "대리점",
+      "code": "DDC2962"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "계향",
+      "branchType": "대리점",
+      "code": "DDD1952"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "금파",
+      "branchType": "대리점",
+      "code": "DEB1950"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "사우",
+      "branchType": "대리점",
+      "code": "DEB1951"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "양촌",
+      "branchType": "대리점",
+      "code": "DEB1952"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "역전",
+      "branchType": "대리점",
+      "code": "DEC1967"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "여월",
+      "branchType": "대리점",
+      "code": "DEC1969"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "대장신도시",
+      "branchType": "대리점",
+      "code": "DEC1970"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "송내",
+      "branchType": "대리점",
+      "code": "DEC2953"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "심곡",
+      "branchType": "대리점",
+      "code": "DEC3950"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "소하",
+      "branchType": "대리점",
+      "code": "DEC5951"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "일직",
+      "branchType": "대리점",
+      "code": "DEC5953"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "비제이",
+      "branchType": "대리점",
+      "code": "DED2953"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "성호",
+      "branchType": "대리점",
+      "code": "DED2956"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "대경중앙",
+      "branchType": "대리점",
+      "code": "DED3951"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "해수",
+      "branchType": "대리점",
+      "code": "DED3955"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "상록수",
+      "branchType": "대리점",
+      "code": "DED3956"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "자동차마을",
+      "branchType": "대리점",
+      "code": "DED3967"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "제일",
+      "branchType": "대리점",
+      "code": "DED5950"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "남광",
+      "branchType": "대리점",
+      "code": "DED6954"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "고잔들",
+      "branchType": "대리점",
+      "code": "DED6955"
+    },
+    {
+      "region": "인천지역본부",
+      "name": "축복",
+      "branchType": "대리점",
+      "code": "DED3969"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "박달",
+      "branchType": "대리점",
+      "code": "DEE1950"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "석수",
+      "branchType": "대리점",
+      "code": "DEE1953"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "평촌중앙",
+      "branchType": "대리점",
+      "code": "DEE1954"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "인덕원역",
+      "branchType": "대리점",
+      "code": "DEE3953"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "남태령",
+      "branchType": "대리점",
+      "code": "DEE3955"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "산본",
+      "branchType": "대리점",
+      "code": "DEE4950"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "명성",
+      "branchType": "대리점",
+      "code": "DEF2950"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "영광제일",
+      "branchType": "대리점",
+      "code": "DEF2951"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "성대",
+      "branchType": "대리점",
+      "code": "DEF2954"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "한일",
+      "branchType": "대리점",
+      "code": "DEF2955"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "남양",
+      "branchType": "대리점",
+      "code": "DEG1952"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "봉담",
+      "branchType": "대리점",
+      "code": "DEG1953"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "병점",
+      "branchType": "대리점",
+      "code": "DEG2950"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "청솔",
+      "branchType": "대리점",
+      "code": "DEG2952"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "진위",
+      "branchType": "대리점",
+      "code": "DEG2953"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "원천",
+      "branchType": "대리점",
+      "code": "DEG3950"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "망포",
+      "branchType": "대리점",
+      "code": "DEG3951"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "효원",
+      "branchType": "대리점",
+      "code": "DEG3953"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "화서",
+      "branchType": "대리점",
+      "code": "DEG3954"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "노벨",
+      "branchType": "대리점",
+      "code": "DEG3955"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "호매실",
+      "branchType": "대리점",
+      "code": "DEG3956"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "강남대",
+      "branchType": "대리점",
+      "code": "DEG4952"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "구성",
+      "branchType": "대리점",
+      "code": "DEG4957"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "친절",
+      "branchType": "대리점",
+      "code": "DEG5954"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "이동",
+      "branchType": "대리점",
+      "code": "DEG5955"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "신평",
+      "branchType": "대리점",
+      "code": "DEH1950"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "비룡",
+      "branchType": "대리점",
+      "code": "DEH1954"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "안평",
+      "branchType": "대리점",
+      "code": "DEH1955"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "서정",
+      "branchType": "대리점",
+      "code": "DEH1952"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "풍덕천",
+      "branchType": "대리점",
+      "code": "DEI2953"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "동백",
+      "branchType": "대리점",
+      "code": "DEI2954"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "여흥",
+      "branchType": "대리점",
+      "code": "DEJ5952"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "행복한",
+      "branchType": "대리점",
+      "code": "DJC1951"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "우리",
+      "branchType": "대리점",
+      "code": "DJC1952"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "만천",
+      "branchType": "대리점",
+      "code": "DFA1954"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "봄내",
+      "branchType": "대리점",
+      "code": "DFA2955"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "율곡",
+      "branchType": "대리점",
+      "code": "DFB2952"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "청초",
+      "branchType": "대리점",
+      "code": "DFB3955"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "모아",
+      "branchType": "대리점",
+      "code": "DFC1956"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "대석",
+      "branchType": "대리점",
+      "code": "DFC1954"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "서원",
+      "branchType": "대리점",
+      "code": "DFC1955"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "아리별",
+      "branchType": "대리점",
+      "code": "DFD1953"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "동계",
+      "branchType": "대리점",
+      "code": "DFD2950"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "새천년",
+      "branchType": "대리점",
+      "code": "DFE1950"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "이사부",
+      "branchType": "대리점",
+      "code": "DFE1952"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "기평",
+      "branchType": "대리점",
+      "code": "DFF2951"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "엘리트",
+      "branchType": "대리점",
+      "code": "DFF2950"
+    },
+    {
+      "region": "강원지역본부",
+      "name": "태봉",
+      "branchType": "대리점",
+      "code": "DFG1950"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "보청",
+      "branchType": "대리점",
+      "code": "DGC2950"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "관성",
+      "branchType": "대리점",
+      "code": "DGC2952"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "판암",
+      "branchType": "대리점",
+      "code": "DHA1958"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "한밭",
+      "branchType": "대리점",
+      "code": "DHA1960"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "일등",
+      "branchType": "대리점",
+      "code": "DHA1961"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "용문역",
+      "branchType": "대리점",
+      "code": "DHB2958"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "도마",
+      "branchType": "대리점",
+      "code": "DHB2959"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "금삼",
+      "branchType": "대리점",
+      "code": "DHB2960"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "문화",
+      "branchType": "대리점",
+      "code": "DHB2961"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "유승",
+      "branchType": "대리점",
+      "code": "DHD1957"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "관저",
+      "branchType": "대리점",
+      "code": "DHD1958"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "신세계",
+      "branchType": "대리점",
+      "code": "DHD1959"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "신관",
+      "branchType": "대리점",
+      "code": "DIA2952"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "대룡",
+      "branchType": "대리점",
+      "code": "DIB1955"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "백제",
+      "branchType": "대리점",
+      "code": "DIB1956"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "서해",
+      "branchType": "대리점",
+      "code": "DIB3951"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "도원",
+      "branchType": "대리점",
+      "code": "DIC5952"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "예당",
+      "branchType": "대리점",
+      "code": "DID1952"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "송악",
+      "branchType": "대리점",
+      "code": "DID2950"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "해나루",
+      "branchType": "대리점",
+      "code": "DID2951"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "홍주",
+      "branchType": "대리점",
+      "code": "DIE1950"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "칠갑",
+      "branchType": "대리점",
+      "code": "DIE1952"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "서령",
+      "branchType": "대리점",
+      "code": "DIE3951"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "한서",
+      "branchType": "대리점",
+      "code": "DIE3952"
+    },
+    {
+      "region": "대전지역본부",
+      "name": "열린",
+      "branchType": "대리점",
+      "code": "DIE3953"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "직지",
+      "branchType": "대리점",
+      "code": "DGA1954"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "하나",
+      "branchType": "대리점",
+      "code": "DGA1959"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "내덕",
+      "branchType": "대리점",
+      "code": "DGA2950"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "조은",
+      "branchType": "대리점",
+      "code": "DGA2958"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "서원",
+      "branchType": "대리점",
+      "code": "DGA3956"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "가경",
+      "branchType": "대리점",
+      "code": "DGA4950"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "봉명",
+      "branchType": "대리점",
+      "code": "DGA4952"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "금왕혁신",
+      "branchType": "대리점",
+      "code": "DGB3952"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "교현",
+      "branchType": "대리점",
+      "code": "DGD1954"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "중원",
+      "branchType": "대리점",
+      "code": "DGD1958"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "장락",
+      "branchType": "대리점",
+      "code": "DGE1951"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "의림",
+      "branchType": "대리점",
+      "code": "DGE1952"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "도전",
+      "branchType": "대리점",
+      "code": "DGE1953"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "두정",
+      "branchType": "대리점",
+      "code": "DIC2950"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "도솔",
+      "branchType": "대리점",
+      "code": "DIC2955"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "천일",
+      "branchType": "대리점",
+      "code": "DIC3952"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "온천",
+      "branchType": "대리점",
+      "code": "DIC4951"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "번영로",
+      "branchType": "대리점",
+      "code": "DIC6953"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "일봉",
+      "branchType": "대리점",
+      "code": "DIC6954"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "양산제일",
+      "branchType": "대리점",
+      "code": "DKA1953"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "오치",
+      "branchType": "대리점",
+      "code": "DKA4950"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "무등",
+      "branchType": "대리점",
+      "code": "DKA4953"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "예향",
+      "branchType": "대리점",
+      "code": "DKC1957"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "스마트",
+      "branchType": "대리점",
+      "code": "DKC1958"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "광남",
+      "branchType": "대리점",
+      "code": "DKC1952"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "무진",
+      "branchType": "대리점",
+      "code": "DKC1953"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "동림",
+      "branchType": "대리점",
+      "code": "DKC1954"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "신시청",
+      "branchType": "대리점",
+      "code": "DKC1955"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "상무",
+      "branchType": "대리점",
+      "code": "DKC1956"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "빛고을",
+      "branchType": "대리점",
+      "code": "DKC1961"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "광서",
+      "branchType": "대리점",
+      "code": "DKC1959"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "가나",
+      "branchType": "대리점",
+      "code": "DKC1960"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "호남",
+      "branchType": "대리점",
+      "code": "DKE2953"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "탐진",
+      "branchType": "대리점",
+      "code": "DLC1957"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "굿모닝",
+      "branchType": "대리점",
+      "code": "DLC1953"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "하당",
+      "branchType": "대리점",
+      "code": "DLC1954"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "청해",
+      "branchType": "대리점",
+      "code": "DLC1955"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "초당",
+      "branchType": "대리점",
+      "code": "DLC1956"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "땅끝",
+      "branchType": "대리점",
+      "code": "DLC4953"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "연향",
+      "branchType": "대리점",
+      "code": "DLE1951"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "봉화",
+      "branchType": "대리점",
+      "code": "DLE1952"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "벌교",
+      "branchType": "대리점",
+      "code": "DLE1954"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "신광",
+      "branchType": "대리점",
+      "code": "DLE1955"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "중마",
+      "branchType": "대리점",
+      "code": "DLE1956"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "동명",
+      "branchType": "대리점",
+      "code": "DLE1970"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "문수",
+      "branchType": "대리점",
+      "code": "DLG1954"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "오케이",
+      "branchType": "대리점",
+      "code": "DLG2950"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "한라",
+      "branchType": "대리점",
+      "code": "DTA1952"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "오성",
+      "branchType": "대리점",
+      "code": "DTA2954"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "삼화",
+      "branchType": "대리점",
+      "code": "DTA3955"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "마한",
+      "branchType": "대리점",
+      "code": "DEJ3950"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "드림",
+      "branchType": "대리점",
+      "code": "DJA1951"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "사랑",
+      "branchType": "대리점",
+      "code": "DJA1953"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "호남",
+      "branchType": "대리점",
+      "code": "DJA2953"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "아중",
+      "branchType": "대리점",
+      "code": "DJA3951"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "광한루",
+      "branchType": "대리점",
+      "code": "DJA3953"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "전일",
+      "branchType": "대리점",
+      "code": "DJA3954"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "서신",
+      "branchType": "대리점",
+      "code": "DJA6952"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "덕유",
+      "branchType": "대리점",
+      "code": "DJB2952"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "부송",
+      "branchType": "대리점",
+      "code": "DJC2951"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "신동",
+      "branchType": "대리점",
+      "code": "DJC2952"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "출세",
+      "branchType": "대리점",
+      "code": "DJC3951"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "금강",
+      "branchType": "대리점",
+      "code": "DJC4951"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "지평선",
+      "branchType": "대리점",
+      "code": "DJC6952"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "새만금",
+      "branchType": "대리점",
+      "code": "DJC6956"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "정주",
+      "branchType": "대리점",
+      "code": "DJE1950"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "차사랑",
+      "branchType": "대리점",
+      "code": "DJE1952"
+    },
+    {
+      "region": "전북지역본부",
+      "name": "선운",
+      "branchType": "대리점",
+      "code": "DJE1953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "대명",
+      "branchType": "대리점",
+      "code": "DMA1955"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "동서변",
+      "branchType": "대리점",
+      "code": "DMA1957"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "학정",
+      "branchType": "대리점",
+      "code": "DMC3953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "비산",
+      "branchType": "대리점",
+      "code": "DMC3954"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "죽전역",
+      "branchType": "대리점",
+      "code": "DMA1956"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "계명",
+      "branchType": "대리점",
+      "code": "DMD3950"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "용산",
+      "branchType": "대리점",
+      "code": "DMD3953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "월배",
+      "branchType": "대리점",
+      "code": "DMD4951"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "본리",
+      "branchType": "대리점",
+      "code": "DMD4952"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "혁신",
+      "branchType": "대리점",
+      "code": "DMF3951"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "대봉",
+      "branchType": "대리점",
+      "code": "DMF2954"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "동진",
+      "branchType": "대리점",
+      "code": "DNA1954"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "성암",
+      "branchType": "대리점",
+      "code": "DNA2952"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "영대",
+      "branchType": "대리점",
+      "code": "DNA2953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "아름다운",
+      "branchType": "대리점",
+      "code": "DNA3953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "대가야",
+      "branchType": "대리점",
+      "code": "DNA3955"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "구미공단",
+      "branchType": "대리점",
+      "code": "DNB1950"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "금오산",
+      "branchType": "대리점",
+      "code": "DNB1955"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "인동",
+      "branchType": "대리점",
+      "code": "DNB1956"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "김천부곡",
+      "branchType": "대리점",
+      "code": "DNC1953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "경도",
+      "branchType": "대리점",
+      "code": "DNC3953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "시청앞",
+      "branchType": "대리점",
+      "code": "DND1951"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "영화",
+      "branchType": "대리점",
+      "code": "DNF1953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "경안",
+      "branchType": "대리점",
+      "code": "DNE1952"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "용상",
+      "branchType": "대리점",
+      "code": "DNE1954"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "충효",
+      "branchType": "대리점",
+      "code": "DNG1952"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "해동",
+      "branchType": "대리점",
+      "code": "DNG2950"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "영일대",
+      "branchType": "대리점",
+      "code": "DNH1954"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "영포",
+      "branchType": "대리점",
+      "code": "DNH1955"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "대한",
+      "branchType": "대리점",
+      "code": "DNH1970"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "형산",
+      "branchType": "대리점",
+      "code": "DNH2953"
+    },
+    {
+      "region": "대구경북지역본부",
+      "name": "한동",
+      "branchType": "대리점",
+      "code": "DNH3958"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "대신",
+      "branchType": "대리점",
+      "code": "DPA1950"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "광복로",
+      "branchType": "대리점",
+      "code": "DPA1952"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "용호",
+      "branchType": "대리점",
+      "code": "DPF1958"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "부곡",
+      "branchType": "대리점",
+      "code": "DPG2952"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "노포",
+      "branchType": "대리점",
+      "code": "DPG3951"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "거제",
+      "branchType": "대리점",
+      "code": "DPH1955"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "송정역",
+      "branchType": "대리점",
+      "code": "DPI1954"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "강변",
+      "branchType": "대리점",
+      "code": "DPK1951"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "부암",
+      "branchType": "대리점",
+      "code": "DPK2951"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "연산",
+      "branchType": "대리점",
+      "code": "DPK3952"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "낙민",
+      "branchType": "대리점",
+      "code": "DPK3953"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "낙동",
+      "branchType": "대리점",
+      "code": "DPL1951"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "구명역",
+      "branchType": "대리점",
+      "code": "DPL1952"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "엄궁",
+      "branchType": "대리점",
+      "code": "DPM1958"
+    },
+    {
+      "region": "부산지역본부",
+      "name": "에덴",
+      "branchType": "대리점",
+      "code": "DPI1955"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "삼문",
+      "branchType": "대리점",
+      "code": "DSA4950"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "장유",
+      "branchType": "대리점",
+      "code": "DSA5950"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "무학",
+      "branchType": "대리점",
+      "code": "DSB1953"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "가고파",
+      "branchType": "대리점",
+      "code": "DSB1954"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "신기",
+      "branchType": "대리점",
+      "code": "DSB1955"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "칠원",
+      "branchType": "대리점",
+      "code": "DSB1956"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "가음정",
+      "branchType": "대리점",
+      "code": "DSC2954"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "마창",
+      "branchType": "대리점",
+      "code": "DSC2950"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "동창",
+      "branchType": "대리점",
+      "code": "DSC2952"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "도계",
+      "branchType": "대리점",
+      "code": "DSC2953"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "경화",
+      "branchType": "대리점",
+      "code": "DSC3952"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "진성",
+      "branchType": "대리점",
+      "code": "DSD2954"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "충무",
+      "branchType": "대리점",
+      "code": "DSD2953"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "옥포",
+      "branchType": "대리점",
+      "code": "DSD2951"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "상동",
+      "branchType": "대리점",
+      "code": "DSD2952"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "하대",
+      "branchType": "대리점",
+      "code": "DSE2956"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "신평",
+      "branchType": "대리점",
+      "code": "DSE2955"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "가나",
+      "branchType": "대리점",
+      "code": "DSE3951"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "섬가람",
+      "branchType": "대리점",
+      "code": "DSE5951"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "황강",
+      "branchType": "대리점",
+      "code": "DSG1951"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "산음",
+      "branchType": "대리점",
+      "code": "DSG2950"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "달동",
+      "branchType": "대리점",
+      "code": "DSH1951"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "한신",
+      "branchType": "대리점",
+      "code": "DSH1952"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "신정",
+      "branchType": "대리점",
+      "code": "DSH2950"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "온산",
+      "branchType": "대리점",
+      "code": "DSH2956"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "병영",
+      "branchType": "대리점",
+      "code": "DSH3950"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "언양",
+      "branchType": "대리점",
+      "code": "DSH2959"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "다운",
+      "branchType": "대리점",
+      "code": "DSH2958"
+    },
+    {
+      "region": "남부지역본부",
+      "name": "봉천역",
+      "branchType": "대리점",
+      "code": "DCJ2955"
+    },
+    {
+      "region": "충청지역본부",
+      "name": "신방",
+      "branchType": "대리점",
+      "code": "DIC2956"
+    },
+    {
+      "region": "전남광주지역본부",
+      "name": "일림",
+      "branchType": "대리점",
+      "code": "DLE1957"
+    },
+    {
+      "region": "경남지역본부",
+      "name": "원지",
+      "branchType": "대리점",
+      "code": "DSE2957"
+    },
+    {
+      "region": "경기지역본부",
+      "name": "여흥",
+      "branchType": "대리점",
+      "code": "DJC1954"
+    }
+  ]
+}

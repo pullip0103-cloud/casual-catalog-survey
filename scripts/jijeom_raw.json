@@ -1,0 +1,1381 @@
+[
+ {
+  "region": "동부",
+  "name": "강동",
+  "code": "CA1",
+  "staff": "6"
+ },
+ {
+  "region": "동부",
+  "name": "강북",
+  "code": "BM1",
+  "staff": "14"
+ },
+ {
+  "region": "동부",
+  "name": "광진",
+  "code": "BN1",
+  "staff": "4"
+ },
+ {
+  "region": "동부",
+  "name": "구리",
+  "code": "EK1",
+  "staff": "9"
+ },
+ {
+  "region": "동부",
+  "name": "구의",
+  "code": "BN2",
+  "staff": "3"
+ },
+ {
+  "region": "동부",
+  "name": "길동",
+  "code": "CA2",
+  "staff": "7"
+ },
+ {
+  "region": "동부",
+  "name": "남대문",
+  "code": "BA2",
+  "staff": "3"
+ },
+ {
+  "region": "동부",
+  "name": "남양주",
+  "code": "EK2",
+  "staff": "10"
+ },
+ {
+  "region": "동부",
+  "name": "노원",
+  "code": "BK1",
+  "staff": "8"
+ },
+ {
+  "region": "동부",
+  "name": "다산갤러리",
+  "code": "BJ2",
+  "staff": "11"
+ },
+ {
+  "region": "동부",
+  "name": "동대문",
+  "code": "BF1",
+  "staff": "6"
+ },
+ {
+  "region": "동부",
+  "name": "동두천",
+  "code": "EL2",
+  "staff": "6"
+ },
+ {
+  "region": "동부",
+  "name": "별내센트럴",
+  "code": "BG1",
+  "staff": "14"
+ },
+ {
+  "region": "동부",
+  "name": "상계",
+  "code": "BK2",
+  "staff": "10"
+ },
+ {
+  "region": "동부",
+  "name": "성동",
+  "code": "BI1",
+  "staff": "5"
+ },
+ {
+  "region": "동부",
+  "name": "성북중앙",
+  "code": "BJ1",
+  "staff": "8"
+ },
+ {
+  "region": "동부",
+  "name": "성수",
+  "code": "BN3",
+  "staff": "9"
+ },
+ {
+  "region": "동부",
+  "name": "신내",
+  "code": "BG3",
+  "staff": "11"
+ },
+ {
+  "region": "동부",
+  "name": "양주",
+  "code": "EL5",
+  "staff": "9"
+ },
+ {
+  "region": "동부",
+  "name": "양평",
+  "code": "EK4",
+  "staff": "5"
+ },
+ {
+  "region": "동부",
+  "name": "왕십리",
+  "code": "BI2",
+  "staff": "5"
+ },
+ {
+  "region": "동부",
+  "name": "의정부",
+  "code": "EL1",
+  "staff": "8"
+ },
+ {
+  "region": "동부",
+  "name": "의정부동부",
+  "code": "EL4",
+  "staff": "11"
+ },
+ {
+  "region": "동부",
+  "name": "종로",
+  "code": "BB3",
+  "staff": "5"
+ },
+ {
+  "region": "동부",
+  "name": "중랑",
+  "code": "BG2",
+  "staff": "8"
+ },
+ {
+  "region": "동부",
+  "name": "창동",
+  "code": "BH1",
+  "staff": "7"
+ },
+ {
+  "region": "동부",
+  "name": "포천",
+  "code": "EL3",
+  "staff": "5"
+ },
+ {
+  "region": "서부",
+  "name": "DMC수색",
+  "code": "BC1",
+  "staff": "4"
+ },
+ {
+  "region": "서부",
+  "name": "가양",
+  "code": "CL1",
+  "staff": "12"
+ },
+ {
+  "region": "서부",
+  "name": "개봉",
+  "code": "CI1",
+  "staff": "4"
+ },
+ {
+  "region": "서부",
+  "name": "고양",
+  "code": "EA3",
+  "staff": "8"
+ },
+ {
+  "region": "서부",
+  "name": "공항",
+  "code": "CL3",
+  "staff": "6"
+ },
+ {
+  "region": "서부",
+  "name": "구파발역",
+  "code": "BE2",
+  "staff": "5"
+ },
+ {
+  "region": "서부",
+  "name": "당산",
+  "code": "CG1",
+  "staff": "2"
+ },
+ {
+  "region": "서부",
+  "name": "마곡센트럴",
+  "code": "CL2",
+  "staff": "8"
+ },
+ {
+  "region": "서부",
+  "name": "마포",
+  "code": "BD1",
+  "staff": "7"
+ },
+ {
+  "region": "서부",
+  "name": "목동",
+  "code": "CM1",
+  "staff": "5"
+ },
+ {
+  "region": "서부",
+  "name": "백석",
+  "code": "EA7",
+  "staff": "8"
+ },
+ {
+  "region": "서부",
+  "name": "삼송",
+  "code": "BB1",
+  "staff": "12"
+ },
+ {
+  "region": "서부",
+  "name": "상암",
+  "code": "BA3",
+  "staff": "23"
+ },
+ {
+  "region": "서부",
+  "name": "신구로",
+  "code": "CI3",
+  "staff": "7"
+ },
+ {
+  "region": "서부",
+  "name": "신길",
+  "code": "CI5",
+  "staff": "5"
+ },
+ {
+  "region": "서부",
+  "name": "신월",
+  "code": "CM2",
+  "staff": "10"
+ },
+ {
+  "region": "서부",
+  "name": "신풍",
+  "code": "CI2",
+  "staff": "8"
+ },
+ {
+  "region": "서부",
+  "name": "여의도",
+  "code": "CG3",
+  "staff": "7"
+ },
+ {
+  "region": "서부",
+  "name": "영등포",
+  "code": "CG4",
+  "staff": "4"
+ },
+ {
+  "region": "서부",
+  "name": "용산",
+  "code": "BL1",
+  "staff": "6"
+ },
+ {
+  "region": "서부",
+  "name": "운정",
+  "code": "EA5",
+  "staff": "7"
+ },
+ {
+  "region": "서부",
+  "name": "은평갤러리",
+  "code": "BE1",
+  "staff": "9"
+ },
+ {
+  "region": "서부",
+  "name": "일산",
+  "code": "EA1",
+  "staff": "8"
+ },
+ {
+  "region": "서부",
+  "name": "운정중앙",
+  "code": "EA4",
+  "staff": "17"
+ },
+ {
+  "region": "남부",
+  "name": "가락",
+  "code": "CF1",
+  "staff": "7"
+ },
+ {
+  "region": "남부",
+  "name": "강남",
+  "code": "CB2",
+  "staff": "6"
+ },
+ {
+  "region": "남부",
+  "name": "강남영동",
+  "code": "CB1",
+  "staff": "8"
+ },
+ {
+  "region": "남부",
+  "name": "경기광주",
+  "code": "EJ1",
+  "staff": "7"
+ },
+ {
+  "region": "남부",
+  "name": "경기하남",
+  "code": "EJ2",
+  "staff": "4"
+ },
+ {
+  "region": "남부",
+  "name": "금천",
+  "code": "CJ2",
+  "staff": "21"
+ },
+ {
+  "region": "남부",
+  "name": "대치",
+  "code": "CB3",
+  "staff": "3"
+ },
+ {
+  "region": "남부",
+  "name": "대치갤러리",
+  "code": "CB6",
+  "staff": "9"
+ },
+ {
+  "region": "남부",
+  "name": "도곡",
+  "code": "CD6",
+  "staff": "8"
+ },
+ {
+  "region": "남부",
+  "name": "미사",
+  "code": "CA3",
+  "staff": "11"
+ },
+ {
+  "region": "남부",
+  "name": "방배",
+  "code": "CD3",
+  "staff": "10"
+ },
+ {
+  "region": "남부",
+  "name": "분당",
+  "code": "EI4",
+  "staff": "7"
+ },
+ {
+  "region": "남부",
+  "name": "분당중앙",
+  "code": "EI6",
+  "staff": "6"
+ },
+ {
+  "region": "남부",
+  "name": "사당",
+  "code": "CK3",
+  "staff": "7"
+ },
+ {
+  "region": "남부",
+  "name": "서초",
+  "code": "CD4",
+  "staff": "8"
+ },
+ {
+  "region": "남부",
+  "name": "서초남부",
+  "code": "CD5",
+  "staff": "13"
+ },
+ {
+  "region": "남부",
+  "name": "성남",
+  "code": "EI3",
+  "staff": "5"
+ },
+ {
+  "region": "남부",
+  "name": "송파",
+  "code": "CF4",
+  "staff": "10"
+ },
+ {
+  "region": "남부",
+  "name": "압구정",
+  "code": "CB5",
+  "staff": "9"
+ },
+ {
+  "region": "남부",
+  "name": "오금",
+  "code": "CF2",
+  "staff": "6"
+ },
+ {
+  "region": "남부",
+  "name": "위례",
+  "code": "EI1",
+  "staff": "8"
+ },
+ {
+  "region": "남부",
+  "name": "잠실",
+  "code": "CF3",
+  "staff": "7"
+ },
+ {
+  "region": "남부",
+  "name": "판교",
+  "code": "EI5",
+  "staff": "11"
+ },
+ {
+  "region": "인천",
+  "name": "광명",
+  "code": "EC5",
+  "staff": "8"
+ },
+ {
+  "region": "인천",
+  "name": "김포",
+  "code": "EB1",
+  "staff": "16"
+ },
+ {
+  "region": "인천",
+  "name": "부천",
+  "code": "EC1",
+  "staff": "11"
+ },
+ {
+  "region": "인천",
+  "name": "부평",
+  "code": "DC2",
+  "staff": "16"
+ },
+ {
+  "region": "인천",
+  "name": "송도국제",
+  "code": "DE1",
+  "staff": "19"
+ },
+ {
+  "region": "인천",
+  "name": "시흥",
+  "code": "ED5",
+  "staff": "5"
+ },
+ {
+  "region": "인천",
+  "name": "안산",
+  "code": "ED3",
+  "staff": "5"
+ },
+ {
+  "region": "인천",
+  "name": "안산고잔",
+  "code": "ED6",
+  "staff": "3"
+ },
+ {
+  "region": "인천",
+  "name": "안산선부",
+  "code": "ED2",
+  "staff": "7"
+ },
+ {
+  "region": "인천",
+  "name": "역곡",
+  "code": "EC2",
+  "staff": "8"
+ },
+ {
+  "region": "인천",
+  "name": "인천",
+  "code": "DA2",
+  "staff": "12"
+ },
+ {
+  "region": "인천",
+  "name": "인천남동",
+  "code": "DE3",
+  "staff": "16"
+ },
+ {
+  "region": "인천",
+  "name": "중동",
+  "code": "EC3",
+  "staff": "5"
+ },
+ {
+  "region": "인천",
+  "name": "청라루원",
+  "code": "DD1",
+  "staff": "22"
+ },
+ {
+  "region": "경기",
+  "name": "군포",
+  "code": "EE4",
+  "staff": "8"
+ },
+ {
+  "region": "경기",
+  "name": "수원",
+  "code": "EF2",
+  "staff": "11"
+ },
+ {
+  "region": "경기",
+  "name": "동수원",
+  "code": "EG3",
+  "staff": "10"
+ },
+ {
+  "region": "경기",
+  "name": "동탄",
+  "code": "EG2",
+  "staff": "12"
+ },
+ {
+  "region": "경기",
+  "name": "동탄역",
+  "code": "EF3",
+  "staff": "11"
+ },
+ {
+  "region": "경기",
+  "name": "발안",
+  "code": "EG1",
+  "staff": "6"
+ },
+ {
+  "region": "경기",
+  "name": "수지",
+  "code": "EI2",
+  "staff": "4"
+ },
+ {
+  "region": "경기",
+  "name": "신갈",
+  "code": "EG4",
+  "staff": "6"
+ },
+ {
+  "region": "경기",
+  "name": "안양",
+  "code": "EE1",
+  "staff": "13"
+ },
+ {
+  "region": "경기",
+  "name": "안중",
+  "code": "EH2",
+  "staff": "4"
+ },
+ {
+  "region": "경기",
+  "name": "여주",
+  "code": "EJ5",
+  "staff": "5"
+ },
+ {
+  "region": "경기",
+  "name": "용인",
+  "code": "EG5",
+  "staff": "6"
+ },
+ {
+  "region": "경기",
+  "name": "의왕",
+  "code": "DC1",
+  "staff": "10"
+ },
+ {
+  "region": "경기",
+  "name": "이천",
+  "code": "JC1",
+  "staff": "12"
+ },
+ {
+  "region": "경기",
+  "name": "평촌",
+  "code": "EE3",
+  "staff": "8"
+ },
+ {
+  "region": "경기",
+  "name": "평택",
+  "code": "EH1",
+  "staff": "16"
+ },
+ {
+  "region": "강원",
+  "name": "강릉",
+  "code": "FB1",
+  "staff": "9"
+ },
+ {
+  "region": "강원",
+  "name": "동해삼척",
+  "code": "FE1",
+  "staff": "11"
+ },
+ {
+  "region": "강원",
+  "name": "속초",
+  "code": "FB3",
+  "staff": "12"
+ },
+ {
+  "region": "강원",
+  "name": "신강릉",
+  "code": "FB2",
+  "staff": "10"
+ },
+ {
+  "region": "강원",
+  "name": "신춘천",
+  "code": "FA1",
+  "staff": "12"
+ },
+ {
+  "region": "강원",
+  "name": "영월",
+  "code": "FD1",
+  "staff": "3"
+ },
+ {
+  "region": "강원",
+  "name": "원주",
+  "code": "FC1",
+  "staff": "15"
+ },
+ {
+  "region": "강원",
+  "name": "철원",
+  "code": "FG1",
+  "staff": "2"
+ },
+ {
+  "region": "강원",
+  "name": "춘천",
+  "code": "FA2",
+  "staff": "9"
+ },
+ {
+  "region": "강원",
+  "name": "태백",
+  "code": "FD3",
+  "staff": "7"
+ },
+ {
+  "region": "강원",
+  "name": "평창",
+  "code": "FD2",
+  "staff": "2"
+ },
+ {
+  "region": "강원",
+  "name": "홍천",
+  "code": "FF2",
+  "staff": "11"
+ },
+ {
+  "region": "대전",
+  "name": "공주",
+  "code": "IA2",
+  "staff": "9"
+ },
+ {
+  "region": "대전",
+  "name": "논산",
+  "code": "IB1",
+  "staff": "5"
+ },
+ {
+  "region": "대전",
+  "name": "당진",
+  "code": "ID2",
+  "staff": "3"
+ },
+ {
+  "region": "대전",
+  "name": "대전",
+  "code": "HA1",
+  "staff": "9"
+ },
+ {
+  "region": "대전",
+  "name": "대전중구",
+  "code": "HB2",
+  "staff": "8"
+ },
+ {
+  "region": "대전",
+  "name": "대천",
+  "code": "IE2",
+  "staff": "3"
+ },
+ {
+  "region": "대전",
+  "name": "둔산",
+  "code": "HC1",
+  "staff": "8"
+ },
+ {
+  "region": "대전",
+  "name": "북유성",
+  "code": "HA2",
+  "staff": "6"
+ },
+ {
+  "region": "대전",
+  "name": "서산",
+  "code": "IE3",
+  "staff": "8"
+ },
+ {
+  "region": "대전",
+  "name": "서천",
+  "code": "IB3",
+  "staff": "2"
+ },
+ {
+  "region": "대전",
+  "name": "세종",
+  "code": "IC5",
+  "staff": "12"
+ },
+ {
+  "region": "대전",
+  "name": "세종시청갤러리",
+  "code": "HC2",
+  "staff": "8"
+ },
+ {
+  "region": "대전",
+  "name": "예산",
+  "code": "ID1",
+  "staff": "5"
+ },
+ {
+  "region": "대전",
+  "name": "옥천",
+  "code": "GC2",
+  "staff": "3"
+ },
+ {
+  "region": "대전",
+  "name": "유성",
+  "code": "HD1",
+  "staff": "12"
+ },
+ {
+  "region": "대전",
+  "name": "테크노밸리",
+  "code": "HD2",
+  "staff": "11"
+ },
+ {
+  "region": "대전",
+  "name": "홍성",
+  "code": "IE1",
+  "staff": "7"
+ },
+ {
+  "region": "충청",
+  "name": "남청주",
+  "code": "GA3",
+  "staff": "5"
+ },
+ {
+  "region": "충청",
+  "name": "서청주",
+  "code": "GA2",
+  "staff": "3"
+ },
+ {
+  "region": "충청",
+  "name": "아산",
+  "code": "IC4",
+  "staff": "6"
+ },
+ {
+  "region": "충청",
+  "name": "오창",
+  "code": "GB2",
+  "staff": "7"
+ },
+ {
+  "region": "충청",
+  "name": "음성",
+  "code": "GB3",
+  "staff": "4"
+ },
+ {
+  "region": "충청",
+  "name": "제천",
+  "code": "GE1",
+  "staff": "8"
+ },
+ {
+  "region": "충청",
+  "name": "천안DCS",
+  "code": "IC2",
+  "staff": "20"
+ },
+ {
+  "region": "충청",
+  "name": "청주",
+  "code": "GA1",
+  "staff": "7"
+ },
+ {
+  "region": "충청",
+  "name": "청주강서",
+  "code": "GA4",
+  "staff": "4"
+ },
+ {
+  "region": "충청",
+  "name": "충주",
+  "code": "GD1",
+  "staff": "13"
+ },
+ {
+  "region": "전남광주",
+  "name": "고흥",
+  "code": "LE4",
+  "staff": "3"
+ },
+ {
+  "region": "전남광주",
+  "name": "광주",
+  "code": "KA1",
+  "staff": "10"
+ },
+ {
+  "region": "전남광주",
+  "name": "나주",
+  "code": "LB1",
+  "staff": "4"
+ },
+ {
+  "region": "전남광주",
+  "name": "목포",
+  "code": "LC1",
+  "staff": "11"
+ },
+ {
+  "region": "전남광주",
+  "name": "서광주",
+  "code": "KC1",
+  "staff": "16"
+ },
+ {
+  "region": "전남광주",
+  "name": "순천",
+  "code": "LE1",
+  "staff": "6"
+ },
+ {
+  "region": "전남광주",
+  "name": "여수",
+  "code": "LG1",
+  "staff": "6"
+ },
+ {
+  "region": "전남광주",
+  "name": "여천",
+  "code": "LG2",
+  "staff": "4"
+ },
+ {
+  "region": "전남광주",
+  "name": "용봉",
+  "code": "KA4",
+  "staff": "5"
+ },
+ {
+  "region": "전남광주",
+  "name": "진도",
+  "code": "LC5",
+  "staff": "4"
+ },
+ {
+  "region": "전남광주",
+  "name": "하남갤러리",
+  "code": "KE2",
+  "staff": "12"
+ },
+ {
+  "region": "전남광주",
+  "name": "해남",
+  "code": "LC4",
+  "staff": "5"
+ },
+ {
+  "region": "전남광주",
+  "name": "화순",
+  "code": "LA3",
+  "staff": "2"
+ },
+ {
+  "region": "전북",
+  "name": "군산",
+  "code": "JC4",
+  "staff": "5"
+ },
+ {
+  "region": "전북",
+  "name": "군산수송",
+  "code": "JC3",
+  "staff": "8"
+ },
+ {
+  "region": "전북",
+  "name": "김제",
+  "code": "JC6",
+  "staff": "7"
+ },
+ {
+  "region": "전북",
+  "name": "효천",
+  "code": "JA3",
+  "staff": "14"
+ },
+ {
+  "region": "전북",
+  "name": "송천",
+  "code": "JA2",
+  "staff": "9"
+ },
+ {
+  "region": "전북",
+  "name": "익산",
+  "code": "EJ3",
+  "staff": "16"
+ },
+ {
+  "region": "전북",
+  "name": "전주",
+  "code": "JA6",
+  "staff": "9"
+ },
+ {
+  "region": "전북",
+  "name": "전주서부",
+  "code": "JA1",
+  "staff": "12"
+ },
+ {
+  "region": "전북",
+  "name": "정읍",
+  "code": "JE1",
+  "staff": "10"
+ },
+ {
+  "region": "전북",
+  "name": "진안",
+  "code": "JB2",
+  "staff": "5"
+ },
+ {
+  "region": "전남광주",
+  "name": "동제주",
+  "code": "TA1",
+  "staff": "6"
+ },
+ {
+  "region": "전남광주",
+  "name": "서귀포",
+  "code": "TB2",
+  "staff": "7"
+ },
+ {
+  "region": "전남광주",
+  "name": "신제주",
+  "code": "TA2",
+  "staff": "10"
+ },
+ {
+  "region": "전남광주",
+  "name": "제주",
+  "code": "TA3",
+  "staff": "10"
+ },
+ {
+  "region": "전남광주",
+  "name": "한림",
+  "code": "TC1",
+  "staff": "4"
+ },
+ {
+  "region": "대구경북",
+  "name": "대구",
+  "code": "MA1",
+  "staff": "17"
+ },
+ {
+  "region": "대구경북",
+  "name": "대구강북",
+  "code": "MC3",
+  "staff": "14"
+ },
+ {
+  "region": "대구경북",
+  "name": "동대구",
+  "code": "MF1",
+  "staff": "12"
+ },
+ {
+  "region": "대구경북",
+  "name": "복현",
+  "code": "MF2",
+  "staff": "9"
+ },
+ {
+  "region": "대구경북",
+  "name": "성서",
+  "code": "MD3",
+  "staff": "7"
+ },
+ {
+  "region": "대구경북",
+  "name": "시지센트럴",
+  "code": "MF3",
+  "staff": "13"
+ },
+ {
+  "region": "대구경북",
+  "name": "신월성",
+  "code": "MD4",
+  "staff": "9"
+ },
+ {
+  "region": "대구경북",
+  "name": "화원",
+  "code": "NA1",
+  "staff": "5"
+ },
+ {
+  "region": "대구경북",
+  "name": "황금",
+  "code": "ME1",
+  "staff": "9"
+ },
+ {
+  "region": "대구경북",
+  "name": "경산",
+  "code": "NA2",
+  "staff": "5"
+ },
+ {
+  "region": "대구경북",
+  "name": "경주",
+  "code": "NG1",
+  "staff": "11"
+ },
+ {
+  "region": "대구경북",
+  "name": "구미",
+  "code": "NB1",
+  "staff": "16"
+ },
+ {
+  "region": "대구경북",
+  "name": "김천",
+  "code": "NC1",
+  "staff": "5"
+ },
+ {
+  "region": "대구경북",
+  "name": "문경",
+  "code": "NC3",
+  "staff": "5"
+ },
+ {
+  "region": "대구경북",
+  "name": "상주",
+  "code": "NC2",
+  "staff": "5"
+ },
+ {
+  "region": "대구경북",
+  "name": "안동",
+  "code": "NE1",
+  "staff": "9"
+ },
+ {
+  "region": "대구경북",
+  "name": "영덕",
+  "code": "NE3",
+  "staff": "2"
+ },
+ {
+  "region": "대구경북",
+  "name": "영주",
+  "code": "ND1",
+  "staff": "6"
+ },
+ {
+  "region": "대구경북",
+  "name": "영천",
+  "code": "NF1",
+  "staff": "3"
+ },
+ {
+  "region": "대구경북",
+  "name": "왜관",
+  "code": "NA3",
+  "staff": "4"
+ },
+ {
+  "region": "대구경북",
+  "name": "의성",
+  "code": "NE4",
+  "staff": "7"
+ },
+ {
+  "region": "대구경북",
+  "name": "포항",
+  "code": "NH3",
+  "staff": "8"
+ },
+ {
+  "region": "대구경북",
+  "name": "포항남부",
+  "code": "NH1",
+  "staff": "9"
+ },
+ {
+  "region": "대구경북",
+  "name": "포항서부",
+  "code": "NH2",
+  "staff": "7"
+ },
+ {
+  "region": "부산",
+  "name": "가야",
+  "code": "PK1",
+  "staff": "6"
+ },
+ {
+  "region": "부산",
+  "name": "강서명지",
+  "code": "PC1",
+  "staff": "8"
+ },
+ {
+  "region": "부산",
+  "name": "구포",
+  "code": "PL1",
+  "staff": "11"
+ },
+ {
+  "region": "부산",
+  "name": "금정",
+  "code": "PG2",
+  "staff": "8"
+ },
+ {
+  "region": "부산",
+  "name": "남산",
+  "code": "PG3",
+  "staff": "7"
+ },
+ {
+  "region": "부산",
+  "name": "부산중앙",
+  "code": "PA1",
+  "staff": "20"
+ },
+ {
+  "region": "부산",
+  "name": "대연",
+  "code": "PF1",
+  "staff": "13"
+ },
+ {
+  "region": "부산",
+  "name": "동래",
+  "code": "PH1",
+  "staff": "8"
+ },
+ {
+  "region": "부산",
+  "name": "동부산",
+  "code": "PG1",
+  "staff": "4"
+ },
+ {
+  "region": "부산",
+  "name": "부산시청갤러리",
+  "code": "PK3",
+  "staff": "12"
+ },
+ {
+  "region": "부산",
+  "name": "사상",
+  "code": "PM1",
+  "staff": "11"
+ },
+ {
+  "region": "부산",
+  "name": "서면",
+  "code": "PK2",
+  "staff": "9"
+ },
+ {
+  "region": "부산",
+  "name": "서부산",
+  "code": "PC4",
+  "staff": "8"
+ },
+ {
+  "region": "부산",
+  "name": "장림",
+  "code": "PC2",
+  "staff": "10"
+ },
+ {
+  "region": "부산",
+  "name": "해운대",
+  "code": "PI1",
+  "staff": "8"
+ },
+ {
+  "region": "경남",
+  "name": "거제",
+  "code": "SD2",
+  "staff": "9"
+ },
+ {
+  "region": "경남",
+  "name": "거창",
+  "code": "SG1",
+  "staff": "6"
+ },
+ {
+  "region": "경남",
+  "name": "김해",
+  "code": "SA1",
+  "staff": "9"
+ },
+ {
+  "region": "경남",
+  "name": "김해서부",
+  "code": "SA5",
+  "staff": "12"
+ },
+ {
+  "region": "경남",
+  "name": "남해",
+  "code": "SE6",
+  "staff": "4"
+ },
+ {
+  "region": "경남",
+  "name": "마산",
+  "code": "SB1",
+  "staff": "19"
+ },
+ {
+  "region": "경남",
+  "name": "밀양",
+  "code": "SA4",
+  "staff": "6"
+ },
+ {
+  "region": "경남",
+  "name": "사천",
+  "code": "SE3",
+  "staff": "6"
+ },
+ {
+  "region": "경남",
+  "name": "양산",
+  "code": "SA2",
+  "staff": "10"
+ },
+ {
+  "region": "경남",
+  "name": "울산",
+  "code": "SH2",
+  "staff": "12"
+ },
+ {
+  "region": "경남",
+  "name": "울산동부",
+  "code": "SH4",
+  "staff": "9"
+ },
+ {
+  "region": "경남",
+  "name": "울산중부",
+  "code": "SH3",
+  "staff": "7"
+ },
+ {
+  "region": "경남",
+  "name": "울산중앙",
+  "code": "SH1",
+  "staff": "8"
+ },
+ {
+  "region": "경남",
+  "name": "웅상",
+  "code": "SA3",
+  "staff": "5"
+ },
+ {
+  "region": "경남",
+  "name": "진주",
+  "code": "SE2",
+  "staff": "20"
+ },
+ {
+  "region": "경남",
+  "name": "진해",
+  "code": "SC3",
+  "staff": "11"
+ },
+ {
+  "region": "경남",
+  "name": "창녕",
+  "code": "SB3",
+  "staff": "3"
+ },
+ {
+  "region": "경남",
+  "name": "창원중앙",
+  "code": "SC2",
+  "staff": "14"
+ },
+ {
+  "region": "경남",
+  "name": "하동",
+  "code": "SE5",
+  "staff": "3"
+ },
+ {
+  "region": "거점 개수",
+  "name": "229",
+  "code": "1917"
+ }
+]

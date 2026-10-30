@@ -1,0 +1,1707 @@
+[
+ {
+  "region": "서부",
+  "name": "벽제",
+  "code": "DBB1951"
+ },
+ {
+  "region": "서부",
+  "name": "증산",
+  "code": "DBC1954"
+ },
+ {
+  "region": "서부",
+  "name": "원",
+  "code": "DBA3951"
+ },
+ {
+  "region": "서부",
+  "name": "서강",
+  "code": "DBA3952"
+ },
+ {
+  "region": "서부",
+  "name": "연신내",
+  "code": "DBE1953"
+ },
+ {
+  "region": "서부",
+  "name": "문화촌",
+  "code": "DBE1955"
+ },
+ {
+  "region": "서부",
+  "name": "역촌",
+  "code": "DBE2957"
+ },
+ {
+  "region": "서부",
+  "name": "이태원",
+  "code": "DBL1956"
+ },
+ {
+  "region": "서부",
+  "name": "선유로",
+  "code": "DCG1951"
+ },
+ {
+  "region": "서부",
+  "name": "양화",
+  "code": "DCG4954"
+ },
+ {
+  "region": "서부",
+  "name": "선진",
+  "code": "DCI1950"
+ },
+ {
+  "region": "서부",
+  "name": "가리봉테크노",
+  "code": "DCI2951"
+ },
+ {
+  "region": "서부",
+  "name": "구로역",
+  "code": "DCI3954"
+ },
+ {
+  "region": "서부",
+  "name": "다온",
+  "code": "DCI1952"
+ },
+ {
+  "region": "서부",
+  "name": "보라매",
+  "code": "DCI5958"
+ },
+ {
+  "region": "서부",
+  "name": "서광",
+  "code": "DCI5959"
+ },
+ {
+  "region": "서부",
+  "name": "양서",
+  "code": "DCL2956"
+ },
+ {
+  "region": "서부",
+  "name": "남부법원",
+  "code": "DCM1956"
+ },
+ {
+  "region": "서부",
+  "name": "신화",
+  "code": "DCM2952"
+ },
+ {
+  "region": "서부",
+  "name": "신정",
+  "code": "DCM2953"
+ },
+ {
+  "region": "서부",
+  "name": "정발산",
+  "code": "DEA1954"
+ },
+ {
+  "region": "서부",
+  "name": "탄현",
+  "code": "DEA1957"
+ },
+ {
+  "region": "서부",
+  "name": "창조",
+  "code": "DEA3951"
+ },
+ {
+  "region": "서부",
+  "name": "은빛",
+  "code": "DEA4950"
+ },
+ {
+  "region": "서부",
+  "name": "능곡",
+  "code": "DEA4952"
+ },
+ {
+  "region": "서부",
+  "name": "봉일천",
+  "code": "DEA5951"
+ },
+ {
+  "region": "서부",
+  "name": "교하",
+  "code": "DEA5952"
+ },
+ {
+  "region": "서부",
+  "name": "금촌제일",
+  "code": "DEA5953"
+ },
+ {
+  "region": "서부",
+  "name": "통일",
+  "code": "DEA4953"
+ },
+ {
+  "region": "서부",
+  "name": "백마",
+  "code": "DEA7950"
+ },
+ {
+  "region": "남부",
+  "name": "우리들",
+  "code": "DCB6954"
+ },
+ {
+  "region": "남부",
+  "name": "역삼",
+  "code": "DCD4960"
+ },
+ {
+  "region": "남부",
+  "name": "동산로",
+  "code": "DCD6950"
+ },
+ {
+  "region": "남부",
+  "name": "삼전",
+  "code": "DCF3951"
+ },
+ {
+  "region": "남부",
+  "name": "샬롬",
+  "code": "DCF4954"
+ },
+ {
+  "region": "남부",
+  "name": "토리",
+  "code": "DCJ2950"
+ },
+ {
+  "region": "남부",
+  "name": "독산",
+  "code": "DCJ2954"
+ },
+ {
+  "region": "남부",
+  "name": "가산",
+  "code": "DCJ2953"
+ },
+ {
+  "region": "남부",
+  "name": "대림",
+  "code": "DCK3954"
+ },
+ {
+  "region": "남부",
+  "name": "숭실대",
+  "code": "DCK3953"
+ },
+ {
+  "region": "남부",
+  "name": "태평역",
+  "code": "DEI1951"
+ },
+ {
+  "region": "남부",
+  "name": "대원",
+  "code": "DEI1954"
+ },
+ {
+  "region": "남부",
+  "name": "온누리",
+  "code": "DEI3960"
+ },
+ {
+  "region": "남부",
+  "name": "오리",
+  "code": "DEI4950"
+ },
+ {
+  "region": "남부",
+  "name": "동서",
+  "code": "DEI4952"
+ },
+ {
+  "region": "남부",
+  "name": "탑",
+  "code": "DEI5952"
+ },
+ {
+  "region": "남부",
+  "name": "서현",
+  "code": "DEI6950"
+ },
+ {
+  "region": "남부",
+  "name": "경안",
+  "code": "DEJ1950"
+ },
+ {
+  "region": "남부",
+  "name": "곤지암",
+  "code": "DEJ1951"
+ },
+ {
+  "region": "남부",
+  "name": "태전",
+  "code": "DEJ1953"
+ },
+ {
+  "region": "남부",
+  "name": "행복",
+  "code": "DEJ2951"
+ },
+ {
+  "region": "동부",
+  "name": "장충",
+  "code": "DBA2952"
+ },
+ {
+  "region": "동부",
+  "name": "을지로",
+  "code": "DBA2957"
+ },
+ {
+  "region": "동부",
+  "name": "마석",
+  "code": "DBG1952"
+ },
+ {
+  "region": "동부",
+  "name": "진건",
+  "code": "DBG1953"
+ },
+ {
+  "region": "동부",
+  "name": "오남",
+  "code": "DBG1954"
+ },
+ {
+  "region": "동부",
+  "name": "좋은차",
+  "code": "DBG2951"
+ },
+ {
+  "region": "동부",
+  "name": "상봉",
+  "code": "DBG2952"
+ },
+ {
+  "region": "동부",
+  "name": "동일로",
+  "code": "DBG3950"
+ },
+ {
+  "region": "동부",
+  "name": "묵동",
+  "code": "DBG3952"
+ },
+ {
+  "region": "동부",
+  "name": "쌍문",
+  "code": "DBH1950"
+ },
+ {
+  "region": "동부",
+  "name": "한마음",
+  "code": "DBH1953"
+ },
+ {
+  "region": "동부",
+  "name": "방학",
+  "code": "DBH1954"
+ },
+ {
+  "region": "동부",
+  "name": "정릉",
+  "code": "DBJ1953"
+ },
+ {
+  "region": "동부",
+  "name": "장위",
+  "code": "DBJ1954"
+ },
+ {
+  "region": "동부",
+  "name": "돈암",
+  "code": "DBJ1955"
+ },
+ {
+  "region": "동부",
+  "name": "마들",
+  "code": "DBK1952"
+ },
+ {
+  "region": "동부",
+  "name": "하계",
+  "code": "DBK2958"
+ },
+ {
+  "region": "동부",
+  "name": "수유",
+  "code": "DBM1951"
+ },
+ {
+  "region": "동부",
+  "name": "우이",
+  "code": "DBM1952"
+ },
+ {
+  "region": "동부",
+  "name": "중곡",
+  "code": "DBN2950"
+ },
+ {
+  "region": "동부",
+  "name": "둔촌",
+  "code": "DCA1950"
+ },
+ {
+  "region": "동부",
+  "name": "영파",
+  "code": "DCA1956"
+ },
+ {
+  "region": "동부",
+  "name": "명일",
+  "code": "DCA2950"
+ },
+ {
+  "region": "동부",
+  "name": "고덕",
+  "code": "DCA2952"
+ },
+ {
+  "region": "동부",
+  "name": "교문",
+  "code": "DEK1950"
+ },
+ {
+  "region": "동부",
+  "name": "인창",
+  "code": "DEK1952"
+ },
+ {
+  "region": "동부",
+  "name": "청평",
+  "code": "DEK4952"
+ },
+ {
+  "region": "동부",
+  "name": "가능",
+  "code": "DEL1954"
+ },
+ {
+  "region": "동부",
+  "name": "내행",
+  "code": "DEL2950"
+ },
+ {
+  "region": "동부",
+  "name": "전곡",
+  "code": "DEL2952"
+ },
+ {
+  "region": "동부",
+  "name": "송우",
+  "code": "DEL3952"
+ },
+ {
+  "region": "동부",
+  "name": "송산",
+  "code": "DEL4951"
+ },
+ {
+  "region": "동부",
+  "name": "회천",
+  "code": "DEL5950"
+ },
+ {
+  "region": "인천",
+  "name": "남주안",
+  "code": "DDA2953"
+ },
+ {
+  "region": "인천",
+  "name": "용현",
+  "code": "DDA2955"
+ },
+ {
+  "region": "인천",
+  "name": "영종",
+  "code": "DDA2956"
+ },
+ {
+  "region": "인천",
+  "name": "청천",
+  "code": "DDC2959"
+ },
+ {
+  "region": "인천",
+  "name": "산곡",
+  "code": "DDC2961"
+ },
+ {
+  "region": "인천",
+  "name": "검단",
+  "code": "DDD1950"
+ },
+ {
+  "region": "인천",
+  "name": "가정",
+  "code": "DDD1951"
+ },
+ {
+  "region": "인천",
+  "name": "구월선수촌",
+  "code": "DDE1952"
+ },
+ {
+  "region": "인천",
+  "name": "학익",
+  "code": "DDE1953"
+ },
+ {
+  "region": "인천",
+  "name": "법원",
+  "code": "DDE1954"
+ },
+ {
+  "region": "인천",
+  "name": "간석",
+  "code": "DDE3951"
+ },
+ {
+  "region": "인천",
+  "name": "간석사거리",
+  "code": "DDE3952"
+ },
+ {
+  "region": "인천",
+  "name": "동막",
+  "code": "DDE3950"
+ },
+ {
+  "region": "인천",
+  "name": "송도",
+  "code": "DDE1955"
+ },
+ {
+  "region": "인천",
+  "name": "삼산",
+  "code": "DDC2962"
+ },
+ {
+  "region": "인천",
+  "name": "계향",
+  "code": "DDD1952"
+ },
+ {
+  "region": "인천",
+  "name": "금파",
+  "code": "DEB1950"
+ },
+ {
+  "region": "인천",
+  "name": "사우",
+  "code": "DEB1951"
+ },
+ {
+  "region": "인천",
+  "name": "양촌",
+  "code": "DEB1952"
+ },
+ {
+  "region": "인천",
+  "name": "역전",
+  "code": "DEC1967"
+ },
+ {
+  "region": "인천",
+  "name": "여월",
+  "code": "DEC1969"
+ },
+ {
+  "region": "인천",
+  "name": "대장신도시",
+  "code": "DEC1970"
+ },
+ {
+  "region": "인천",
+  "name": "송내",
+  "code": "DEC2953"
+ },
+ {
+  "region": "인천",
+  "name": "심곡",
+  "code": "DEC3950"
+ },
+ {
+  "region": "인천",
+  "name": "소하",
+  "code": "DEC5951"
+ },
+ {
+  "region": "인천",
+  "name": "일직",
+  "code": "DEC5953"
+ },
+ {
+  "region": "인천",
+  "name": "비제이",
+  "code": "DED2953"
+ },
+ {
+  "region": "인천",
+  "name": "성호",
+  "code": "DED2956"
+ },
+ {
+  "region": "인천",
+  "name": "대경중앙",
+  "code": "DED3951"
+ },
+ {
+  "region": "인천",
+  "name": "해수",
+  "code": "DED3955"
+ },
+ {
+  "region": "인천",
+  "name": "상록수",
+  "code": "DED3956"
+ },
+ {
+  "region": "인천",
+  "name": "자동차마을",
+  "code": "DED3967"
+ },
+ {
+  "region": "인천",
+  "name": "제일",
+  "code": "DED5950"
+ },
+ {
+  "region": "인천",
+  "name": "남광",
+  "code": "DED6954"
+ },
+ {
+  "region": "인천",
+  "name": "고잔들",
+  "code": "DED6955"
+ },
+ {
+  "region": "인천",
+  "name": "축복",
+  "code": "DED3969"
+ },
+ {
+  "region": "경기",
+  "name": "박달",
+  "code": "DEE1950"
+ },
+ {
+  "region": "경기",
+  "name": "석수",
+  "code": "DEE1953"
+ },
+ {
+  "region": "경기",
+  "name": "평촌중앙",
+  "code": "DEE1954"
+ },
+ {
+  "region": "경기",
+  "name": "인덕원역",
+  "code": "DEE3953"
+ },
+ {
+  "region": "경기",
+  "name": "남태령",
+  "code": "DEE3955"
+ },
+ {
+  "region": "경기",
+  "name": "산본",
+  "code": "DEE4950"
+ },
+ {
+  "region": "경기",
+  "name": "명성",
+  "code": "DEF2950"
+ },
+ {
+  "region": "경기",
+  "name": "영광제일",
+  "code": "DEF2951"
+ },
+ {
+  "region": "경기",
+  "name": "성대",
+  "code": "DEF2954"
+ },
+ {
+  "region": "경기",
+  "name": "한일",
+  "code": "DEF2955"
+ },
+ {
+  "region": "경기",
+  "name": "남양",
+  "code": "DEG1952"
+ },
+ {
+  "region": "경기",
+  "name": "봉담",
+  "code": "DEG1953"
+ },
+ {
+  "region": "경기",
+  "name": "병점",
+  "code": "DEG2950"
+ },
+ {
+  "region": "경기",
+  "name": "청솔",
+  "code": "DEG2952"
+ },
+ {
+  "region": "경기",
+  "name": "진위",
+  "code": "DEG2953"
+ },
+ {
+  "region": "경기",
+  "name": "원천",
+  "code": "DEG3950"
+ },
+ {
+  "region": "경기",
+  "name": "망포",
+  "code": "DEG3951"
+ },
+ {
+  "region": "경기",
+  "name": "효원",
+  "code": "DEG3953"
+ },
+ {
+  "region": "경기",
+  "name": "화서",
+  "code": "DEG3954"
+ },
+ {
+  "region": "경기",
+  "name": "노벨",
+  "code": "DEG3955"
+ },
+ {
+  "region": "경기",
+  "name": "호매실",
+  "code": "DEG3956"
+ },
+ {
+  "region": "경기",
+  "name": "강남대",
+  "code": "DEG4952"
+ },
+ {
+  "region": "경기",
+  "name": "구성",
+  "code": "DEG4957"
+ },
+ {
+  "region": "경기",
+  "name": "친절",
+  "code": "DEG5954"
+ },
+ {
+  "region": "경기",
+  "name": "이동",
+  "code": "DEG5955"
+ },
+ {
+  "region": "경기",
+  "name": "신평",
+  "code": "DEH1950"
+ },
+ {
+  "region": "경기",
+  "name": "비룡",
+  "code": "DEH1954"
+ },
+ {
+  "region": "경기",
+  "name": "안평",
+  "code": "DEH1955"
+ },
+ {
+  "region": "경기",
+  "name": "서정",
+  "code": "DEH1952"
+ },
+ {
+  "region": "경기",
+  "name": "풍덕천",
+  "code": "DEI2953"
+ },
+ {
+  "region": "경기",
+  "name": "동백",
+  "code": "DEI2954"
+ },
+ {
+  "region": "경기",
+  "name": "여흥",
+  "code": "DEJ5952"
+ },
+ {
+  "region": "경기",
+  "name": "행복한",
+  "code": "DJC1951"
+ },
+ {
+  "region": "경기",
+  "name": "우리",
+  "code": "DJC1952"
+ },
+ {
+  "region": "강원",
+  "name": "만천",
+  "code": "DFA1954"
+ },
+ {
+  "region": "강원",
+  "name": "봄내",
+  "code": "DFA2955"
+ },
+ {
+  "region": "강원",
+  "name": "율곡",
+  "code": "DFB2952"
+ },
+ {
+  "region": "강원",
+  "name": "청초",
+  "code": "DFB3955"
+ },
+ {
+  "region": "강원",
+  "name": "모아",
+  "code": "DFC1956"
+ },
+ {
+  "region": "강원",
+  "name": "대석",
+  "code": "DFC1954"
+ },
+ {
+  "region": "강원",
+  "name": "서원",
+  "code": "DFC1955"
+ },
+ {
+  "region": "강원",
+  "name": "아리별",
+  "code": "DFD1953"
+ },
+ {
+  "region": "강원",
+  "name": "동계",
+  "code": "DFD2950"
+ },
+ {
+  "region": "강원",
+  "name": "새천년",
+  "code": "DFE1950"
+ },
+ {
+  "region": "강원",
+  "name": "이사부",
+  "code": "DFE1952"
+ },
+ {
+  "region": "강원",
+  "name": "기평",
+  "code": "DFF2951"
+ },
+ {
+  "region": "강원",
+  "name": "엘리트",
+  "code": "DFF2950"
+ },
+ {
+  "region": "강원",
+  "name": "태봉",
+  "code": "DFG1950"
+ },
+ {
+  "region": "대전",
+  "name": "보청",
+  "code": "DGC2950"
+ },
+ {
+  "region": "대전",
+  "name": "관성",
+  "code": "DGC2952"
+ },
+ {
+  "region": "대전",
+  "name": "판암",
+  "code": "DHA1958"
+ },
+ {
+  "region": "대전",
+  "name": "한밭",
+  "code": "DHA1960"
+ },
+ {
+  "region": "대전",
+  "name": "일등",
+  "code": "DHA1961"
+ },
+ {
+  "region": "대전",
+  "name": "용문역",
+  "code": "DHB2958"
+ },
+ {
+  "region": "대전",
+  "name": "도마",
+  "code": "DHB2959"
+ },
+ {
+  "region": "대전",
+  "name": "금삼",
+  "code": "DHB2960"
+ },
+ {
+  "region": "대전",
+  "name": "문화",
+  "code": "DHB2961"
+ },
+ {
+  "region": "대전",
+  "name": "유승",
+  "code": "DHD1957"
+ },
+ {
+  "region": "대전",
+  "name": "관저",
+  "code": "DHD1958"
+ },
+ {
+  "region": "대전",
+  "name": "신세계",
+  "code": "DHD1959"
+ },
+ {
+  "region": "대전",
+  "name": "신관",
+  "code": "DIA2952"
+ },
+ {
+  "region": "대전",
+  "name": "대룡",
+  "code": "DIB1955"
+ },
+ {
+  "region": "대전",
+  "name": "백제",
+  "code": "DIB1956"
+ },
+ {
+  "region": "대전",
+  "name": "서해",
+  "code": "DIB3951"
+ },
+ {
+  "region": "대전",
+  "name": "도원",
+  "code": "DIC5952"
+ },
+ {
+  "region": "대전",
+  "name": "예당",
+  "code": "DID1952"
+ },
+ {
+  "region": "대전",
+  "name": "송악",
+  "code": "DID2950"
+ },
+ {
+  "region": "대전",
+  "name": "해나루",
+  "code": "DID2951"
+ },
+ {
+  "region": "대전",
+  "name": "홍주",
+  "code": "DIE1950"
+ },
+ {
+  "region": "대전",
+  "name": "칠갑",
+  "code": "DIE1952"
+ },
+ {
+  "region": "대전",
+  "name": "서령",
+  "code": "DIE3951"
+ },
+ {
+  "region": "대전",
+  "name": "한서",
+  "code": "DIE3952"
+ },
+ {
+  "region": "대전",
+  "name": "열린",
+  "code": "DIE3953"
+ },
+ {
+  "region": "충청",
+  "name": "직지",
+  "code": "DGA1954"
+ },
+ {
+  "region": "충청",
+  "name": "하나",
+  "code": "DGA1959"
+ },
+ {
+  "region": "충청",
+  "name": "내덕",
+  "code": "DGA2950"
+ },
+ {
+  "region": "충청",
+  "name": "조은",
+  "code": "DGA2958"
+ },
+ {
+  "region": "충청",
+  "name": "서원",
+  "code": "DGA3956"
+ },
+ {
+  "region": "충청",
+  "name": "가경",
+  "code": "DGA4950"
+ },
+ {
+  "region": "충청",
+  "name": "봉명",
+  "code": "DGA4952"
+ },
+ {
+  "region": "충청",
+  "name": "금왕혁신",
+  "code": "DGB3952"
+ },
+ {
+  "region": "충청",
+  "name": "교현",
+  "code": "DGD1954"
+ },
+ {
+  "region": "충청",
+  "name": "중원",
+  "code": "DGD1958"
+ },
+ {
+  "region": "충청",
+  "name": "장락",
+  "code": "DGE1951"
+ },
+ {
+  "region": "충청",
+  "name": "의림",
+  "code": "DGE1952"
+ },
+ {
+  "region": "충청",
+  "name": "도전",
+  "code": "DGE1953"
+ },
+ {
+  "region": "충청",
+  "name": "두정",
+  "code": "DIC2950"
+ },
+ {
+  "region": "충청",
+  "name": "도솔",
+  "code": "DIC2955"
+ },
+ {
+  "region": "충청",
+  "name": "천일",
+  "code": "DIC3952"
+ },
+ {
+  "region": "충청",
+  "name": "온천",
+  "code": "DIC4951"
+ },
+ {
+  "region": "충청",
+  "name": "번영로",
+  "code": "DIC6953"
+ },
+ {
+  "region": "충청",
+  "name": "일봉",
+  "code": "DIC6954"
+ },
+ {
+  "region": "전남광주",
+  "name": "양산제일",
+  "code": "DKA1953"
+ },
+ {
+  "region": "전남광주",
+  "name": "오치",
+  "code": "DKA4950"
+ },
+ {
+  "region": "전남광주",
+  "name": "무등",
+  "code": "DKA4953"
+ },
+ {
+  "region": "전남광주",
+  "name": "예향",
+  "code": "DKC1957"
+ },
+ {
+  "region": "전남광주",
+  "name": "스마트",
+  "code": "DKC1958"
+ },
+ {
+  "region": "전남광주",
+  "name": "광남",
+  "code": "DKC1952"
+ },
+ {
+  "region": "전남광주",
+  "name": "무진",
+  "code": "DKC1953"
+ },
+ {
+  "region": "전남광주",
+  "name": "동림",
+  "code": "DKC1954"
+ },
+ {
+  "region": "전남광주",
+  "name": "신시청",
+  "code": "DKC1955"
+ },
+ {
+  "region": "전남광주",
+  "name": "상무",
+  "code": "DKC1956"
+ },
+ {
+  "region": "전남광주",
+  "name": "빛고을",
+  "code": "DKC1961"
+ },
+ {
+  "region": "전남광주",
+  "name": "광서",
+  "code": "DKC1959"
+ },
+ {
+  "region": "전남광주",
+  "name": "가나",
+  "code": "DKC1960"
+ },
+ {
+  "region": "전남광주",
+  "name": "호남",
+  "code": "DKE2953"
+ },
+ {
+  "region": "전남광주",
+  "name": "탐진",
+  "code": "DLC1957"
+ },
+ {
+  "region": "전남광주",
+  "name": "굿모닝",
+  "code": "DLC1953"
+ },
+ {
+  "region": "전남광주",
+  "name": "하당",
+  "code": "DLC1954"
+ },
+ {
+  "region": "전남광주",
+  "name": "청해",
+  "code": "DLC1955"
+ },
+ {
+  "region": "전남광주",
+  "name": "초당",
+  "code": "DLC1956"
+ },
+ {
+  "region": "전남광주",
+  "name": "땅끝",
+  "code": "DLC4953"
+ },
+ {
+  "region": "전남광주",
+  "name": "연향",
+  "code": "DLE1951"
+ },
+ {
+  "region": "전남광주",
+  "name": "봉화",
+  "code": "DLE1952"
+ },
+ {
+  "region": "전남광주",
+  "name": "벌교",
+  "code": "DLE1954"
+ },
+ {
+  "region": "전남광주",
+  "name": "신광",
+  "code": "DLE1955"
+ },
+ {
+  "region": "전남광주",
+  "name": "중마",
+  "code": "DLE1956"
+ },
+ {
+  "region": "전남광주",
+  "name": "동명",
+  "code": "DLE1970"
+ },
+ {
+  "region": "전남광주",
+  "name": "문수",
+  "code": "DLG1954"
+ },
+ {
+  "region": "전남광주",
+  "name": "오케이",
+  "code": "DLG2950"
+ },
+ {
+  "region": "전남광주",
+  "name": "한라",
+  "code": "DTA1952"
+ },
+ {
+  "region": "전남광주",
+  "name": "오성",
+  "code": "DTA2954"
+ },
+ {
+  "region": "전남광주",
+  "name": "삼화",
+  "code": "DTA3955"
+ },
+ {
+  "region": "전북",
+  "name": "마한",
+  "code": "DEJ3950"
+ },
+ {
+  "region": "전북",
+  "name": "드림",
+  "code": "DJA1951"
+ },
+ {
+  "region": "전북",
+  "name": "사랑",
+  "code": "DJA1953"
+ },
+ {
+  "region": "전북",
+  "name": "호남",
+  "code": "DJA2953"
+ },
+ {
+  "region": "전북",
+  "name": "아중",
+  "code": "DJA3951"
+ },
+ {
+  "region": "전북",
+  "name": "광한루",
+  "code": "DJA3953"
+ },
+ {
+  "region": "전북",
+  "name": "전일",
+  "code": "DJA3954"
+ },
+ {
+  "region": "전북",
+  "name": "서신",
+  "code": "DJA6952"
+ },
+ {
+  "region": "전북",
+  "name": "덕유",
+  "code": "DJB2952"
+ },
+ {
+  "region": "전북",
+  "name": "부송",
+  "code": "DJC2951"
+ },
+ {
+  "region": "전북",
+  "name": "신동",
+  "code": "DJC2952"
+ },
+ {
+  "region": "전북",
+  "name": "출세",
+  "code": "DJC3951"
+ },
+ {
+  "region": "전북",
+  "name": "금강",
+  "code": "DJC4951"
+ },
+ {
+  "region": "전북",
+  "name": "지평선",
+  "code": "DJC6952"
+ },
+ {
+  "region": "전북",
+  "name": "새만금",
+  "code": "DJC6956"
+ },
+ {
+  "region": "전북",
+  "name": "정주",
+  "code": "DJE1950"
+ },
+ {
+  "region": "전북",
+  "name": "차사랑",
+  "code": "DJE1952"
+ },
+ {
+  "region": "전북",
+  "name": "선운",
+  "code": "DJE1953"
+ },
+ {
+  "region": "대구경북",
+  "name": "대명",
+  "code": "DMA1955"
+ },
+ {
+  "region": "대구경북",
+  "name": "동서변",
+  "code": "DMA1957"
+ },
+ {
+  "region": "대구경북",
+  "name": "학정",
+  "code": "DMC3953"
+ },
+ {
+  "region": "대구경북",
+  "name": "비산",
+  "code": "DMC3954"
+ },
+ {
+  "region": "대구경북",
+  "name": "죽전역",
+  "code": "DMA1956"
+ },
+ {
+  "region": "대구경북",
+  "name": "계명",
+  "code": "DMD3950"
+ },
+ {
+  "region": "대구경북",
+  "name": "용산",
+  "code": "DMD3953"
+ },
+ {
+  "region": "대구경북",
+  "name": "월배",
+  "code": "DMD4951"
+ },
+ {
+  "region": "대구경북",
+  "name": "본리",
+  "code": "DMD4952"
+ },
+ {
+  "region": "대구경북",
+  "name": "혁신",
+  "code": "DMF3951"
+ },
+ {
+  "region": "대구경북",
+  "name": "대봉",
+  "code": "DMF2954"
+ },
+ {
+  "region": "대구경북",
+  "name": "동진",
+  "code": "DNA1954"
+ },
+ {
+  "region": "대구경북",
+  "name": "성암",
+  "code": "DNA2952"
+ },
+ {
+  "region": "대구경북",
+  "name": "영대",
+  "code": "DNA2953"
+ },
+ {
+  "region": "대구경북",
+  "name": "아름다운",
+  "code": "DNA3953"
+ },
+ {
+  "region": "대구경북",
+  "name": "대가야",
+  "code": "DNA3955"
+ },
+ {
+  "region": "대구경북",
+  "name": "구미공단",
+  "code": "DNB1950"
+ },
+ {
+  "region": "대구경북",
+  "name": "금오산",
+  "code": "DNB1955"
+ },
+ {
+  "region": "대구경북",
+  "name": "인동",
+  "code": "DNB1956"
+ },
+ {
+  "region": "대구경북",
+  "name": "김천부곡",
+  "code": "DNC1953"
+ },
+ {
+  "region": "대구경북",
+  "name": "경도",
+  "code": "DNC3953"
+ },
+ {
+  "region": "대구경북",
+  "name": "시청앞",
+  "code": "DND1951"
+ },
+ {
+  "region": "대구경북",
+  "name": "영화",
+  "code": "DNF1953"
+ },
+ {
+  "region": "대구경북",
+  "name": "경안",
+  "code": "DNE1952"
+ },
+ {
+  "region": "대구경북",
+  "name": "용상",
+  "code": "DNE1954"
+ },
+ {
+  "region": "대구경북",
+  "name": "충효",
+  "code": "DNG1952"
+ },
+ {
+  "region": "대구경북",
+  "name": "해동",
+  "code": "DNG2950"
+ },
+ {
+  "region": "대구경북",
+  "name": "영일대",
+  "code": "DNH1954"
+ },
+ {
+  "region": "대구경북",
+  "name": "영포",
+  "code": "DNH1955"
+ },
+ {
+  "region": "대구경북",
+  "name": "대한",
+  "code": "DNH1970"
+ },
+ {
+  "region": "대구경북",
+  "name": "형산",
+  "code": "DNH2953"
+ },
+ {
+  "region": "대구경북",
+  "name": "한동",
+  "code": "DNH3958"
+ },
+ {
+  "region": "부산",
+  "name": "대신",
+  "code": "DPA1950"
+ },
+ {
+  "region": "부산",
+  "name": "광복로",
+  "code": "DPA1952"
+ },
+ {
+  "region": "부산",
+  "name": "용호",
+  "code": "DPF1958"
+ },
+ {
+  "region": "부산",
+  "name": "부곡",
+  "code": "DPG2952"
+ },
+ {
+  "region": "부산",
+  "name": "노포",
+  "code": "DPG3951"
+ },
+ {
+  "region": "부산",
+  "name": "거제",
+  "code": "DPH1955"
+ },
+ {
+  "region": "부산",
+  "name": "송정역",
+  "code": "DPI1954"
+ },
+ {
+  "region": "부산",
+  "name": "강변",
+  "code": "DPK1951"
+ },
+ {
+  "region": "부산",
+  "name": "부암",
+  "code": "DPK2951"
+ },
+ {
+  "region": "부산",
+  "name": "연산",
+  "code": "DPK3952"
+ },
+ {
+  "region": "부산",
+  "name": "낙민",
+  "code": "DPK3953"
+ },
+ {
+  "region": "부산",
+  "name": "낙동",
+  "code": "DPL1951"
+ },
+ {
+  "region": "부산",
+  "name": "구명역",
+  "code": "DPL1952"
+ },
+ {
+  "region": "부산",
+  "name": "엄궁",
+  "code": "DPM1958"
+ },
+ {
+  "region": "부산",
+  "name": "에덴",
+  "code": "DPI1955"
+ },
+ {
+  "region": "경남",
+  "name": "삼문",
+  "code": "DSA4950"
+ },
+ {
+  "region": "경남",
+  "name": "장유",
+  "code": "DSA5950"
+ },
+ {
+  "region": "경남",
+  "name": "무학",
+  "code": "DSB1953"
+ },
+ {
+  "region": "경남",
+  "name": "가고파",
+  "code": "DSB1954"
+ },
+ {
+  "region": "경남",
+  "name": "신기",
+  "code": "DSB1955"
+ },
+ {
+  "region": "경남",
+  "name": "칠원",
+  "code": "DSB1956"
+ },
+ {
+  "region": "경남",
+  "name": "가음정",
+  "code": "DSC2954"
+ },
+ {
+  "region": "경남",
+  "name": "마창",
+  "code": "DSC2950"
+ },
+ {
+  "region": "경남",
+  "name": "동창",
+  "code": "DSC2952"
+ },
+ {
+  "region": "경남",
+  "name": "도계",
+  "code": "DSC2953"
+ },
+ {
+  "region": "경남",
+  "name": "경화",
+  "code": "DSC3952"
+ },
+ {
+  "region": "경남",
+  "name": "진성",
+  "code": "DSD2954"
+ },
+ {
+  "region": "경남",
+  "name": "충무",
+  "code": "DSD2953"
+ },
+ {
+  "region": "경남",
+  "name": "옥포",
+  "code": "DSD2951"
+ },
+ {
+  "region": "경남",
+  "name": "상동",
+  "code": "DSD2952"
+ },
+ {
+  "region": "경남",
+  "name": "하대",
+  "code": "DSE2956"
+ },
+ {
+  "region": "경남",
+  "name": "신평",
+  "code": "DSE2955"
+ },
+ {
+  "region": "경남",
+  "name": "가나",
+  "code": "DSE3951"
+ },
+ {
+  "region": "경남",
+  "name": "섬가람",
+  "code": "DSE5951"
+ },
+ {
+  "region": "경남",
+  "name": "황강",
+  "code": "DSG1951"
+ },
+ {
+  "region": "경남",
+  "name": "산음",
+  "code": "DSG2950"
+ },
+ {
+  "region": "경남",
+  "name": "달동",
+  "code": "DSH1951"
+ },
+ {
+  "region": "경남",
+  "name": "한신",
+  "code": "DSH1952"
+ },
+ {
+  "region": "경남",
+  "name": "신정",
+  "code": "DSH2950"
+ },
+ {
+  "region": "경남",
+  "name": "온산",
+  "code": "DSH2956"
+ },
+ {
+  "region": "경남",
+  "name": "병영",
+  "code": "DSH3950"
+ },
+ {
+  "region": "경남",
+  "name": "언양",
+  "code": "DSH2959"
+ },
+ {
+  "region": "경남",
+  "name": "다운",
+  "code": "DSH2958"
+ },
+ {
+  "region": "남부",
+  "name": "봉천역",
+  "code": "DCJ2955"
+ },
+ {
+  "region": "충청",
+  "name": "신방",
+  "code": "DIC2956"
+ },
+ {
+  "region": "전남광주",
+  "name": "일림",
+  "code": "DLE1957"
+ },
+ {
+  "region": "경남",
+  "name": "원지",
+  "code": "DSE2957"
+ },
+ {
+  "region": "경기",
+  "name": "여흥",
+  "code": "DJC1954"
+ }
+]
