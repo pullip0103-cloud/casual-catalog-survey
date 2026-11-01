@@ -1,11 +1,13 @@
 "use client";
 
 import { Fragment, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import {
   Bar,
   BarChart,
   CartesianGrid,
   Cell,
+  LabelList,
   Legend,
   Pie,
   PieChart,
@@ -22,6 +24,11 @@ const AWARENESS_LABELS: Record<string, string> = { aware: "알고 있다", unawa
 const Q1A_LABELS: Record<string, string> = { good: "좋다", bad: "안좋다", other: "기타" };
 const Q1C_LABELS: Record<string, string> = { hq_decide: "본사 결정", branch_ratio: "거점별 비중" };
 const Q1CRATIO_LABELS: Record<string, string> = { "90_10": "90:10", "80_20": "80:20(현재)", "70_30": "70:30" };
+
+const AWARENESS_SENTIMENTS: Record<string, Sentiment> = { aware: "positive", unaware: "negative" };
+const Q1A_SENTIMENTS: Record<string, Sentiment> = { good: "positive", bad: "negative", other: "neutral" };
+const Q1C_SENTIMENTS: Record<string, Sentiment> = { hq_decide: "neutral", branch_ratio: "neutral" };
+const Q1CRATIO_SENTIMENTS: Record<string, Sentiment> = { "90_10": "neutral", "80_20": "neutral", "70_30": "neutral" };
 
 type BranchFilter = "전체" | "지점" | "대리점";
 
@@ -65,7 +72,15 @@ export default function DashboardPage() {
 
   return (
     <main className="flex flex-1 flex-col px-6 py-10 max-w-4xl w-full mx-auto">
-      <h1 className="text-xl font-bold mb-6">캐쥬얼 카탈로그 설문 결과</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-xl font-bold">캐쥬얼 카탈로그 설문 결과</h1>
+        <Link
+          href="/survey/preview"
+          className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-100"
+        >
+          설문조사 내용 보기
+        </Link>
+      </div>
 
       <div className="flex flex-wrap gap-3 mb-6">
         <select
@@ -111,6 +126,7 @@ export default function DashboardPage() {
               national={data.national}
               getRecord={(b) => b.awareness}
               labels={AWARENESS_LABELS}
+              sentiments={AWARENESS_SENTIMENTS}
             />
           )}
 
@@ -123,6 +139,7 @@ export default function DashboardPage() {
               national={data.national}
               getRecord={(b) => b.q1a}
               labels={Q1A_LABELS}
+              sentiments={Q1A_SENTIMENTS}
             />
           )}
 
@@ -135,6 +152,7 @@ export default function DashboardPage() {
               national={data.national}
               getRecord={(b) => b.q1c}
               labels={Q1C_LABELS}
+              sentiments={Q1C_SENTIMENTS}
             />
           )}
 
@@ -149,16 +167,17 @@ export default function DashboardPage() {
                   national={data.national}
                   getRecord={(b) => b.q1cRatio}
                   labels={Q1CRATIO_LABELS}
+                  sentiments={Q1CRATIO_SENTIMENTS}
                 />
               )}
             </>
           )}
 
           <p className="text-xs text-slate-400">
-            <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(37, 99, 235, 0.45)" }} />
-            전국 평균보다 높음
             <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(220, 38, 38, 0.45)" }} />
-            전국 평균보다 낮음　(색이 진할수록 차이가 큼, 응답 5건 이상·15%p 이상 차이 기준)
+            캐쥬얼 카탈로그에 긍정적인 쪽으로 전국 평균보다 뚜렷이 튐
+            <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(37, 99, 235, 0.45)" }} />
+            부정적인 쪽으로 뚜렷이 튐　(배포 방식·비중 선호는 중립 항목이라 항상 붉은색, 색이 진할수록 차이가 큼, 응답 5건 이상·15%p 이상 차이 기준)
           </p>
         </div>
       )}
@@ -168,14 +187,24 @@ export default function DashboardPage() {
 
 const HIGHLIGHT_MIN_TOTAL = 5;
 
-function highlightStyle(pct: number, basePct: number): { className: string; style?: React.CSSProperties } {
+// 각 항목 값이 "캐쥬얼 카탈로그에 긍정적인 신호"인지 "부정적인 신호"인지,
+// 혹은 좋다/나쁘다가 없는 중립 항목인지 표시. 중립은 방향과 무관하게 항상 붉은색.
+type Sentiment = "positive" | "negative" | "neutral";
+
+function highlightStyle(
+  pct: number,
+  basePct: number,
+  sentiment: Sentiment
+): { className: string; style?: React.CSSProperties } {
   const diff = pct - basePct;
   const abs = Math.abs(diff);
   if (abs < 15) return { className: "" };
 
   // 차이가 클수록 진하게: 15pt~50pt 범위를 알파 0.15~0.6으로 매핑
   const alpha = Math.min(0.6, 0.15 + ((abs - 15) / 35) * 0.45);
-  const color = diff > 0 ? `rgba(37, 99, 235, ${alpha})` : `rgba(220, 38, 38, ${alpha})`;
+  const isGoodNews =
+    sentiment === "neutral" || (sentiment === "positive" ? diff > 0 : diff < 0);
+  const color = isGoodNews ? `rgba(220, 38, 38, ${alpha})` : `rgba(37, 99, 235, ${alpha})`;
   return { className: "font-semibold", style: { backgroundColor: color } };
 }
 
@@ -186,6 +215,7 @@ function RegionTypeTable({
   national,
   getRecord,
   labels,
+  sentiments,
 }: {
   title: string;
   regionNames: string[];
@@ -193,6 +223,7 @@ function RegionTypeTable({
   national: StatsResult;
   getRecord: (bucket: StatsBucket) => Record<string, number>;
   labels: Record<string, string>;
+  sentiments: Record<string, Sentiment>;
 }) {
   const keys = Object.keys(labels);
   const columns: { key: string; label: string; filter: BranchFilter }[] = [
@@ -260,7 +291,7 @@ function RegionTypeTable({
                           const pct = Math.round(pctExact);
                           const highlight =
                             total >= HIGHLIGHT_MIN_TOTAL
-                              ? highlightStyle(pctExact, basePcts[col.key][k])
+                              ? highlightStyle(pctExact, basePcts[col.key][k], sentiments[k] ?? "neutral")
                               : { className: "" };
                           return (
                             <td
@@ -293,21 +324,35 @@ function ChartSection({ title, data }: { title: string; data: { name: string; va
   const filtered = data.filter((d) => d.value > 0);
   if (filtered.length === 0) return null;
 
+  const total = filtered.reduce((sum, d) => sum + d.value, 0);
+  const withPct = filtered.map((d) => ({
+    ...d,
+    pct: total > 0 ? Math.round((d.value / total) * 100) : 0,
+  }));
+
   return (
     <section>
       <h2 className="text-sm font-semibold mb-3">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={filtered}>
+            <BarChart data={withPct} margin={{ top: 20 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
               <XAxis dataKey="name" tick={{ fontSize: 12 }} />
               <YAxis allowDecimals={false} tick={{ fontSize: 12 }} />
-              <Tooltip />
+              <Tooltip
+                formatter={(value, _name, item) => [`${value}건 (${(item?.payload as { pct?: number } | undefined)?.pct ?? 0}%)`, "응답"]}
+              />
               <Bar dataKey="value" radius={[4, 4, 0, 0]}>
-                {filtered.map((_, i) => (
+                {withPct.map((_, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />
                 ))}
+                <LabelList
+                  dataKey="pct"
+                  position="top"
+                  formatter={(v: React.ReactNode) => `${v}%`}
+                  style={{ fontSize: 12, fill: "#475569" }}
+                />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -315,12 +360,22 @@ function ChartSection({ title, data }: { title: string; data: { name: string; va
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
-              <Pie data={filtered} dataKey="value" nameKey="name" outerRadius={80} label>
-                {filtered.map((_, i) => (
+              <Pie
+                data={withPct}
+                dataKey="value"
+                nameKey="name"
+                outerRadius={80}
+                label={(props: { name?: string; value?: number; payload?: { pct?: number } }) =>
+                  `${props.name} ${props.value} (${props.payload?.pct ?? 0}%)`
+                }
+              >
+                {withPct.map((_, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />
                 ))}
               </Pie>
-              <Tooltip />
+              <Tooltip
+                formatter={(value, _name, item) => [`${value}건 (${(item?.payload as { pct?: number } | undefined)?.pct ?? 0}%)`, "응답"]}
+              />
               <Legend wrapperStyle={{ fontSize: 12 }} />
             </PieChart>
           </ResponsiveContainer>
