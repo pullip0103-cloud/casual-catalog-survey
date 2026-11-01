@@ -175,9 +175,9 @@ export default function DashboardPage() {
 
           <p className="text-xs text-slate-400">
             <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(220, 38, 38, 0.45)" }} />
-            캐쥬얼 카탈로그에 긍정적인 쪽으로 전국 평균보다 뚜렷이 튐
+            긍정 항목(안다/좋다)이 전국 평균보다 뚜렷이 튐
             <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(37, 99, 235, 0.45)" }} />
-            부정적인 쪽으로 뚜렷이 튐　(배포 방식·비중 선호는 중립 항목이라 항상 붉은색, 색이 진할수록 차이가 큼, 응답 5건 이상·15%p 이상 차이 기준)
+            부정 항목(모른다/안좋다)이 뚜렷이 튐　(배포 방식·비중 선호는 중립 항목이라 항상 붉은색, 색이 진할수록 차이가 큼, 응답 5건 이상·15%p 이상 차이 기준)
           </p>
         </div>
       )}
@@ -202,9 +202,9 @@ function highlightStyle(
 
   // 차이가 클수록 진하게: 15pt~50pt 범위를 알파 0.15~0.6으로 매핑
   const alpha = Math.min(0.6, 0.15 + ((abs - 15) / 35) * 0.45);
-  const isGoodNews =
-    sentiment === "neutral" || (sentiment === "positive" ? diff > 0 : diff < 0);
-  const color = isGoodNews ? `rgba(220, 38, 38, ${alpha})` : `rgba(37, 99, 235, ${alpha})`;
+  // 방향(평균보다 높은지/낮은지)과 무관하게, 그 열 자체가 긍정(좋다/안다)이면 항상 붉은색,
+  // 부정(안좋다/모른다)이면 항상 파란색. 중립 항목(배포방식/비중)도 항상 붉은색.
+  const color = sentiment === "negative" ? `rgba(37, 99, 235, ${alpha})` : `rgba(220, 38, 38, ${alpha})`;
   return { className: "font-semibold", style: { backgroundColor: color } };
 }
 
