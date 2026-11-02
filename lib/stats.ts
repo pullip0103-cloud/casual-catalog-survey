@@ -23,7 +23,7 @@ function emptyBucket(): StatsBucket {
     awareness: { aware: 0, unaware: 0 },
     q1a: { good: 0, bad: 0, other: 0 },
     q1c: { hq_decide: 0, branch_ratio: 0 },
-    q1cRatio: { "90_10": 0, "70_30": 0 },
+    q1cRatio: { "95_5": 0, "90_10": 0, "70_30": 0 },
   };
 }
 

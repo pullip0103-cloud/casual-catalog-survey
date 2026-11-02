@@ -23,13 +23,13 @@ const COLORS = ["#2563eb", "#f97316", "#64748b", "#16a34a", "#dc2626"];
 const AWARENESS_LABELS: Record<string, string> = { aware: "알고 있다", unaware: "모른다" };
 const Q1A_LABELS: Record<string, string> = { good: "좋다", bad: "안좋다", other: "기타" };
 const Q1C_LABELS: Record<string, string> = { hq_decide: "본사 결정", branch_ratio: "거점별 비중" };
-const Q1CRATIO_LABELS: Record<string, string> = { "90_10": "90:10", "70_30": "70:30" };
+const Q1CRATIO_LABELS: Record<string, string> = { "95_5": "95:5", "90_10": "90:10", "70_30": "70:30" };
 
 const AWARENESS_SENTIMENTS: Record<string, Sentiment> = { aware: "positive", unaware: "negative" };
 // "기타"는 긍정/부정 판단이 불가능해 하이라이트 대상에서 제외(의도적으로 키 없음).
 const Q1A_SENTIMENTS: Record<string, Sentiment> = { good: "positive", bad: "negative" };
 const Q1C_SENTIMENTS: Record<string, Sentiment> = { hq_decide: "neutral", branch_ratio: "neutral" };
-const Q1CRATIO_SENTIMENTS: Record<string, Sentiment> = { "90_10": "neutral", "70_30": "neutral" };
+const Q1CRATIO_SENTIMENTS: Record<string, Sentiment> = { "95_5": "neutral", "90_10": "neutral", "70_30": "neutral" };
 
 type BranchFilter = "전체" | "지점" | "대리점";
 
@@ -165,7 +165,7 @@ export default function DashboardPage() {
             />
           )}
 
-          {(bucket.q1cRatio["90_10"] + bucket.q1cRatio["70_30"]) > 0 && (
+          {(bucket.q1cRatio["95_5"] + bucket.q1cRatio["90_10"] + bucket.q1cRatio["70_30"]) > 0 && (
             <>
               <ChartSection title="캐쥬얼 카탈로그 비중 선호" data={toChartData(bucket.q1cRatio, Q1CRATIO_LABELS)} />
               {scope === "national" && (

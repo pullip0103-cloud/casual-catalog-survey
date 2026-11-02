@@ -24,7 +24,7 @@ export default function SurveyPreviewPage() {
             얇고 적은 페이지수(4페이지)를 통해 비용은 절감하고 수량은 늘린 제작물입니다.
           </p>
           <p>
-            정식 카탈로그 1부 비용으로 약 4부의 캐쥬얼 카탈로그를 제작할 수 있습니다
+            일반 카탈로그 1부 비용으로 약 4부의 캐쥬얼 카탈로그를 제작할 수 있습니다
             (쏘렌토, 카니발, 스포티지 한정).
           </p>
           <p>
@@ -32,10 +32,17 @@ export default function SurveyPreviewPage() {
             카탈로그만 제작하고, 나머지 20부만큼의 예산으로 캐쥬얼 카탈로그를 80부
             추가 제작해서 배포합니다.
           </p>
-          <div className="pt-2">
+          <div className="pt-2 space-y-2">
             <Image
               src="/catalog/sorento-casual-catalog.png"
-              alt="쏘렌토 캐쥬얼 카탈로그 예시"
+              alt="쏘렌토 캐쥬얼 카탈로그 예시 앞면"
+              width={920}
+              height={540}
+              className="w-full rounded-md border border-slate-200"
+            />
+            <Image
+              src="/catalog/sorento-casual-catalog-2.png"
+              alt="쏘렌토 캐쥬얼 카탈로그 예시 뒷면"
               width={920}
               height={540}
               className="w-full rounded-md border border-slate-200"
@@ -56,19 +63,20 @@ export default function SurveyPreviewPage() {
 
         <PreviewBlock label="나. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
           <p className="text-xs text-slate-500 -mt-1 mb-1">
-            공식 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
+            일반 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
           </p>
           <PreviewOption
-            label="지금처럼 차종별 예산에서 공식 카탈로그 / 캐쥬얼 카탈로그 비율 80% / 20%가 적절하다."
-            description="예시) 100부 예산 신청 시 공식 80부 + 캐쥬얼 80부"
+            label="지금처럼 차종별 예산에서 일반 카탈로그 / 캐쥬얼 카탈로그 비율 80% / 20%가 적절하다."
+            description="예시) 100부 예산 신청 시 일반 80부 + 캐쥬얼 80부"
           />
           <PreviewOption label="비중 조정이 필요하다." />
           <div className="mt-1 rounded-lg bg-slate-100 p-4 space-y-2">
             <p className="text-xs text-slate-500">
               ↳ &quot;비중 조정이 필요하다&quot; 선택 시 노출되는 하위 질문
             </p>
-            <PreviewOption label="선택 1: 90% : 10%" description="예시) 100부 예산 신청 시 공식 90부 + 캐쥬얼 40부" />
-            <PreviewOption label="선택 2: 70% : 30%" description="예시) 100부 예산 신청 시 공식 70부 + 캐쥬얼 120부" />
+            <PreviewOption label="선택 1: 95% : 5%" description="예시) 100부 예산 신청 시 일반 95부 + 캐쥬얼 20부" />
+            <PreviewOption label="선택 2: 90% : 10%" description="예시) 100부 예산 신청 시 일반 90부 + 캐쥬얼 40부" />
+            <PreviewOption label="선택 3: 70% : 30%" description="예시) 100부 예산 신청 시 일반 70부 + 캐쥬얼 120부" />
           </div>
         </PreviewBlock>
       </div>

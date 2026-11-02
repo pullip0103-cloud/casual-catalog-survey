@@ -9,7 +9,7 @@ function normalizeCode(raw: string): string {
 const AWARENESS_VALUES: Awareness[] = ["aware", "unaware"];
 const Q1A_VALUES: Q1A[] = ["good", "bad", "other"];
 const Q1C_VALUES: Q1C[] = ["hq_decide", "branch_ratio"];
-const Q1CRATIO_VALUES: Q1CRatio[] = ["90_10", "70_30"];
+const Q1CRATIO_VALUES: Q1CRatio[] = ["95_5", "90_10", "70_30"];
 
 export async function POST(req: NextRequest) {
   await connection();
