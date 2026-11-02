@@ -37,7 +37,7 @@ const Q1AREASON_LABELS: Record<string, string> = {
   thin_material: "얇은 용지(고급감 부족)",
   other: "기타",
 };
-const Q1C_LABELS: Record<string, string> = { hq_decide: "본사 결정", branch_ratio: "거점별 비중" };
+const Q1C_LABELS: Record<string, string> = { hq_decide: "80:20 현재 비율 적절", branch_ratio: "비중 조정 필요" };
 const Q1CRATIO_LABELS: Record<string, string> = { "95_5": "95:5", "90_10": "90:10", "70_30": "70:30" };
 
 const AWARENESS_SENTIMENTS: Record<string, Sentiment> = {
@@ -98,7 +98,7 @@ export default function DashboardPage() {
   const bucket = result ? pickBucket(result, branchFilter) : null;
 
   return (
-    <main className="flex flex-1 flex-col px-6 py-10 max-w-4xl w-full mx-auto">
+    <main className="flex flex-1 flex-col px-6 py-10 max-w-6xl w-full mx-auto">
       <div className="flex items-center justify-between mb-6 gap-3 flex-wrap">
         <h1 className="text-xl font-bold">캐쥬얼 카탈로그 설문 결과</h1>
         <div className="flex gap-3">
@@ -195,10 +195,10 @@ export default function DashboardPage() {
             </>
           )}
 
-          <ChartSection title="3. 배포 방식 선호" data={toChartData(bucket.q1c, Q1C_LABELS)} />
+          <ChartSection title="3. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?" data={toChartData(bucket.q1c, Q1C_LABELS)} />
           {scope === "national" && (
             <RegionTypeTable
-              title="3. 배포 방식 선호"
+              title="3. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?"
               regionNames={regionNames}
               byRegion={data.byRegion}
               national={data.national}
@@ -210,10 +210,10 @@ export default function DashboardPage() {
 
           {(bucket.q1cRatio["95_5"] + bucket.q1cRatio["90_10"] + bucket.q1cRatio["70_30"]) > 0 && (
             <>
-              <ChartSection title="캐쥬얼 카탈로그 비중 선호" data={toChartData(bucket.q1cRatio, Q1CRATIO_LABELS)} />
+              <ChartSection title="3-가. 희망 비중(비중 조정 필요 응답 중)" data={toChartData(bucket.q1cRatio, Q1CRATIO_LABELS)} />
               {scope === "national" && (
                 <RegionTypeTable
-                  title="캐쥬얼 카탈로그 비중 선호"
+                  title="3-가. 희망 비중(비중 조정 필요 응답 중)"
                   regionNames={regionNames}
                   byRegion={data.byRegion}
                   national={data.national}
@@ -443,15 +443,13 @@ function ChartSection({ title, data }: { title: string; data: { name: string; va
         </div>
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
+            <PieChart margin={{ top: 10, right: 10, bottom: 10, left: 10 }}>
               <Pie
                 data={withPct}
                 dataKey="value"
                 nameKey="name"
-                outerRadius={80}
-                label={(props: { name?: string; value?: number; payload?: { pct?: number } }) =>
-                  `${props.name} ${props.value} (${props.payload?.pct ?? 0}%)`
-                }
+                outerRadius={70}
+                label={(props: { payload?: { pct?: number } }) => `${props.payload?.pct ?? 0}%`}
               >
                 {withPct.map((_, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />
@@ -460,7 +458,13 @@ function ChartSection({ title, data }: { title: string; data: { name: string; va
               <Tooltip
                 formatter={(value, _name, item) => [`${value}건 (${(item?.payload as { pct?: number } | undefined)?.pct ?? 0}%)`, "응답"]}
               />
-              <Legend wrapperStyle={{ fontSize: 12 }} />
+              <Legend
+                wrapperStyle={{ fontSize: 11 }}
+                formatter={(value: string, entry) => {
+                  const pct = (entry?.payload as { pct?: number } | undefined)?.pct ?? 0;
+                  return `${value} (${pct}%)`;
+                }}
+              />
             </PieChart>
           </ResponsiveContainer>
         </div>
