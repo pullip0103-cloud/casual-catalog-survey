@@ -11,7 +11,7 @@ export interface Branch {
 export type Awareness = "aware" | "unaware";
 export type Q1A = "good" | "bad" | "other";
 export type Q1C = "hq_decide" | "branch_ratio";
-export type Q1CRatio = "90_10" | "80_20" | "70_30";
+export type Q1CRatio = "90_10" | "70_30";
 
 export interface SurveyAnswers {
   awareness: Awareness;

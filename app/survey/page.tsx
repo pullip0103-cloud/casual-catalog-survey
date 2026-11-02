@@ -291,38 +291,36 @@ export default function SurveyPage() {
               </QuestionBlock>
 
               <QuestionBlock label="나. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
+                <p className="text-xs text-slate-500 -mt-1 mb-1">
+                  공식 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
+                </p>
                 <RadioOption
                   checked={q1c === "hq_decide"}
                   onChange={() => {
                     setQ1c("hq_decide");
                     setQ1cRatio(null);
                   }}
-                  label="지금처럼 차종별 예산으로 신청하면, 본사에서 알아서 공식/캐쥬얼 카탈로그 수량을 정해주면 좋겠다."
+                  label="지금처럼 차종별 예산에서 공식 카탈로그 / 캐쥬얼 카탈로그 비율 80% / 20%가 적절하다."
+                  description="예시) 100부 예산 신청 시 공식 80부 + 캐쥬얼 80부"
                 />
                 <RadioOption
                   checked={q1c === "branch_ratio"}
                   onChange={() => setQ1c("branch_ratio")}
-                  label="거점마다 캐쥬얼 카탈로그 비중을 정할 수 있으면 좋겠다."
+                  label="비중 조정이 필요하다."
                 />
                 {q1c === "branch_ratio" && (
                   <div className="mt-3 rounded-lg bg-slate-100 p-4 space-y-2">
-                    <p className="text-xs text-slate-500">
-                      공식 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
-                    </p>
-                    <RadioOption
-                      checked={q1cRatio === "80_20"}
-                      onChange={() => setQ1cRatio("80_20")}
-                      label="현재: 80% : 20% (쏘렌토 100부 신청 시 공식 80부 + 캐쥬얼 80부)"
-                    />
                     <RadioOption
                       checked={q1cRatio === "90_10"}
                       onChange={() => setQ1cRatio("90_10")}
-                      label="선택 1: 90% : 10% (공식 90부 + 캐쥬얼 40부)"
+                      label="선택 1: 90% : 10%"
+                      description="예시) 100부 예산 신청 시 공식 90부 + 캐쥬얼 40부"
                     />
                     <RadioOption
                       checked={q1cRatio === "70_30"}
                       onChange={() => setQ1cRatio("70_30")}
-                      label="선택 3: 70% : 30% (공식 70부 + 캐쥬얼 90부)"
+                      label="선택 2: 70% : 30%"
+                      description="예시) 100부 예산 신청 시 공식 70부 + 캐쥬얼 120부"
                     />
                   </div>
                 )}
@@ -406,10 +404,12 @@ function RadioOption({
   checked,
   onChange,
   label,
+  description,
 }: {
   checked: boolean;
   onChange: () => void;
   label: string;
+  description?: string;
 }) {
   return (
     <label
@@ -418,7 +418,10 @@ function RadioOption({
       }`}
     >
       <input type="radio" checked={checked} onChange={onChange} className="mt-0.5" />
-      <span>{label}</span>
+      <span>
+        {label}
+        {description && <span className="block mt-1 text-xs text-slate-500">{description}</span>}
+      </span>
     </label>
   );
 }

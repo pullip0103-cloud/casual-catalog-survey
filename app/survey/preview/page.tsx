@@ -55,16 +55,20 @@ export default function SurveyPreviewPage() {
         </PreviewBlock>
 
         <PreviewBlock label="나. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
-          <PreviewOption label="지금처럼 차종별 예산으로 신청하면, 본사에서 알아서 공식/캐쥬얼 카탈로그 수량을 정해주면 좋겠다." />
-          <PreviewOption label="거점마다 캐쥬얼 카탈로그 비중을 정할 수 있으면 좋겠다." />
+          <p className="text-xs text-slate-500 -mt-1 mb-1">
+            공식 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
+          </p>
+          <PreviewOption
+            label="지금처럼 차종별 예산에서 공식 카탈로그 / 캐쥬얼 카탈로그 비율 80% / 20%가 적절하다."
+            description="예시) 100부 예산 신청 시 공식 80부 + 캐쥬얼 80부"
+          />
+          <PreviewOption label="비중 조정이 필요하다." />
           <div className="mt-1 rounded-lg bg-slate-100 p-4 space-y-2">
             <p className="text-xs text-slate-500">
-              ↳ &quot;거점마다 비중을 정할 수 있으면 좋겠다&quot; 선택 시 노출되는 하위 질문 — 공식
-              카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
+              ↳ &quot;비중 조정이 필요하다&quot; 선택 시 노출되는 하위 질문
             </p>
-            <PreviewOption label="현재: 80% : 20% (쏘렌토 100부 신청 시 공식 80부 + 캐쥬얼 80부)" />
-            <PreviewOption label="선택 1: 90% : 10% (공식 90부 + 캐쥬얼 40부)" />
-            <PreviewOption label="선택 3: 70% : 30% (공식 70부 + 캐쥬얼 90부)" />
+            <PreviewOption label="선택 1: 90% : 10%" description="예시) 100부 예산 신청 시 공식 90부 + 캐쥬얼 40부" />
+            <PreviewOption label="선택 2: 70% : 30%" description="예시) 100부 예산 신청 시 공식 70부 + 캐쥬얼 120부" />
           </div>
         </PreviewBlock>
       </div>
@@ -81,11 +85,14 @@ function PreviewBlock({ label, children }: { label: string; children: React.Reac
   );
 }
 
-function PreviewOption({ label }: { label: string }) {
+function PreviewOption({ label, description }: { label: string; description?: string }) {
   return (
     <label className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-500">
       <input type="radio" disabled className="mt-0.5" />
-      <span>{label}</span>
+      <span>
+        {label}
+        {description && <span className="block mt-1 text-xs text-slate-400">{description}</span>}
+      </span>
     </label>
   );
 }

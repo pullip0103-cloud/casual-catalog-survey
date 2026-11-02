@@ -13,7 +13,7 @@ const db = getFirestore(app);
 const AWARENESS = ["aware", "unaware"];
 const Q1A = ["good", "bad", "other"];
 const Q1C = ["hq_decide", "branch_ratio"];
-const Q1CRATIO = ["90_10", "80_20", "70_30"];
+const Q1CRATIO = ["90_10", "70_30"];
 
 function pick(arr) {
   return arr[Math.floor(Math.random() * arr.length)];

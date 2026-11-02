@@ -23,12 +23,13 @@ const COLORS = ["#2563eb", "#f97316", "#64748b", "#16a34a", "#dc2626"];
 const AWARENESS_LABELS: Record<string, string> = { aware: "알고 있다", unaware: "모른다" };
 const Q1A_LABELS: Record<string, string> = { good: "좋다", bad: "안좋다", other: "기타" };
 const Q1C_LABELS: Record<string, string> = { hq_decide: "본사 결정", branch_ratio: "거점별 비중" };
-const Q1CRATIO_LABELS: Record<string, string> = { "90_10": "90:10", "80_20": "80:20(현재)", "70_30": "70:30" };
+const Q1CRATIO_LABELS: Record<string, string> = { "90_10": "90:10", "70_30": "70:30" };
 
 const AWARENESS_SENTIMENTS: Record<string, Sentiment> = { aware: "positive", unaware: "negative" };
-const Q1A_SENTIMENTS: Record<string, Sentiment> = { good: "positive", bad: "negative", other: "neutral" };
+// "기타"는 긍정/부정 판단이 불가능해 하이라이트 대상에서 제외(의도적으로 키 없음).
+const Q1A_SENTIMENTS: Record<string, Sentiment> = { good: "positive", bad: "negative" };
 const Q1C_SENTIMENTS: Record<string, Sentiment> = { hq_decide: "neutral", branch_ratio: "neutral" };
-const Q1CRATIO_SENTIMENTS: Record<string, Sentiment> = { "90_10": "neutral", "80_20": "neutral", "70_30": "neutral" };
+const Q1CRATIO_SENTIMENTS: Record<string, Sentiment> = { "90_10": "neutral", "70_30": "neutral" };
 
 type BranchFilter = "전체" | "지점" | "대리점";
 
@@ -72,14 +73,22 @@ export default function DashboardPage() {
 
   return (
     <main className="flex flex-1 flex-col px-6 py-10 max-w-4xl w-full mx-auto">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-6 gap-3 flex-wrap">
         <h1 className="text-xl font-bold">캐쥬얼 카탈로그 설문 결과</h1>
-        <Link
-          href="/survey/preview"
-          className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-100"
-        >
-          설문조사 내용 보기
-        </Link>
+        <div className="flex gap-3">
+          <Link
+            href="/dashboard/participation"
+            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-100"
+          >
+            응답 현황 보기
+          </Link>
+          <Link
+            href="/survey/preview"
+            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-100"
+          >
+            설문조사 내용 보기
+          </Link>
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-3 mb-6">
@@ -156,7 +165,7 @@ export default function DashboardPage() {
             />
           )}
 
-          {(bucket.q1cRatio["90_10"] + bucket.q1cRatio["80_20"] + bucket.q1cRatio["70_30"]) > 0 && (
+          {(bucket.q1cRatio["90_10"] + bucket.q1cRatio["70_30"]) > 0 && (
             <>
               <ChartSection title="캐쥬얼 카탈로그 비중 선호" data={toChartData(bucket.q1cRatio, Q1CRATIO_LABELS)} />
               {scope === "national" && (
@@ -175,9 +184,9 @@ export default function DashboardPage() {
 
           <p className="text-xs text-slate-400">
             <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(220, 38, 38, 0.45)" }} />
-            긍정 항목(안다/좋다)이 전국 평균보다 뚜렷이 튐
+            긍정 항목(안다/좋다)이 전국 평균보다 특이하게 높음
             <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(37, 99, 235, 0.45)" }} />
-            부정 항목(모른다/안좋다)이 뚜렷이 튐　(배포 방식·비중 선호는 중립 항목이라 항상 붉은색, 색이 진할수록 차이가 큼, 응답 5건 이상·15%p 이상 차이 기준)
+            부정 항목(모른다/안좋다)이 전국 평균보다 특이하게 높음　(각 항목별 상위 {HIGHLIGHT_TOP_N}개 지역본부만 표시, 색이 진할수록 순위가 높음)
           </p>
         </div>
       )}
@@ -185,25 +194,24 @@ export default function DashboardPage() {
   );
 }
 
-const HIGHLIGHT_MIN_TOTAL = 5;
+const HIGHLIGHT_MIN_TOTAL = 1;
+const HIGHLIGHT_TOP_N = 3;
 
 // 각 항목 값이 "캐쥬얼 카탈로그에 긍정적인 신호"인지 "부정적인 신호"인지,
 // 혹은 좋다/나쁘다가 없는 중립 항목인지 표시. 중립은 방향과 무관하게 항상 붉은색.
 type Sentiment = "positive" | "negative" | "neutral";
 
 function highlightStyle(
-  pct: number,
-  basePct: number,
+  rank: number,
   sentiment: Sentiment
 ): { className: string; style?: React.CSSProperties } {
-  const diff = pct - basePct;
-  const abs = Math.abs(diff);
-  if (abs < 15) return { className: "" };
+  if (rank < 0) return { className: "" };
 
-  // 차이가 클수록 진하게: 15pt~50pt 범위를 알파 0.15~0.6으로 매핑
-  const alpha = Math.min(0.6, 0.15 + ((abs - 15) / 35) * 0.45);
-  // 방향(평균보다 높은지/낮은지)과 무관하게, 그 열 자체가 긍정(좋다/안다)이면 항상 붉은색,
-  // 부정(안좋다/모른다)이면 항상 파란색. 중립 항목(배포방식/비중)도 항상 붉은색.
+  // 1위가 가장 진하게, 이후 등수가 내려갈수록 옅어짐
+  const alpha = Math.max(0.2, 0.55 - rank * 0.15);
+  // 여기 들어오는 건 이미 "그 키 자체의 비율이 평균보다 높은" 경우만이다
+  // (호출부에서 diff<=0은 걸러짐). 긍정 항목(좋다/안다)이 튀면 붉은색, 부정
+  // 항목(안좋다/모른다)이 튀면 파란색. 중립 항목(배포방식/비중)은 항상 붉은색.
   const color = sentiment === "negative" ? `rgba(37, 99, 235, ${alpha})` : `rgba(220, 38, 38, ${alpha})`;
   return { className: "font-semibold", style: { backgroundColor: color } };
 }
@@ -240,6 +248,41 @@ function RegionTypeTable({
     basePcts[col.key] = {};
     for (const k of keys) {
       basePcts[col.key][k] = nTotal > 0 ? (nRecord[k] / nTotal) * 100 : 0;
+    }
+  }
+
+  // (열, 키) 조합마다, "그 키 자체의 비율이 전국 평균보다 높은" 지역본부 중에서만
+  // 차이가 큰 상위 N개의 등수(0부터)와 차이(항상 양수)를 구해둔다. 두 선택지(안다/모른다 등)가
+  // 서로 반대로 움직이는 거울 관계라도, 평균보다 낮은 쪽은 아예 후보에서 빼서 "그 항목 자체가
+  // 튀는 경우"만 하이라이트되게 한다. 응답 5건 미만인 지역본부는 애초에 후보에서 제외.
+  const rankByColKey: Record<string, Record<string, Record<string, { rank: number; diff: number }>>> = {};
+  for (const col of columns) {
+    rankByColKey[col.key] = {};
+    for (const k of keys) {
+      if (!sentiments[k]) {
+        rankByColKey[col.key][k] = {};
+        continue;
+      }
+      const diffs = regionNames
+        .map((region) => {
+          const result = byRegion[region];
+          const bucket = col.filter === "전체" ? result?.all : result?.byBranchType[col.filter];
+          const record = bucket ? getRecord(bucket) : undefined;
+          const total = record ? keys.reduce((sum, kk) => sum + (record[kk] ?? 0), 0) : 0;
+          if (total < HIGHLIGHT_MIN_TOTAL) return null;
+          const pct = (record?.[k] ?? 0) / total * 100;
+          const diff = pct - basePcts[col.key][k];
+          if (diff <= 0) return null;
+          return { region, diff };
+        })
+        .filter((d): d is { region: string; diff: number } => d !== null)
+        .sort((a, b) => b.diff - a.diff)
+        .slice(0, HIGHLIGHT_TOP_N);
+
+      rankByColKey[col.key][k] = {};
+      diffs.forEach((d, i) => {
+        rankByColKey[col.key][k][d.region] = { rank: i, diff: d.diff };
+      });
     }
   }
 
@@ -289,10 +332,8 @@ function RegionTypeTable({
                           const value = record?.[k] ?? 0;
                           const pctExact = total > 0 ? (value / total) * 100 : 0;
                           const pct = Math.round(pctExact);
-                          const highlight =
-                            total >= HIGHLIGHT_MIN_TOTAL
-                              ? highlightStyle(pctExact, basePcts[col.key][k], sentiments[k] ?? "neutral")
-                              : { className: "" };
+                          const ranked = rankByColKey[col.key][k][region];
+                          const highlight = highlightStyle(ranked?.rank ?? -1, sentiments[k] ?? "neutral");
                           return (
                             <td
                               key={`${col.key}-${k}`}
