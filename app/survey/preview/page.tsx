@@ -50,18 +50,31 @@ export default function SurveyPreviewPage() {
           </div>
         </div>
 
-        <PreviewBlock label="캐쥬얼 카탈로그를 알고 계신가요?">
-          <PreviewOption label="알고 있다" />
-          <PreviewOption label="모른다" />
+        <PreviewBlock label="1. 본 설문에 참여하기 전, 캐주얼 카탈로그(4p)를 알고 계셨습니까?">
+          <PreviewOption label="알고 있으며, 고객 응대에 사용해 보았다" />
+          <PreviewOption label="알고 있으나, 고객 응대에 사용한 적은 없다" />
+          <PreviewOption label="모르고 있었다." />
         </PreviewBlock>
 
-        <PreviewBlock label="가. 캐쥬얼 카탈로그를 잘 활용하고 계신가요?">
-          <PreviewOption label="카탈로그가 부족했는데, 캐쥬얼 카탈로그라도 고객에게 드릴 수 있으니 좋은 것 같다." />
-          <PreviewOption label="캐쥬얼 카탈로그는 페이지수도 적고 얇은 재질이다보니 고객에게 전달하기가 적절하지 않다." />
-          <PreviewOption label="기타 의견 (주관식 입력)" />
+        <PreviewBlock label="2. 캐주얼 카탈로그는 고객 응대에 얼마나 도움이 되었습니까?">
+          <PreviewOption label="매우 도움이 되었다. (고객 응대시 활용)" />
+          <PreviewOption label="다소 도움이 되었다." />
+          <PreviewOption label="보통이다." />
+          <PreviewOption label="별로 도움이 되지 않았다." />
+          <PreviewOption label="전혀 도움이 되지 않았다. (고객 응대시 미활용)" />
         </PreviewBlock>
 
-        <PreviewBlock label="나. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
+        <PreviewBlock label="2-가. 캐쥬얼 카탈로그가 도움이 되지 않았다면 가장 큰 이유는 무엇입니까?">
+          <p className="text-xs text-slate-500 -mt-1 mb-1">
+            ↳ 2번에서 &quot;별로 도움이 되지 않았다&quot; 또는 &quot;전혀 도움이 되지 않았다&quot;
+            선택 시에만 노출되는 질문
+          </p>
+          <PreviewOption label="일반 카탈로그보다 페이지수가 적어 포함되어 있는 정보가 적어서" />
+          <PreviewOption label="두께감이 얇은 용지를 사용하여 고급감이 들지 않아서" />
+          <PreviewOption label="기타 (주관식 입력)" />
+        </PreviewBlock>
+
+        <PreviewBlock label="3. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
           <p className="text-xs text-slate-500 -mt-1 mb-1">
             일반 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
           </p>
@@ -78,6 +91,15 @@ export default function SurveyPreviewPage() {
             <PreviewOption label="선택 2: 90% : 10%" description="예시) 100부 예산 신청 시 일반 90부 + 캐쥬얼 40부" />
             <PreviewOption label="선택 3: 70% : 30%" description="예시) 100부 예산 신청 시 일반 70부 + 캐쥬얼 120부" />
           </div>
+        </PreviewBlock>
+
+        <PreviewBlock label="4. 현재 캐쥬얼 카탈로그에 대한 의견이 있다면 자유롭게 기재해주세요.">
+          <textarea
+            disabled
+            placeholder="의견을 입력해주세요 (선택)"
+            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-400"
+            rows={3}
+          />
         </PreviewBlock>
       </div>
     </main>

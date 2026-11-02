@@ -10,8 +10,10 @@ const app = initializeApp({
 });
 const db = getFirestore(app);
 
-const AWARENESS = ["aware", "unaware"];
-const Q1A = ["good", "bad", "other"];
+const AWARENESS = ["used_in_response", "aware_not_used", "unaware"];
+const Q1A = ["very_helpful", "somewhat_helpful", "neutral", "not_very_helpful", "not_helpful_at_all"];
+const Q1A_NOT_HELPFUL = ["not_very_helpful", "not_helpful_at_all"];
+const Q1AREASON = ["fewer_pages", "thin_material", "other"];
 const Q1C = ["hq_decide", "branch_ratio"];
 const Q1CRATIO = ["95_5", "90_10", "70_30"];
 
@@ -33,6 +35,7 @@ async function main() {
   for (const b of sampled) {
     const awareness = pick(AWARENESS);
     const q1a = pick(Q1A);
+    const q1aReason = Q1A_NOT_HELPFUL.includes(q1a) ? pick(Q1AREASON) : undefined;
     const q1c = pick(Q1C);
     const q1cRatio = q1c === "branch_ratio" ? pick(Q1CRATIO) : undefined;
 
@@ -46,8 +49,12 @@ async function main() {
       createdAt: new Date().toISOString(),
       __sample: true,
     };
-    if (q1a === "other") doc.q1aOther = "샘플 의견입니다.";
+    if (q1aReason) {
+      doc.q1aReason = q1aReason;
+      if (q1aReason === "other") doc.q1aReasonOther = "샘플 이유입니다.";
+    }
     if (q1cRatio) doc.q1cRatio = q1cRatio;
+    if (Math.random() < 0.3) doc.generalComment = "샘플 의견입니다.";
 
     const ref = db.collection("survey_responses").doc();
     batch.set(ref, doc);

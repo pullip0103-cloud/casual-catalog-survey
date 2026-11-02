@@ -20,14 +20,40 @@ import type { StatsBucket, StatsResult } from "@/lib/stats";
 
 const COLORS = ["#2563eb", "#f97316", "#64748b", "#16a34a", "#dc2626"];
 
-const AWARENESS_LABELS: Record<string, string> = { aware: "알고 있다", unaware: "모른다" };
-const Q1A_LABELS: Record<string, string> = { good: "좋다", bad: "안좋다", other: "기타" };
+const AWARENESS_LABELS: Record<string, string> = {
+  used_in_response: "알고 있으며 사용함",
+  aware_not_used: "알고 있으나 미사용",
+  unaware: "모르고 있었음",
+};
+const Q1A_LABELS: Record<string, string> = {
+  very_helpful: "매우 도움됨",
+  somewhat_helpful: "다소 도움됨",
+  neutral: "보통",
+  not_very_helpful: "별로 도움안됨",
+  not_helpful_at_all: "전혀 도움안됨",
+};
+const Q1AREASON_LABELS: Record<string, string> = {
+  fewer_pages: "페이지수 부족(정보 적음)",
+  thin_material: "얇은 용지(고급감 부족)",
+  other: "기타",
+};
 const Q1C_LABELS: Record<string, string> = { hq_decide: "본사 결정", branch_ratio: "거점별 비중" };
 const Q1CRATIO_LABELS: Record<string, string> = { "95_5": "95:5", "90_10": "90:10", "70_30": "70:30" };
 
-const AWARENESS_SENTIMENTS: Record<string, Sentiment> = { aware: "positive", unaware: "negative" };
-// "기타"는 긍정/부정 판단이 불가능해 하이라이트 대상에서 제외(의도적으로 키 없음).
-const Q1A_SENTIMENTS: Record<string, Sentiment> = { good: "positive", bad: "negative" };
+const AWARENESS_SENTIMENTS: Record<string, Sentiment> = {
+  used_in_response: "positive",
+  // "알고 있으나 미사용"은 긍정/부정 판단이 애매해 하이라이트 대상에서 제외.
+  unaware: "negative",
+};
+// "보통"은 긍정/부정 판단이 불가능해 하이라이트 대상에서 제외(의도적으로 키 없음).
+const Q1A_SENTIMENTS: Record<string, Sentiment> = {
+  very_helpful: "positive",
+  somewhat_helpful: "positive",
+  not_very_helpful: "negative",
+  not_helpful_at_all: "negative",
+};
+// "기타"는 하이라이트 제외, 나머지 이유는 긍정/부정 판단이 없는 중립 항목으로 처리.
+const Q1AREASON_SENTIMENTS: Record<string, Sentiment> = { fewer_pages: "neutral", thin_material: "neutral" };
 const Q1C_SENTIMENTS: Record<string, Sentiment> = { hq_decide: "neutral", branch_ratio: "neutral" };
 const Q1CRATIO_SENTIMENTS: Record<string, Sentiment> = { "95_5": "neutral", "90_10": "neutral", "70_30": "neutral" };
 
@@ -126,10 +152,10 @@ export default function DashboardPage() {
         <div className="space-y-10">
           <p className="text-sm text-slate-500">총 응답 수: {bucket.total}건</p>
 
-          <ChartSection title="캐쥬얼 카탈로그 인지도" data={toChartData(bucket.awareness, AWARENESS_LABELS)} />
+          <ChartSection title="1. 캐쥬얼 카탈로그 인지도" data={toChartData(bucket.awareness, AWARENESS_LABELS)} />
           {scope === "national" && (
             <RegionTypeTable
-              title="캐쥬얼 카탈로그 인지도"
+              title="1. 캐쥬얼 카탈로그 인지도"
               regionNames={regionNames}
               byRegion={data.byRegion}
               national={data.national}
@@ -139,10 +165,10 @@ export default function DashboardPage() {
             />
           )}
 
-          <ChartSection title="가. 캐쥬얼 카탈로그 활용 만족도" data={toChartData(bucket.q1a, Q1A_LABELS)} />
+          <ChartSection title="2. 캐쥬얼 카탈로그 활용 만족도" data={toChartData(bucket.q1a, Q1A_LABELS)} />
           {scope === "national" && (
             <RegionTypeTable
-              title="가. 캐쥬얼 카탈로그 활용 만족도"
+              title="2. 캐쥬얼 카탈로그 활용 만족도"
               regionNames={regionNames}
               byRegion={data.byRegion}
               national={data.national}
@@ -152,10 +178,27 @@ export default function DashboardPage() {
             />
           )}
 
-          <ChartSection title="나. 배포 방식 선호" data={toChartData(bucket.q1c, Q1C_LABELS)} />
+          {(bucket.q1aReason.fewer_pages + bucket.q1aReason.thin_material + bucket.q1aReason.other) > 0 && (
+            <>
+              <ChartSection title="2-가. 도움이 되지 않은 이유" data={toChartData(bucket.q1aReason, Q1AREASON_LABELS)} />
+              {scope === "national" && (
+                <RegionTypeTable
+                  title="2-가. 도움이 되지 않은 이유"
+                  regionNames={regionNames}
+                  byRegion={data.byRegion}
+                  national={data.national}
+                  getRecord={(b) => b.q1aReason}
+                  labels={Q1AREASON_LABELS}
+                  sentiments={Q1AREASON_SENTIMENTS}
+                />
+              )}
+            </>
+          )}
+
+          <ChartSection title="3. 배포 방식 선호" data={toChartData(bucket.q1c, Q1C_LABELS)} />
           {scope === "national" && (
             <RegionTypeTable
-              title="나. 배포 방식 선호"
+              title="3. 배포 방식 선호"
               regionNames={regionNames}
               byRegion={data.byRegion}
               national={data.national}

@@ -3,7 +3,17 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Awareness, Q1A, Q1C, Q1CRatio, BranchType } from "@/lib/types";
+import type { Awareness, Q1A, Q1AReason, Q1C, Q1CRatio, BranchType } from "@/lib/types";
+
+const Q1A_OPTIONS: { value: Q1A; label: string }[] = [
+  { value: "very_helpful", label: "매우 도움이 되었다. (고객 응대시 활용)" },
+  { value: "somewhat_helpful", label: "다소 도움이 되었다." },
+  { value: "neutral", label: "보통이다." },
+  { value: "not_very_helpful", label: "별로 도움이 되지 않았다." },
+  { value: "not_helpful_at_all", label: "전혀 도움이 되지 않았다. (고객 응대시 미활용)" },
+];
+
+const Q1A_NOT_HELPFUL: Q1A[] = ["not_very_helpful", "not_helpful_at_all"];
 
 type Step =
   | "intro"
@@ -36,9 +46,11 @@ export default function SurveyPage() {
 
   const [awareness, setAwareness] = useState<Awareness | null>(null);
   const [q1a, setQ1a] = useState<Q1A | null>(null);
-  const [q1aOther, setQ1aOther] = useState("");
+  const [q1aReason, setQ1aReason] = useState<Q1AReason | null>(null);
+  const [q1aReasonOther, setQ1aReasonOther] = useState("");
   const [q1c, setQ1c] = useState<Q1C | null>(null);
   const [q1cRatio, setQ1cRatio] = useState<Q1CRatio | null>(null);
+  const [generalComment, setGeneralComment] = useState("");
 
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -84,8 +96,12 @@ export default function SurveyPage() {
 
   async function handleSubmit() {
     if (!branchId || !awareness || !q1a || !q1c) return;
-    if (q1a === "other" && !q1aOther.trim()) {
-      setSubmitError("기타 의견을 입력해주세요.");
+    if (Q1A_NOT_HELPFUL.includes(q1a) && !q1aReason) {
+      setSubmitError("도움이 되지 않은 이유를 선택해주세요.");
+      return;
+    }
+    if (q1aReason === "other" && !q1aReasonOther.trim()) {
+      setSubmitError("기타 이유를 입력해주세요.");
       return;
     }
     if (q1c === "branch_ratio" && !q1cRatio) {
@@ -104,9 +120,11 @@ export default function SurveyPage() {
           code: code.trim(),
           awareness,
           q1a,
-          q1aOther: q1a === "other" ? q1aOther.trim() : undefined,
+          q1aReason: Q1A_NOT_HELPFUL.includes(q1a) ? q1aReason : undefined,
+          q1aReasonOther: q1aReason === "other" ? q1aReasonOther.trim() : undefined,
           q1c,
           q1cRatio: q1c === "branch_ratio" ? q1cRatio : undefined,
+          generalComment: generalComment.trim() || undefined,
         }),
       });
       const data = await res.json();
@@ -261,43 +279,69 @@ export default function SurveyPage() {
                 </div>
               </div>
 
-              <QuestionBlock label="캐쥬얼 카탈로그를 알고 계신가요?">
+              <QuestionBlock label="1. 본 설문에 참여하기 전, 캐주얼 카탈로그(4p)를 알고 계셨습니까?">
                 <RadioOption
-                  checked={awareness === "aware"}
-                  onChange={() => setAwareness("aware")}
-                  label="알고 있다"
+                  checked={awareness === "used_in_response"}
+                  onChange={() => setAwareness("used_in_response")}
+                  label="알고 있으며, 고객 응대에 사용해 보았다"
+                />
+                <RadioOption
+                  checked={awareness === "aware_not_used"}
+                  onChange={() => setAwareness("aware_not_used")}
+                  label="알고 있으나, 고객 응대에 사용한 적은 없다"
                 />
                 <RadioOption
                   checked={awareness === "unaware"}
                   onChange={() => setAwareness("unaware")}
-                  label="모른다"
+                  label="모르고 있었다."
                 />
               </QuestionBlock>
 
-              <QuestionBlock label="가. 캐쥬얼 카탈로그를 잘 활용하고 계신가요?">
-                <RadioOption
-                  checked={q1a === "good"}
-                  onChange={() => setQ1a("good")}
-                  label="카탈로그가 부족했는데, 캐쥬얼 카탈로그라도 고객에게 드릴 수 있으니 좋은 것 같다."
-                />
-                <RadioOption
-                  checked={q1a === "bad"}
-                  onChange={() => setQ1a("bad")}
-                  label="캐쥬얼 카탈로그는 페이지수도 적고 얇은 재질이다보니 고객에게 전달하기가 적절하지 않다."
-                />
-                <RadioOption checked={q1a === "other"} onChange={() => setQ1a("other")} label="기타 의견" />
-                {q1a === "other" && (
-                  <textarea
-                    value={q1aOther}
-                    onChange={(e) => setQ1aOther(e.target.value)}
-                    placeholder="의견을 입력해주세요"
-                    className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
-                    rows={3}
+              <QuestionBlock label="2. 캐주얼 카탈로그는 고객 응대에 얼마나 도움이 되었습니까?">
+                {Q1A_OPTIONS.map((opt) => (
+                  <RadioOption
+                    key={opt.value}
+                    checked={q1a === opt.value}
+                    onChange={() => {
+                      setQ1a(opt.value);
+                      setQ1aReason(null);
+                      setQ1aReasonOther("");
+                    }}
+                    label={opt.label}
                   />
-                )}
+                ))}
               </QuestionBlock>
 
-              <QuestionBlock label="나. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
+              {q1a && Q1A_NOT_HELPFUL.includes(q1a) && (
+                <QuestionBlock label="2-가. 캐쥬얼 카탈로그가 도움이 되지 않았다면 가장 큰 이유는 무엇입니까?">
+                  <RadioOption
+                    checked={q1aReason === "fewer_pages"}
+                    onChange={() => setQ1aReason("fewer_pages")}
+                    label="일반 카탈로그보다 페이지수가 적어 포함되어 있는 정보가 적어서"
+                  />
+                  <RadioOption
+                    checked={q1aReason === "thin_material"}
+                    onChange={() => setQ1aReason("thin_material")}
+                    label="두께감이 얇은 용지를 사용하여 고급감이 들지 않아서"
+                  />
+                  <RadioOption
+                    checked={q1aReason === "other"}
+                    onChange={() => setQ1aReason("other")}
+                    label="기타"
+                  />
+                  {q1aReason === "other" && (
+                    <textarea
+                      value={q1aReasonOther}
+                      onChange={(e) => setQ1aReasonOther(e.target.value)}
+                      placeholder="이유를 입력해주세요"
+                      className="mt-2 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
+                      rows={3}
+                    />
+                  )}
+                </QuestionBlock>
+              )}
+
+              <QuestionBlock label="3. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?">
                 <p className="text-xs text-slate-500 -mt-1 mb-1">
                   일반 카탈로그 1부 제작 예산으로 캐쥬얼 카탈로그 4부를 제작할 수 있습니다.
                 </p>
@@ -337,6 +381,16 @@ export default function SurveyPage() {
                     />
                   </div>
                 )}
+              </QuestionBlock>
+
+              <QuestionBlock label="4. 현재 캐쥬얼 카탈로그에 대한 의견이 있다면 자유롭게 기재해주세요.">
+                <textarea
+                  value={generalComment}
+                  onChange={(e) => setGeneralComment(e.target.value)}
+                  placeholder="의견을 입력해주세요 (선택)"
+                  className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
+                  rows={3}
+                />
               </QuestionBlock>
 
               {submitError && <p className="text-sm text-red-600">{submitError}</p>}
