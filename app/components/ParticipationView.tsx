@@ -122,26 +122,33 @@ export default function ParticipationView({ headerRight }: { headerRight?: React
         {regionNames.map((region) => {
           const r = data.byRegion[region];
           const isOpen = expanded.has(region);
+          const regionPct = pct(r.responded, r.total);
 
           return (
             <div key={region} className="rounded-lg border border-slate-200 bg-white overflow-hidden">
               <button
                 onClick={() => toggle(region)}
-                className="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-slate-50"
+                className="w-full flex items-center justify-between gap-4 px-4 py-3 text-left hover:bg-slate-50"
               >
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">{region}</p>
-                  <p className="text-xs text-slate-500 mt-0.5">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <p className="text-sm font-semibold text-slate-900">{region}</p>
+                    <span className="text-sm font-medium text-slate-700 whitespace-nowrap">
+                      {r.responded} / {r.total} ({regionPct}%)
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-0.5 mb-1.5">
                     지점 {r.byType.지점.responded}/{r.byType.지점.total} · 대리점{" "}
                     {r.byType.대리점.responded}/{r.byType.대리점.total}
                   </p>
+                  <div className="h-1.5 w-full rounded-full bg-slate-100 overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-blue-500"
+                      style={{ width: `${regionPct}%` }}
+                    />
+                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-medium text-slate-700">
-                    {r.responded} / {r.total} ({pct(r.responded, r.total)}%)
-                  </span>
-                  <span className="text-slate-400 text-xs">{isOpen ? "▲" : "▼"}</span>
-                </div>
+                <span className="text-slate-400 text-xs shrink-0">{isOpen ? "▲" : "▼"}</span>
               </button>
 
               {isOpen && (
