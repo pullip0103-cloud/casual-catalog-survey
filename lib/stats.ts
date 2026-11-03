@@ -16,6 +16,7 @@ export interface RawResponse {
 export interface AttributedText {
   region: string;
   branchName: string;
+  branchType: BranchType;
   text: string;
 }
 
@@ -49,6 +50,14 @@ function emptyBucket(): StatsBucket {
   };
 }
 
+function sortAttributed(items: AttributedText[]): AttributedText[] {
+  return [...items].sort((a, b) => {
+    if (a.region !== b.region) return a.region.localeCompare(b.region, "ko");
+    if (a.branchType !== b.branchType) return a.branchType === "지점" ? -1 : 1;
+    return a.branchName.localeCompare(b.branchName, "ko");
+  });
+}
+
 export function aggregate(responses: RawResponse[]): StatsBucket {
   const bucket = emptyBucket();
   for (const r of responses) {
@@ -57,14 +66,26 @@ export function aggregate(responses: RawResponse[]): StatsBucket {
     bucket.q1a[r.q1a] += 1;
     if (r.q1aReason) bucket.q1aReason[r.q1aReason] += 1;
     if (r.q1aReason === "other" && r.q1aReasonOther) {
-      bucket.q1aReasonOtherTexts.push({ region: r.region, branchName: r.branchName, text: r.q1aReasonOther });
+      bucket.q1aReasonOtherTexts.push({
+        region: r.region,
+        branchName: r.branchName,
+        branchType: r.branchType,
+        text: r.q1aReasonOther,
+      });
     }
     bucket.q1c[r.q1c] += 1;
     if (r.q1cRatio) bucket.q1cRatio[r.q1cRatio] += 1;
     if (r.generalComment) {
-      bucket.generalComments.push({ region: r.region, branchName: r.branchName, text: r.generalComment });
+      bucket.generalComments.push({
+        region: r.region,
+        branchName: r.branchName,
+        branchType: r.branchType,
+        text: r.generalComment,
+      });
     }
   }
+  bucket.q1aReasonOtherTexts = sortAttributed(bucket.q1aReasonOtherTexts);
+  bucket.generalComments = sortAttributed(bucket.generalComments);
   return bucket;
 }
 

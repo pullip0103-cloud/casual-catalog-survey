@@ -218,7 +218,7 @@ export default function DashboardPage() {
                     {bucket.q1aReasonOtherTexts.map((c, i) => (
                       <p key={i} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
                         <span className="text-slate-400 font-medium mr-1">
-                          {c.region}/{c.branchName}
+                          {c.region}/{c.branchName}({c.branchType})
                         </span>
                         {c.text}
                       </p>
@@ -436,7 +436,7 @@ function GeneralCommentsSection({ bucket }: { bucket: StatsBucket }) {
         {comments.map((c, i) => (
           <p key={i} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
             <span className="text-slate-400 font-medium mr-1">
-              {c.region}/{c.branchName}
+              {c.region}/{c.branchName}({c.branchType})
             </span>
             {c.text}
           </p>
