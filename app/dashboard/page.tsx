@@ -432,10 +432,23 @@ function ChartSection({ title, data }: { title: string; data: { name: string; va
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />
                 ))}
                 <LabelList
-                  dataKey="pct"
                   position="top"
-                  formatter={(v: React.ReactNode) => `${v}%`}
-                  style={{ fontSize: 12, fill: "#475569" }}
+                  content={(props: {
+                    x?: number | string;
+                    y?: number | string;
+                    width?: number | string;
+                    index?: number;
+                  }) => {
+                    const item = withPct[props.index ?? 0];
+                    if (!item) return null;
+                    const x = Number(props.x ?? 0) + Number(props.width ?? 0) / 2;
+                    const y = Number(props.y ?? 0) - 6;
+                    return (
+                      <text x={x} y={y} textAnchor="middle" fontSize={12} fill="#475569">
+                        {item.pct}% ({item.value})
+                      </text>
+                    );
+                  }}
                 />
               </Bar>
             </BarChart>
@@ -449,7 +462,9 @@ function ChartSection({ title, data }: { title: string; data: { name: string; va
                 dataKey="value"
                 nameKey="name"
                 outerRadius={70}
-                label={(props: { payload?: { pct?: number } }) => `${props.payload?.pct ?? 0}%`}
+                label={(props: { payload?: { pct?: number; value?: number } }) =>
+                  `${props.payload?.pct ?? 0}% (${props.payload?.value ?? 0})`
+                }
               >
                 {withPct.map((_, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />
@@ -461,8 +476,8 @@ function ChartSection({ title, data }: { title: string; data: { name: string; va
               <Legend
                 wrapperStyle={{ fontSize: 11 }}
                 formatter={(value: string, entry) => {
-                  const pct = (entry?.payload as { pct?: number } | undefined)?.pct ?? 0;
-                  return `${value} (${pct}%)`;
+                  const payload = entry?.payload as { pct?: number; value?: number } | undefined;
+                  return `${value} (${payload?.pct ?? 0}%, ${payload?.value ?? 0}건)`;
                 }}
               />
             </PieChart>
