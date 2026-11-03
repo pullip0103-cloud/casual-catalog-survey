@@ -37,8 +37,12 @@ const Q1AREASON_LABELS: Record<string, string> = {
   thin_material: "얇은 용지(고급감 부족)",
   other: "기타",
 };
-const Q1C_LABELS: Record<string, string> = { hq_decide: "80:20 현재 비율 적절", branch_ratio: "비중 조정 필요" };
-const Q1CRATIO_LABELS: Record<string, string> = { "95_5": "95:5", "90_10": "90:10", "70_30": "70:30" };
+const Q1RATIO_LABELS: Record<string, string> = {
+  "95_5": "95:5",
+  "90_10": "90:10",
+  "80_20": "80:20(현재)",
+  "70_30": "70:30",
+};
 
 const AWARENESS_SENTIMENTS: Record<string, Sentiment> = {
   used_in_response: "positive",
@@ -54,8 +58,21 @@ const Q1A_SENTIMENTS: Record<string, Sentiment> = {
 };
 // "기타"는 하이라이트 제외, 나머지 이유는 긍정/부정 판단이 없는 중립 항목으로 처리.
 const Q1AREASON_SENTIMENTS: Record<string, Sentiment> = { fewer_pages: "neutral", thin_material: "neutral" };
-const Q1C_SENTIMENTS: Record<string, Sentiment> = { hq_decide: "neutral", branch_ratio: "neutral" };
-const Q1CRATIO_SENTIMENTS: Record<string, Sentiment> = { "95_5": "neutral", "90_10": "neutral", "70_30": "neutral" };
+const Q1RATIO_SENTIMENTS: Record<string, Sentiment> = {
+  "95_5": "neutral",
+  "90_10": "neutral",
+  "80_20": "neutral",
+  "70_30": "neutral",
+};
+
+function buildRatioRecord(bucket: StatsBucket): Record<string, number> {
+  return {
+    "95_5": bucket.q1cRatio["95_5"],
+    "90_10": bucket.q1cRatio["90_10"],
+    "80_20": bucket.q1c.hq_decide,
+    "70_30": bucket.q1cRatio["70_30"],
+  };
+}
 
 type BranchFilter = "전체" | "지점" | "대리점";
 
@@ -192,38 +209,37 @@ export default function DashboardPage() {
                   sentiments={Q1AREASON_SENTIMENTS}
                 />
               )}
-            </>
-          )}
-
-          <ChartSection title="3. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?" data={toChartData(bucket.q1c, Q1C_LABELS)} />
-          {scope === "national" && (
-            <RegionTypeTable
-              title="3. 캐쥬얼 카탈로그는 어떤 식으로 배포하는 것이 좋을까요?"
-              regionNames={regionNames}
-              byRegion={data.byRegion}
-              national={data.national}
-              getRecord={(b) => b.q1c}
-              labels={Q1C_LABELS}
-              sentiments={Q1C_SENTIMENTS}
-            />
-          )}
-
-          {(bucket.q1cRatio["95_5"] + bucket.q1cRatio["90_10"] + bucket.q1cRatio["70_30"]) > 0 && (
-            <>
-              <ChartSection title="3-가. 희망 비중(비중 조정 필요 응답 중)" data={toChartData(bucket.q1cRatio, Q1CRATIO_LABELS)} />
-              {scope === "national" && (
-                <RegionTypeTable
-                  title="3-가. 희망 비중(비중 조정 필요 응답 중)"
-                  regionNames={regionNames}
-                  byRegion={data.byRegion}
-                  national={data.national}
-                  getRecord={(b) => b.q1cRatio}
-                  labels={Q1CRATIO_LABELS}
-                  sentiments={Q1CRATIO_SENTIMENTS}
-                />
+              {bucket.q1aReasonOtherTexts.length > 0 && (
+                <div className="-mt-4">
+                  <p className="text-xs text-slate-400 mb-2">
+                    2-가. 기타 주관식 답변 ({bucket.q1aReasonOtherTexts.length}건)
+                  </p>
+                  <div className="space-y-2">
+                    {bucket.q1aReasonOtherTexts.map((c, i) => (
+                      <p key={i} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
+                        {c}
+                      </p>
+                    ))}
+                  </div>
+                </div>
               )}
             </>
           )}
+
+          <ChartSection title="3. 캐쥬얼 카탈로그 희망 배포 비중" data={toChartData(buildRatioRecord(bucket), Q1RATIO_LABELS)} />
+          {scope === "national" && (
+            <RegionTypeTable
+              title="3. 캐쥬얼 카탈로그 희망 배포 비중"
+              regionNames={regionNames}
+              byRegion={data.byRegion}
+              national={data.national}
+              getRecord={(b) => buildRatioRecord(b)}
+              labels={Q1RATIO_LABELS}
+              sentiments={Q1RATIO_SENTIMENTS}
+            />
+          )}
+
+          <GeneralCommentsSection bucket={bucket} />
 
           <p className="text-xs text-slate-400">
             <span className="inline-block w-3 h-3 rounded-sm align-middle mr-1" style={{ backgroundColor: "rgba(220, 38, 38, 0.45)" }} />
@@ -401,6 +417,26 @@ function RegionTypeTable({
         </table>
       </div>
     </div>
+  );
+}
+
+function GeneralCommentsSection({ bucket }: { bucket: StatsBucket }) {
+  const comments = bucket.generalComments;
+  if (comments.length === 0) return null;
+
+  return (
+    <section>
+      <h2 className="text-sm font-semibold mb-3">
+        4. 기타 의견 ({comments.length}건)
+      </h2>
+      <div className="space-y-2">
+        {comments.map((c, i) => (
+          <p key={i} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">
+            {c}
+          </p>
+        ))}
+      </div>
+    </section>
   );
 }
 

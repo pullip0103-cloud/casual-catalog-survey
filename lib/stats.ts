@@ -6,8 +6,10 @@ export interface RawResponse {
   awareness: Awareness;
   q1a: Q1A;
   q1aReason?: Q1AReason;
+  q1aReasonOther?: string;
   q1c: Q1C;
   q1cRatio?: Q1CRatio;
+  generalComment?: string;
 }
 
 export interface StatsBucket {
@@ -15,8 +17,10 @@ export interface StatsBucket {
   awareness: Record<Awareness, number>;
   q1a: Record<Q1A, number>;
   q1aReason: Record<Q1AReason, number>;
+  q1aReasonOtherTexts: string[];
   q1c: Record<Q1C, number>;
   q1cRatio: Record<Q1CRatio, number>;
+  generalComments: string[];
 }
 
 function emptyBucket(): StatsBucket {
@@ -31,8 +35,10 @@ function emptyBucket(): StatsBucket {
       not_helpful_at_all: 0,
     },
     q1aReason: { fewer_pages: 0, thin_material: 0, other: 0 },
+    q1aReasonOtherTexts: [],
     q1c: { hq_decide: 0, branch_ratio: 0 },
     q1cRatio: { "95_5": 0, "90_10": 0, "70_30": 0 },
+    generalComments: [],
   };
 }
 
@@ -43,8 +49,10 @@ export function aggregate(responses: RawResponse[]): StatsBucket {
     bucket.awareness[r.awareness] += 1;
     bucket.q1a[r.q1a] += 1;
     if (r.q1aReason) bucket.q1aReason[r.q1aReason] += 1;
+    if (r.q1aReason === "other" && r.q1aReasonOther) bucket.q1aReasonOtherTexts.push(r.q1aReasonOther);
     bucket.q1c[r.q1c] += 1;
     if (r.q1cRatio) bucket.q1cRatio[r.q1cRatio] += 1;
+    if (r.generalComment) bucket.generalComments.push(r.generalComment);
   }
   return bucket;
 }
