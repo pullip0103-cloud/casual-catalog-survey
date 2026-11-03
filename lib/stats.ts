@@ -3,6 +3,7 @@ import type { Awareness, BranchType, Q1A, Q1AReason, Q1C, Q1CRatio } from "@/lib
 export interface RawResponse {
   region: string;
   branchType: BranchType;
+  branchName: string;
   awareness: Awareness;
   q1a: Q1A;
   q1aReason?: Q1AReason;
@@ -12,15 +13,21 @@ export interface RawResponse {
   generalComment?: string;
 }
 
+export interface AttributedText {
+  region: string;
+  branchName: string;
+  text: string;
+}
+
 export interface StatsBucket {
   total: number;
   awareness: Record<Awareness, number>;
   q1a: Record<Q1A, number>;
   q1aReason: Record<Q1AReason, number>;
-  q1aReasonOtherTexts: string[];
+  q1aReasonOtherTexts: AttributedText[];
   q1c: Record<Q1C, number>;
   q1cRatio: Record<Q1CRatio, number>;
-  generalComments: string[];
+  generalComments: AttributedText[];
 }
 
 function emptyBucket(): StatsBucket {
@@ -49,10 +56,14 @@ export function aggregate(responses: RawResponse[]): StatsBucket {
     bucket.awareness[r.awareness] += 1;
     bucket.q1a[r.q1a] += 1;
     if (r.q1aReason) bucket.q1aReason[r.q1aReason] += 1;
-    if (r.q1aReason === "other" && r.q1aReasonOther) bucket.q1aReasonOtherTexts.push(r.q1aReasonOther);
+    if (r.q1aReason === "other" && r.q1aReasonOther) {
+      bucket.q1aReasonOtherTexts.push({ region: r.region, branchName: r.branchName, text: r.q1aReasonOther });
+    }
     bucket.q1c[r.q1c] += 1;
     if (r.q1cRatio) bucket.q1cRatio[r.q1cRatio] += 1;
-    if (r.generalComment) bucket.generalComments.push(r.generalComment);
+    if (r.generalComment) {
+      bucket.generalComments.push({ region: r.region, branchName: r.branchName, text: r.generalComment });
+    }
   }
   return bucket;
 }
