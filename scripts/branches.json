@@ -1865,12 +1865,6 @@
     },
     {
       "region": "동부지역본부",
-      "name": "내행",
-      "branchType": "대리점",
-      "code": "DEL2950"
-    },
-    {
-      "region": "동부지역본부",
       "name": "전곡",
       "branchType": "대리점",
       "code": "DEL2952"
@@ -2147,12 +2141,6 @@
     },
     {
       "region": "경기지역본부",
-      "name": "명성",
-      "branchType": "대리점",
-      "code": "DEF2950"
-    },
-    {
-      "region": "경기지역본부",
       "name": "영광제일",
       "branchType": "대리점",
       "code": "DEF2951"
@@ -2294,12 +2282,6 @@
       "name": "동백",
       "branchType": "대리점",
       "code": "DEI2954"
-    },
-    {
-      "region": "경기지역본부",
-      "name": "여흥",
-      "branchType": "대리점",
-      "code": "DEJ5952"
     },
     {
       "region": "경기지역본부",
@@ -2579,12 +2561,6 @@
     },
     {
       "region": "충청지역본부",
-      "name": "가경",
-      "branchType": "대리점",
-      "code": "DGA4950"
-    },
-    {
-      "region": "충청지역본부",
       "name": "봉명",
       "branchType": "대리점",
       "code": "DGA4952"
@@ -2618,12 +2594,6 @@
       "name": "의림",
       "branchType": "대리점",
       "code": "DGE1952"
-    },
-    {
-      "region": "충청지역본부",
-      "name": "도전",
-      "branchType": "대리점",
-      "code": "DGE1953"
     },
     {
       "region": "충청지역본부",
@@ -2792,12 +2762,6 @@
       "name": "봉화",
       "branchType": "대리점",
       "code": "DLE1952"
-    },
-    {
-      "region": "전남광주지역본부",
-      "name": "벌교",
-      "branchType": "대리점",
-      "code": "DLE1954"
     },
     {
       "region": "전남광주지역본부",
@@ -3005,12 +2969,6 @@
     },
     {
       "region": "대구경북지역본부",
-      "name": "본리",
-      "branchType": "대리점",
-      "code": "DMD4952"
-    },
-    {
-      "region": "대구경북지역본부",
       "name": "혁신",
       "branchType": "대리점",
       "code": "DMF3951"
@@ -3143,7 +3101,7 @@
     },
     {
       "region": "대구경북지역본부",
-      "name": "한동",
+      "name": "양덕",
       "branchType": "대리점",
       "code": "DNH3958"
     },
