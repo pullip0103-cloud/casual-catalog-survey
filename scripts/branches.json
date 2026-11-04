@@ -1421,12 +1421,6 @@
     },
     {
       "region": "서부지역본부",
-      "name": "문화촌",
-      "branchType": "대리점",
-      "code": "DBE1955"
-    },
-    {
-      "region": "서부지역본부",
       "name": "역촌",
       "branchType": "대리점",
       "code": "DBE2957"
@@ -2815,7 +2809,7 @@
       "region": "전북지역본부",
       "name": "마한",
       "branchType": "대리점",
-      "code": "DEJ3950"
+      "code": "DJC2953"
     },
     {
       "region": "전북지역본부",
@@ -2851,7 +2845,7 @@
       "region": "전북지역본부",
       "name": "전일",
       "branchType": "대리점",
-      "code": "DJA3954"
+      "code": "DJA3955"
     },
     {
       "region": "전북지역본부",
