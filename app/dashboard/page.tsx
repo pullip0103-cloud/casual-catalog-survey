@@ -16,7 +16,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import type { StatsBucket, StatsResult } from "@/lib/stats";
+import { mergeStatsResults, type StatsBucket, type StatsResult } from "@/lib/stats";
 
 const COLORS = ["#2563eb", "#f97316", "#64748b", "#16a34a", "#dc2626"];
 
@@ -76,6 +76,9 @@ function buildRatioRecord(bucket: StatsBucket): Record<string, number> {
 
 type BranchFilter = "전체" | "지점" | "대리점";
 
+const METRO_LABEL = "수도권(남부, 동부, 서부, 인천, 경기)";
+const METRO_REGIONS = ["남부지역본부", "동부지역본부", "서부지역본부", "인천지역본부", "경기지역본부"];
+
 interface ApiResponse {
   national: StatsResult;
   byRegion: Record<string, StatsResult>;
@@ -111,7 +114,12 @@ export default function DashboardPage() {
     );
   }
 
-  const result = scope === "national" ? data.national : data.byRegion[scope];
+  const result =
+    scope === "national"
+      ? data.national
+      : scope === METRO_LABEL
+      ? mergeStatsResults(METRO_REGIONS.map((r) => data.byRegion[r]).filter((r): r is StatsResult => !!r))
+      : data.byRegion[scope];
   const bucket = result ? pickBucket(result, branchFilter) : null;
 
   return (
@@ -134,13 +142,14 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3 mb-6">
+      <div className="sticky top-0 z-10 bg-slate-50 flex flex-wrap gap-3 mb-6 py-3">
         <select
           value={scope}
           onChange={(e) => setScope(e.target.value)}
           className="rounded-lg border border-slate-300 px-3 py-2 text-sm bg-white"
         >
           <option value="national">전국</option>
+          <option value={METRO_LABEL}>{METRO_LABEL}</option>
           {regionNames.map((r) => (
             <option key={r} value={r}>
               {r}

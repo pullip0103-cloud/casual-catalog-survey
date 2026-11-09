@@ -50,7 +50,7 @@ function emptyBucket(): StatsBucket {
   };
 }
 
-function sortAttributed(items: AttributedText[]): AttributedText[] {
+export function sortAttributed(items: AttributedText[]): AttributedText[] {
   return [...items].sort((a, b) => {
     if (a.region !== b.region) return a.region.localeCompare(b.region, "ko");
     if (a.branchType !== b.branchType) return a.branchType === "지점" ? -1 : 1;
@@ -100,6 +100,43 @@ export function buildStatsResult(responses: RawResponse[]): StatsResult {
     byBranchType: {
       지점: aggregate(responses.filter((r) => r.branchType === "지점")),
       대리점: aggregate(responses.filter((r) => r.branchType === "대리점")),
+    },
+  };
+}
+
+function mergeBuckets(buckets: StatsBucket[]): StatsBucket {
+  const merged = emptyBucket();
+  for (const b of buckets) {
+    merged.total += b.total;
+    for (const k of Object.keys(merged.awareness) as (keyof StatsBucket["awareness"])[]) {
+      merged.awareness[k] += b.awareness[k];
+    }
+    for (const k of Object.keys(merged.q1a) as (keyof StatsBucket["q1a"])[]) {
+      merged.q1a[k] += b.q1a[k];
+    }
+    for (const k of Object.keys(merged.q1aReason) as (keyof StatsBucket["q1aReason"])[]) {
+      merged.q1aReason[k] += b.q1aReason[k];
+    }
+    for (const k of Object.keys(merged.q1c) as (keyof StatsBucket["q1c"])[]) {
+      merged.q1c[k] += b.q1c[k];
+    }
+    for (const k of Object.keys(merged.q1cRatio) as (keyof StatsBucket["q1cRatio"])[]) {
+      merged.q1cRatio[k] += b.q1cRatio[k];
+    }
+    merged.q1aReasonOtherTexts.push(...b.q1aReasonOtherTexts);
+    merged.generalComments.push(...b.generalComments);
+  }
+  merged.q1aReasonOtherTexts = sortAttributed(merged.q1aReasonOtherTexts);
+  merged.generalComments = sortAttributed(merged.generalComments);
+  return merged;
+}
+
+export function mergeStatsResults(results: StatsResult[]): StatsResult {
+  return {
+    all: mergeBuckets(results.map((r) => r.all)),
+    byBranchType: {
+      지점: mergeBuckets(results.map((r) => r.byBranchType.지점)),
+      대리점: mergeBuckets(results.map((r) => r.byBranchType.대리점)),
     },
   };
 }
