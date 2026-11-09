@@ -1577,12 +1577,6 @@
     },
     {
       "region": "남부지역본부",
-      "name": "동산로",
-      "branchType": "대리점",
-      "code": "DCD6950"
-    },
-    {
-      "region": "남부지역본부",
       "name": "삼전",
       "branchType": "대리점",
       "code": "DCF3951"
@@ -1664,12 +1658,6 @@
       "name": "서현",
       "branchType": "대리점",
       "code": "DEI6950"
-    },
-    {
-      "region": "남부지역본부",
-      "name": "경안",
-      "branchType": "대리점",
-      "code": "DEJ1950"
     },
     {
       "region": "남부지역본부",
